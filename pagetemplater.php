@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Page Template Plugin : 'Good To Be Bad'
-Plugin URI: http://hbt.io/
-Version: 1.0.1
-Author: Harri Bell-Thomas
-Author URI: http://hbt.io/
+Plugin Name: CAS Custom Plugin
+Plugin URI: http://briancoords.com
+Version: 1.0.0
+Author: Brian Coords
+Author URI: http://briancoords.com
 */
 
 class PageTemplater {
