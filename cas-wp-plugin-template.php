@@ -6,8 +6,6 @@ get_header();
 
   <h1 class="center">Custom Backend!</h1>
   <div ng-controller="backendCtrl">
-   <p ng-if="data.currentUser.id">Hello! 
-   {{data.currentUser.name}}!</p>
    
     <ul>
       
