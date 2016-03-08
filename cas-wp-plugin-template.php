@@ -47,7 +47,7 @@ get_header();
     </table>
     <BR><BR><BR><BR><BR>
     
-    <div class="cwp-modal-overlay" ng-if="isShowingModal">
+    <div class="cwp-modal-overlay" ng-show="isShowingModal">
       <div class="cwp-modal">
         <div class="cwp-modal__header">
           <a class="cwp-button" ng-click="showModal(-1)">Close</a>
