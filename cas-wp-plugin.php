@@ -159,4 +159,30 @@ add_action( 'plugins_loaded', array( 'PageTemplater', 'get_instance' ) );
 
 
 
+
+add_action( 'rest_api_init', 'cas_plugin_register_custom_meta' );
+function cas_plugin_register_custom_meta() {
+    register_rest_field( 'cas_school',
+        '_cas_school_name',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+
+/**
+ * Get the value of the "starship" field
+ *
+ * @param array $object Details of current post.
+ * @param string $field_name Name of field.
+ * @param WP_REST_Request $request Current request
+ *
+ * @return mixed
+ */
+function cas_plugin_get_custom_meta( $object, $field_name, $request ) {
+    return get_post_meta( $object[ 'id' ], $field_name, true );
+}
+
 ?>
