@@ -3,8 +3,6 @@ get_header();
 ?>
 <div class="cwp cas-wp-plugin" ng-app="backendApp">
 
-
-  <h1 class="center">Schools Backend</h1>
   <div ng-controller="backendCtrl">
    
    <div class="cwp-header">
@@ -18,7 +16,7 @@ get_header();
        CALENDAR THING
      </div>
    </div>
-   
+   <BR><BR><BR><BR>
    
     <table>
       <tr>
