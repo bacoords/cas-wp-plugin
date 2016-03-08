@@ -48,10 +48,11 @@ get_header();
     <BR><BR><BR><BR><BR>
     
     <div class="cwp-modal-overlay" ng-show="isShowingModal">
-       <a class="cwp-button cwp-modal-close" ng-click="showModal(-1)">&#10006;</a>
       <div class="cwp-modal">
+       
+       <a class="cwp-button cwp-modal-close" ng-click="showModal(-1)">&#10006;</a>
         <div class="cwp-modal__header">
-           <div class="cwp-modal__header__logo">
+           <div class="cwp-modal__header__logo" ng-show="{{modalSchool._cas_school_logo}}">
              <img ng-src="{{modalSchool._cas_school_logo}}" alt="{{modalSchool._cas_school_name}} Logo">
            </div>
            <div class="cwp-modal__header__desc">

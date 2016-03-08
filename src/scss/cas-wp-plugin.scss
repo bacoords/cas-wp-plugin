@@ -137,8 +137,9 @@ $blue: rgba(101,164,219, 1);
     z-index: 110000;
   }
   a.cwp-modal-close{
-    position:relative;
-    top:0;
+    position: absolute;
+    top: -15px;
+    right: -15px;
     border-radius: 300px;    
     width: 35px;
     height: 35px;
