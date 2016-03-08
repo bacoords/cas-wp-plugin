@@ -153,7 +153,7 @@ function angular_wp_api_scripts() {
 	if ( ! $config = get_theme_support( 'angular-wp-api' ) )
 		return;
 	// Array of dependencies
-	$script_dependencies = null;
+	$script_dependencies =  array('angular','ngresource','angular-route' );
 	// Data for localization
 	$script_data = null;
 	// Script dependency from theme support
