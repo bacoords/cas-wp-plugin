@@ -1,6 +1,6 @@
 
 
-angular.module('backendApp', [])
+angular.module('backendApp', ['wp.api'])
 
 
 
