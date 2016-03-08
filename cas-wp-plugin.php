@@ -141,7 +141,7 @@ add_action( 'plugins_loaded', array( 'PageTemplater', 'get_instance' ) );
 
 
 //enable wp angular
-add_theme_support( 'angular-wp-api' );
+add_theme_support( 'angular-wp-api', array('angular', 'angular-route', 'ngresource') );
 
 
 //enqueue scripts
@@ -151,6 +151,8 @@ function cas_plugin_enqueue_script() {
   if(is_page_template( 'cas-wp-plugin-template.php')){
     
  	  wp_enqueue_script('angular', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js', array('jquery'));
+ 	  
+    wp_enqueue_script('angular-route', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js', array('angular'));
     
     wp_enqueue_script( 'ngresource', '//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-resource.min.js', array( 'angular' ) );
     
