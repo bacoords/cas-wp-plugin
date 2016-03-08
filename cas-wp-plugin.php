@@ -156,7 +156,7 @@ function cas_plugin_enqueue_script() {
     
     wp_enqueue_script( 'ngresource', '//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-resource.min.js', array( 'angular' ) );
     
-    wp_enqueue_script( 'cas-plugin-js', 'http://cas.threecordsstudio.com/wp-content/plugins/cas-wp-plugin/cas-wp-plugin.js', array( 'jquery','angular','ngresource','angular-wp-api' ) );   
+    wp_enqueue_script( 'cas-plugin-js', 'http://cas.threecordsstudio.com/wp-content/plugins/cas-wp-plugin/cas-wp-plugin.js', array( 'jquery','angular','ngresource','angular-route','angular-wp-api' ) );   
   }
 
 }
