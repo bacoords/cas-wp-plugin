@@ -208,7 +208,7 @@ function cas_plugin_register_custom_meta() {
     register_rest_field( 'cas_school',
         '_cas_school_city',
         array(
-            'get_callback'    => 'cas_plugin_get_custom_meta_city',
+            'get_callback'    => 'cas_plugin_get_custom_meta_name',
             'update_callback' => null,
             'schema'          => null,
         )
@@ -228,8 +228,11 @@ function cas_plugin_get_custom_meta_name( $object, $field_name, $request ) {
     return get_post_meta( $object[ 'id' ], $field_name, true );
 }
 
-function cas_plugin_get_custom_meta_city( $object, $field_name, $request ) {
-    return get_post_meta( $object[ 'id' ], $field_name, true );
-}
+//function cas_plugin_get_custom_meta_city( $object, $field_name, $request ) {
+//    return get_post_meta( $object[ 'id' ], $field_name, true );
+//}
+//function cas_plugin_get_custom_meta_state( $object, $field_name, $request ) {
+//    return get_post_meta( $object[ 'id' ], $field_name, true );
+//}
 
 ?>
