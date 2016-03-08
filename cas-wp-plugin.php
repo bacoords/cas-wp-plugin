@@ -144,7 +144,7 @@ add_action( 'plugins_loaded', array( 'PageTemplater', 'get_instance' ) );
 
 
 function cas_plugin_enqueue_script() {
-  if(is_page( 'cas-wp-plugin-template')){
+  if(is_page_template( 'cas-wp-plugin-template.php')){
     wp_enqueue_script( 'cas-plugin-js', plugin_dir_url( $file ) . '/cas-wp-plugin.js', array( 'jquery','angular' ) );
   }
 
