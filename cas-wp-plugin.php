@@ -146,6 +146,15 @@ add_action( 'plugins_loaded', array( 'PageTemplater', 'get_instance' ) );
 function cas_plugin_enqueue_script() {
   if(is_page_template( 'cas-wp-plugin-template.php')){
     wp_enqueue_script( 'cas-plugin-js', 'http://cas.threecordsstudio.com/wp-content/plugins/cas-wp-plugin/cas-wp-plugin.js', array( 'jquery','angular' ) );
+  
+  wp_localize_script(
+		'my-scripts',
+		'myLocalized',
+		array(
+			'partials' => trailingslashit( get_template_directory_uri() ) . 'partials/',
+			'nonce' => wp_create_nonce( 'wp_rest' )
+			)
+    );
   }
 
 }
