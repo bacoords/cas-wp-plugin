@@ -140,6 +140,30 @@ add_action( 'plugins_loaded', array( 'PageTemplater', 'get_instance' ) );
 
 
 
+//enqueue scripts
+
+
+function cas_plugin_enqueue_script() {
+  if(is_page( 'cas-wp-plugin-template')){
+    wp_enqueue_script( 'cas-plugin-js', plugin_dir_url( $file ) . '/cas-wp-plugin.js', array( 'jquery','angular' ) );
+  }
+
+}
+
+
+add_action( 'wp_enqueue_scripts', 'cas_plugin_enqueue_script' );
+
+
+
+
+
+
+
+
+
+
+
+
   /**
   * Add REST API support to an already registered post type.
   */
