@@ -50,9 +50,20 @@ get_header();
     <div class="cwp-modal-overlay" ng-show="isShowingModal">
       <div class="cwp-modal">
         <div class="cwp-modal__header">
-          <img ng-src="{{modalSchool._cas_school_logo}}" alt="{{modalSchool._cas_school_name}} Logo">
-           {{modalSchool._cas_school_name}} <br>
-           {{modalSchool._cas_school_city}},  {{modalSchool._cas_school_state}}
+           <div class="cwp-modal__header__logo">
+             <img ng-src="{{modalSchool._cas_school_logo}}" alt="{{modalSchool._cas_school_name}} Logo">
+           </div>
+           <div class="cwp-modal__header__desc">
+             {{modalSchool._cas_school_name}} <br>
+             {{modalSchool._cas_school_city}},  {{modalSchool._cas_school_state}}
+           </div>
+           <div class="cwp-modal__header__buttons">
+             <a href="#" class="cwp-button">send email</a><BR>
+             <a href="#" class="cwp-button">current sales</a><BR>
+             <a href="#" class="cwp-button">print page</a><BR>
+           </div>
+          
+           
           <a class="cwp-button" ng-click="showModal(-1)">Close</a>
         </div>
          <div class="cwp-modal__body">
