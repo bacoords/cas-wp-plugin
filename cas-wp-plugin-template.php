@@ -20,7 +20,7 @@ get_header();
         <td>Links</td>
       </tr>
       <tr ng-repeat="school in schools | filter:search | orderBy:'_cas_school_name'">
-        <td><a class="cwp-button">INFO</a><a class="cwp-button">EMAIL</a></td>
+        <td><a class="cwp-button cwp-button--blue">INFO</a><a class="cwp-button">EMAIL</a></td>
         <td> {{school._cas_school_name}}</td>
         <td> {{school._cas_school_city}},  {{school._cas_school_state}}</td>
         <td>{{school.modified | date: 'M/d/yy'}}</td> 

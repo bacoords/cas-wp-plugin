@@ -1,21 +1,24 @@
 $black: #494949;
-$blue: blue;
+
 $red: red;
 $gray: #ccc;
 $gray--dark: #3c3c3c;
+$gray--light: #eee;
 $white: whitesmoke;
+$blue: rgba(101,164,219, 1);
 
 .cwp{
   font-family: 'Lato', sans-serif;
   table{
     width: 960px;
-    margin: 0 auto;
+    margin: 0 auto;    
+    border-collapse: collapse;
     tr{
       td{
         padding:3px;
       }
       &:nth-of-type(odd){
-        background:$gray;
+        background:$gray--light;
         td{
         }
       }
@@ -24,9 +27,9 @@ $white: whitesmoke;
         td{
           color:$white;
           padding:10px;
-          text-align: center;
           text-transform: uppercase;
           font-size:16px;
+          font-weight:700;
         }
       }
     }
@@ -46,6 +49,14 @@ $white: whitesmoke;
     &:hover{
       background:$black;
       color:$white;
+    }
+    &--blue{
+      border-color:$blue;
+      color:$blue;
+      &:hover{
+        background:$blue;
+        color:$white;
+      }
     }
   }
 }
