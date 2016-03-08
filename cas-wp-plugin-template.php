@@ -19,7 +19,7 @@ get_header();
         <td>Last Modified</td>
         <td>Links</td>
       </tr>
-      <tr ng-repeat="school in schools | filter:search | orderBy:_cas_school_name">
+      <tr ng-repeat="school in schools | filter:search | orderBy:'_cas_school_name'">
         <td><a class="cwp-button">INFO</a><a class="cwp-button">EMAIL</a></td>
         <td> {{school._cas_school_name}}</td>
         <td> {{school._cas_school_city}},  {{school._cas_school_state}}</td>
