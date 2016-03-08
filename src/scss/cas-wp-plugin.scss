@@ -155,13 +155,14 @@ $blue: rgba(101,164,219, 1);
     background:$white;
     border-radius: 5px;
     box-shadow: 0px 3px 5px $gray;
-    overflow: hidden;
     &__header{
       background:$gray--light;
       display:flex;
       justify-content: space-between;
       align-items: stretch;
       padding:10px;
+      overflow: hidden;
+    border-radius: 5px 5px 0px 0px;
       &__logo{
         img{max-width: 200px;height:auto;}
       }
@@ -175,6 +176,9 @@ $blue: rgba(101,164,219, 1);
     &__body{
       background:$white;
       padding:10px;
+      
+      overflow: hidden;
+    border-radius: 0px 0px 5px 5px ;
     }
   }
   
