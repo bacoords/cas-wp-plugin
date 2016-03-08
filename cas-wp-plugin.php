@@ -200,7 +200,7 @@ function cas_plugin_register_custom_meta() {
     register_rest_field( 'cas_school',
         '_cas_school_name',
         array(
-            'get_callback'    => 'cas_plugin_get_custom_meta_name',
+            'get_callback'    => 'cas_plugin_get_custom_meta',
             'update_callback' => null,
             'schema'          => null,
         )
@@ -208,7 +208,15 @@ function cas_plugin_register_custom_meta() {
     register_rest_field( 'cas_school',
         '_cas_school_city',
         array(
-            'get_callback'    => 'cas_plugin_get_custom_meta_name',
+            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+    register_rest_field( 'cas_school',
+        '_cas_school_state',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta',
             'update_callback' => null,
             'schema'          => null,
         )
@@ -224,15 +232,8 @@ function cas_plugin_register_custom_meta() {
  *
  * @return mixed
  */
-function cas_plugin_get_custom_meta_name( $object, $field_name, $request ) {
+function cas_plugin_get_custom_meta( $object, $field_name, $request ) {
     return get_post_meta( $object[ 'id' ], $field_name, true );
 }
-
-//function cas_plugin_get_custom_meta_city( $object, $field_name, $request ) {
-//    return get_post_meta( $object[ 'id' ], $field_name, true );
-//}
-//function cas_plugin_get_custom_meta_state( $object, $field_name, $request ) {
-//    return get_post_meta( $object[ 'id' ], $field_name, true );
-//}
 
 ?>
