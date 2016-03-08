@@ -147,11 +147,11 @@ if ( ! function_exists( 'angular_wp_api_scripts' ) ) :
  */
 function angular_wp_api_scripts() {
 	// Leave if WP-API is not activated
-	if ( ! defined( 'JSON_API_VERSION' ) )
-		return;
+//	if ( ! defined( 'JSON_API_VERSION' ) )
+//		return;
 	// Leave if not specifically requested from the theme or a plugin
-	if ( ! $config = get_theme_support( 'angular-wp-api' ) )
-		return;
+//	if ( ! $config = get_theme_support( 'angular-wp-api' ) )
+//		return;
 	// Array of dependencies
 	$script_dependencies =  array('angular','ngresource','angular-route' );
 	// Data for localization
