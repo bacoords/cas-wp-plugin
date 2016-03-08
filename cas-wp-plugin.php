@@ -160,12 +160,55 @@ add_action( 'plugins_loaded', array( 'PageTemplater', 'get_instance' ) );
 
 
 
+//List of Post Meta
+//$name = get_post_meta( get_the_ID(),'_cas_school_name', true );
+//$subheading = get_post_meta( get_the_ID(),'_cas_school_subheading', true );
+//$mascot = get_post_meta( get_the_ID(),'_cas_school_mascot', true );
+//$colors = get_post_meta( get_the_ID(),'_cas_school_colors', true );
+//$color_hex = get_post_meta( get_the_ID(),'_cas_school_color_hex', true );
+//$progorpost = get_post_meta( get_the_ID(),'_cas_school_poster_program', true );
+//$description = get_post_meta( get_the_ID(),'_cas_school_description', true );
+//$season_sports = get_post_meta( get_the_ID(),'_cas_school_season_sports', true );
+//$info_field_sports = get_post_meta( get_the_ID(),'_cas_school_info_field_sports', true );
+//$address = get_post_meta( get_the_ID(),'_cas_school_address', true );
+//$city = get_post_meta( get_the_ID(),'_cas_school_city', true );
+//$state = get_post_meta( get_the_ID(),'_cas_school_state', true );
+//$zip = get_post_meta( get_the_ID(),'_cas_school_zip', true );
+//$leads = get_post_meta( get_the_ID(),'_cas_school_leads', true );
+//$website_url = get_post_meta( get_the_ID(),'_cas_school_site_url', true );
+//$contact_name = get_post_meta( get_the_ID(),'_cas_school_contact_name', true );
+//$contact_title = get_post_meta( get_the_ID(),'_cas_school_contact_title', true );
+//$contact_phone = get_post_meta( get_the_ID(),'_cas_school_contact_phone', true );
+//$contact_email = get_post_meta( get_the_ID(),'_cas_school_contact_email', true );
+//$logo = get_post_meta( get_the_ID(),'_cas_school_logo', true );
+//$background = get_post_meta( get_the_ID(),'_cas_school_background', true );
+//$previous_posters = get_post_meta( get_the_ID(),'_cas_school_previous_posters', true );
+//$testimonial_text = get_post_meta( get_the_ID(),'_cas_school_testimonial_text', true );
+//$testimonial_name = get_post_meta( get_the_ID(),'_cas_school_testimonial_name', true );
+//$testimonial_business_name = get_post_meta( get_the_ID(),'_cas_school_testimonial_business_name', true );
+//$testimonial_business_url = get_post_meta( get_the_ID(),'_cas_school_testimonial_business_url', true );
+//$testimonial_achievements = get_post_meta( get_the_ID(),'_cas_school_testimonial_achievements', true );
+
+
+
+
+
+
+
 add_action( 'rest_api_init', 'cas_plugin_register_custom_meta' );
 function cas_plugin_register_custom_meta() {
     register_rest_field( 'cas_school',
         '_cas_school_name',
         array(
-            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'get_callback'    => 'cas_plugin_get_custom_meta_name',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+    register_rest_field( 'cas_school',
+        '_cas_school_city',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta_city',
             'update_callback' => null,
             'schema'          => null,
         )
@@ -181,7 +224,11 @@ function cas_plugin_register_custom_meta() {
  *
  * @return mixed
  */
-function cas_plugin_get_custom_meta( $object, $field_name, $request ) {
+function cas_plugin_get_custom_meta_name( $object, $field_name, $request ) {
+    return get_post_meta( $object[ 'id' ], $field_name, true );
+}
+
+function cas_plugin_get_custom_meta_city( $object, $field_name, $request ) {
     return get_post_meta( $object[ 'id' ], $field_name, true );
 }
 
