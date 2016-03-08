@@ -48,7 +48,7 @@ get_header();
     <BR><BR><BR><BR><BR>
     
     <div class="cwp-modal-overlay" ng-show="isShowingModal">
-       <a class="cwp-button cwp-modal-close" ng-click="showModal(-1)">Close</a>
+       <a class="cwp-button cwp-modal-close" ng-click="showModal(-1)">&#10006;</a>
       <div class="cwp-modal">
         <div class="cwp-modal__header">
            <div class="cwp-modal__header__logo">
@@ -59,9 +59,9 @@ get_header();
              {{modalSchool._cas_school_city}},  {{modalSchool._cas_school_state}}
            </div>
            <div class="cwp-modal__header__buttons">
-             <a href="#" class="cwp-button">send email</a><BR>
-             <a href="#" class="cwp-button">current sales</a><BR>
-             <a href="#" class="cwp-button">print page</a><BR>
+             <a href="#" class="cwp-button cwp-button--full">send email</a><BR>
+             <a href="#" class="cwp-button cwp-button--full">current sales</a><BR>
+             <a href="#" class="cwp-button cwp-button--full">print page</a><BR>
            </div>
           
            

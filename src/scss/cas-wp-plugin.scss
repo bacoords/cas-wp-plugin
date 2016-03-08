@@ -115,6 +115,9 @@ $blue: rgba(101,164,219, 1);
         color:$white;
       }
     }
+    &--full{
+      width:100%;
+    }
   }
   
   
@@ -155,6 +158,7 @@ $blue: rgba(101,164,219, 1);
       display:flex;
       justify-content: space-between;
       align-items: stretch;
+      padding:10px
       &__logo{
         img{max-width: 200px;height:auto;}
       }
@@ -167,6 +171,7 @@ $blue: rgba(101,164,219, 1);
     }
     &__body{
       background:$white;
+      padding:10px
     }
   }
   
