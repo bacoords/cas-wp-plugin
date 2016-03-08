@@ -183,34 +183,34 @@ add_action( 'wp_enqueue_scripts', 'cas_plugin_enqueue_script' );
 
 
 //List of Post Meta
-//$name = get_post_meta( get_the_ID(),'_cas_school_name', true );
-//$subheading = get_post_meta( get_the_ID(),'_cas_school_subheading', true );
-//$mascot = get_post_meta( get_the_ID(),'_cas_school_mascot', true );
-//$colors = get_post_meta( get_the_ID(),'_cas_school_colors', true );
-//$color_hex = get_post_meta( get_the_ID(),'_cas_school_color_hex', true );
-//$progorpost = get_post_meta( get_the_ID(),'_cas_school_poster_program', true );
-//$description = get_post_meta( get_the_ID(),'_cas_school_description', true );
-//$season_sports = get_post_meta( get_the_ID(),'_cas_school_season_sports', true );
-//$info_field_sports = get_post_meta( get_the_ID(),'_cas_school_info_field_sports', true );
-//$address = get_post_meta( get_the_ID(),'_cas_school_address', true );
-//$city = get_post_meta( get_the_ID(),'_cas_school_city', true );
-//$state = get_post_meta( get_the_ID(),'_cas_school_state', true );
-//$zip = get_post_meta( get_the_ID(),'_cas_school_zip', true );
-//$leads = get_post_meta( get_the_ID(),'_cas_school_leads', true );
-//$website_url = get_post_meta( get_the_ID(),'_cas_school_site_url', true );
-//$contact_name = get_post_meta( get_the_ID(),'_cas_school_contact_name', true );
-//$contact_title = get_post_meta( get_the_ID(),'_cas_school_contact_title', true );
-//$contact_phone = get_post_meta( get_the_ID(),'_cas_school_contact_phone', true );
-//$contact_email = get_post_meta( get_the_ID(),'_cas_school_contact_email', true );
-//$logo = get_post_meta( get_the_ID(),'_cas_school_logo', true );
-//$background = get_post_meta( get_the_ID(),'_cas_school_background', true );
-//$previous_posters = get_post_meta( get_the_ID(),'_cas_school_previous_posters', true );
-//$testimonial_text = get_post_meta( get_the_ID(),'_cas_school_testimonial_text', true );
-//$testimonial_name = get_post_meta( get_the_ID(),'_cas_school_testimonial_name', true );
-//$testimonial_business_name = get_post_meta( get_the_ID(),'_cas_school_testimonial_business_name', true );
-//$testimonial_business_url = get_post_meta( get_the_ID(),'_cas_school_testimonial_business_url', true );
-//$testimonial_achievements = get_post_meta( get_the_ID(),'_cas_school_testimonial_achievements', true );
-
+//_cas_school_name', true );
+//'_cas_school_subheading', true );
+//'_cas_school_mascot', true );
+//'_cas_school_colors', true );
+//'_cas_school_color_hex', true );
+//'_cas_school_poster_program', true );
+//'_cas_school_description', true );
+//'_cas_school_season_sports', true );
+//'_cas_school_info_field_sports', true );
+//'_cas_school_address', true );
+//'_cas_school_city', true );
+//'_cas_school_state', true );
+//'_cas_school_zip', true );
+//'_cas_school_leads', true );
+//'_cas_school_site_url', true );
+//'_cas_school_contact_name', true );
+//'_cas_school_contact_title', true );
+//'_cas_school_contact_phone', true );
+//'_cas_school_contact_email', true );
+//'_cas_school_logo', true );
+//'_cas_school_background', true );
+//'_cas_school_previous_posters', true );
+//'_cas_school_testimonial_text', true );
+//'_cas_school_testimonial_name', true );
+//'_cas_school_testimonial_business_name', true );
+//'_cas_school_testimonial_business_url', true );
+//'_cas_school_testimonial_achievements', true );
+//'_cas_school_team_bank_url
 
 
 
@@ -237,6 +237,14 @@ function cas_plugin_register_custom_meta() {
     );
     register_rest_field( 'cas_school',
         '_cas_school_state',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+    register_rest_field( 'cas_school',
+        '_cas_school_team_bank_url',
         array(
             'get_callback'    => 'cas_plugin_get_custom_meta',
             'update_callback' => null,
