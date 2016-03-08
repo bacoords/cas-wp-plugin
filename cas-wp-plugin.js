@@ -28,5 +28,9 @@ angular.module('backendApp', ['wp.api'])
 //    $scope.schools = response.data;
 //    console.log($scope.schools);
 //  });
+    $scope.schools = wpAPIResource.query( {
+      param1: 'cas_school'
+    } );
+
   $scope.search = '';
 });
