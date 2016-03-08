@@ -24,7 +24,7 @@ get_header();
         <td> {{school._cas_school_name}}</td>
         <td> {{school._cas_school_city}},  {{school._cas_school_state}}</td>
         <td>{{school.modified | date: 'M/d/yy'}}</td> 
-        <td><a ng-href="school.link" class="cwp-button">CAS</a><a ng-href="school._cas_school_team_bank_url" ng-if="school._cas_school_team_bank_url" class="cwp-button">TB</a></td>
+        <td><a ng-href="{{school.link}}" class="cwp-button">CAS</a><a ng-href="school._cas_school_team_bank_url" ng-if="school._cas_school_team_bank_url" class="cwp-button">TB</a></td>
       
       </tr>
     </table>
