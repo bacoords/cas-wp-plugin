@@ -11,16 +11,22 @@ $white: whitesmoke;
     width: 960px;
     margin: 0 auto;
     tr{
+      td{
+        padding:3px;
+      }
       &:nth-of-type(odd){
         background:$gray;
         td{
-          color:$white;
         }
       }
       &:nth-of-type(1){ 
         background:$gray--dark;
         td{
           color:$white;
+          padding:10px;
+          text-align: center;
+          text-transform: uppercase;
+          font-size:16px;
         }
       }
     }
@@ -36,6 +42,7 @@ $white: whitesmoke;
     font-size: 14px;
     transition:all 300ms ease;
     text-decoration: none;
+    cursor: pointer;
     &:hover{
       background:$black;
       color:$white;
