@@ -14,11 +14,12 @@ wp.api = wp.api || angular.module( 'wp.api', [ 'ngResource' ] )
 		);
 
 	}]);
+
+
+
 angular.module('backendApp', ['wp.api'])
 
-
-
-.controller('backendCtrl', function($scope, $http, wpAPIResource){
+.controller('backendCtrl', function($scope, $http, wpAPIResource, wpAPIData){
 //  $http.get('http://cas.threecordsstudio.com/wp-json/wp/v2/cas_school')
 //    .then(function(response){
 //    $scope.schools = response.data;
