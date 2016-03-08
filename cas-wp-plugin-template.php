@@ -7,10 +7,23 @@ get_header();
   <h1 class="center">Custom Backend!</h1>
   <div ng-controller="backendCtrl">
    
-    <ul>
+    <table>
+      <tr>
+       <td>Shortcuts</td>
+        <td>School</td>
+        <td>Location</td>
+        <td>Last Modified</td>
+        <td>Links</td>
+      </tr>
+      <tr ng-repeat="school in schools">
+        <td>===</td>
+        <td> {{school._cas_school_name}}</td>
+        <td> {{school._cas_school_city}},  {{school._cas_school_state}}</td>
+        <td>{{school.modified | date: 'M/d/yy'}}</td> 
+        <td>===</td>
       
-      <li ng-repeat="school in schools">{{school.title.rendered}} &amp; {{school._cas_school_name}}</li>
-    </ul>
+      </tr>
+    </table>
     
     
   </div>
