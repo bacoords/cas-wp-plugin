@@ -50,6 +50,8 @@ get_header();
     <div class="cwp-modal-overlay" ng-show="isShowingModal">
       <div class="cwp-modal">
         <div class="cwp-modal__header">
+           {{modalSchool._cas_school_name}} <br>
+           {{school._cas_school_city}},  {{school._cas_school_state}}
           <a class="cwp-button" ng-click="showModal(-1)">Close</a>
         </div>
          <div class="cwp-modal__body">
