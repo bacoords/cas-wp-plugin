@@ -32,7 +32,7 @@ get_header();
       </tr>
       <tr ng-repeat="school in schools | filter:search | orderBy:'_cas_school_name'">
         <td>
-          <a class="cwp-button cwp-button--blue" ng-click="showModal(school.id)">+info</a>
+          <a class="cwp-button cwp-button--blue" ng-click="showModal(school)">+info</a>
           <a class="cwp-button">email</a>
         </td>
         <td> {{school._cas_school_name}}</td>
