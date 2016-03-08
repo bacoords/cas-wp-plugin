@@ -5,10 +5,6 @@ window.wp = window.wp || {};
 wp.api = wp.api || angular.module( 'wp.api', [ 'ngResource' ] )
  
 
-
-
-angular.module('backendApp', ['wp.api'])
-
 	// API resource
 	.factory( 'wpAPIResource', [ '$resource', function ( $resource ) {
 
@@ -19,7 +15,11 @@ angular.module('backendApp', ['wp.api'])
 			}
 		);
 
-	}])
+	}]);
+
+
+angular.module('backendApp', ['wp.api'])
+
 
 
 .controller('backendCtrl', function($scope, $http, wpAPIResource){
