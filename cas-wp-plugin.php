@@ -140,6 +140,34 @@ add_action( 'plugins_loaded', array( 'PageTemplater', 'get_instance' ) );
 
 
 
+
+
+
+
+
+
+
+//enqueue scripts
+
+
+function cas_plugin_enqueue_script() {
+  if(is_page_template( 'cas-wp-plugin-template.php')){
+    
+ 	  wp_enqueue_script('angular', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js', array('jquery'));
+    
+    wp_enqueue_script( 'ngresource', '//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-resource.min.js', array( 'angular' ) );
+    
+    wp_enqueue_script( 'cas-plugin-js', 'http://cas.threecordsstudio.com/wp-content/plugins/cas-wp-plugin/cas-wp-plugin.js', array( 'jquery','angular','ngresource','angular-wp-api' ) );   
+  }
+
+}
+add_action( 'wp_enqueue_scripts', 'cas_plugin_enqueue_script' );
+
+
+
+
+
+
 //Angular Set UP
 defined( 'ABSPATH' ) || die;
 if ( ! function_exists( 'angular_wp_api_scripts' ) ) :
@@ -189,28 +217,9 @@ function angular_wp_api_scripts() {
 add_action( 'wp_enqueue_scripts', 'angular_wp_api_scripts' );
 endif;
 
-add_theme_support( 'angular-wp-api' );
+//add_theme_support( 'angular-wp-api' );
 
 
-
-
-
-
-
-//enqueue scripts
-
-
-function cas_plugin_enqueue_script() {
-  if(is_page_template( 'cas-wp-plugin-template.php')){
-    
-    wp_enqueue_script( 'cas-plugin-js', 'http://cas.threecordsstudio.com/wp-content/plugins/cas-wp-plugin/cas-wp-plugin.js', array( 'jquery','angular','ngresource','angular-wp-api' ) ); 
-    
-    wp_enqueue_script( 'ngresource', '//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-resource.min.js', array( 'angular' ) );
-  
-  }
-
-}
-add_action( 'wp_enqueue_scripts', 'cas_plugin_enqueue_script' );
 
 
 
