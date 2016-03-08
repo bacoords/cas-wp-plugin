@@ -1,0 +1,28 @@
+$black: #494949;
+$blue: blue;
+$red: red;
+$gray: #d6d6d6;
+$white: whitesmoke;
+
+.cwp{
+  font-family: 'Lato', sans-serif;
+  table{
+    width: 960px;
+    margin: 0 auto;
+  } 
+  .cwp-button{
+    display: block;
+    padding: 7px;
+    float: left;
+    border: 1px solid $black;
+    margin: 3px;
+    color:$black;
+    border-radius: 3px;
+    font-size: 14px;
+    transition:all 300ms ease;
+    &.hover{
+      background:$black;
+      color:$white;
+    }
+  }
+}

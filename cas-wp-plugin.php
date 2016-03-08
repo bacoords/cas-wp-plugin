@@ -157,7 +157,10 @@ function cas_plugin_enqueue_script() {
 }
 add_action( 'wp_enqueue_scripts', 'cas_plugin_enqueue_script' );
 
-
+function cas_plugin_enqueue_style() {
+    wp_enqueue_style( 'cas-plugin-style', 'http://cas.threecordsstudio.com/wp-content/plugins/cas-wp-plugin/dist/css/cas-wp-plugin.css' ); 
+}
+add_action( 'wp_enqueue_scripts', 'cas_plugin_enqueue_style' );
 
 
 
