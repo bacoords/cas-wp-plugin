@@ -37,5 +37,18 @@ angular.module('backendApp', ['wp.api'])
   
   //Variables for sort/order
   $scope.search = '';
-  $scope.order_col = '_cas_school_name';
+  
+  
+  //Modal
+  $scope.isShowingModal = false;
+  $scope.showModal = function(i){
+    if(i>-1){
+      console.log = i;
+      $scope.isShowingModal = true;
+      return;
+    }else{
+      $scope.isShowingModal = false;
+      return;
+    }
+  }
 });

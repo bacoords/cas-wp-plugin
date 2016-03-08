@@ -32,7 +32,7 @@ get_header();
       </tr>
       <tr ng-repeat="school in schools | filter:search | orderBy:'_cas_school_name'">
         <td>
-          <a class="cwp-button cwp-button--blue">+info</a>
+          <a class="cwp-button cwp-button--blue" ng-click="showModal(school.id)">+info</a>
           <a class="cwp-button">email</a>
         </td>
         <td> {{school._cas_school_name}}</td>
@@ -47,9 +47,14 @@ get_header();
     </table>
     <BR><BR><BR><BR><BR>
     
-    <div class="cwp-modal-overlay">
+    <div class="cwp-modal-overlay" ng-show="isShowingModal">
       <div class="cwp-modal">
-        TEST
+        <div class="cwp-modal__header">
+          <a class="cwp-button" ng-click="showModal(-1)">Close</a>
+        </div>
+         <div class="cwp-modal__body">
+          
+        </div>
       </div>
     </div>
     
