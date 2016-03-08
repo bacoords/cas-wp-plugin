@@ -42,7 +42,7 @@ angular.module('backendApp', ['wp.api'])
   //Modal
   $scope.isShowingModal = false;
   $scope.showModal = function(i){
-    jQuery('body').toggleClass('modal-open');
+    jQuery(document.body).toggleClass('modal-open');
     if(i>-1){
       console.log(i);
       $scope.isShowingModal = true;
