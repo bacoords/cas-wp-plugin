@@ -4,8 +4,12 @@ get_header();
 <div class="cas-wp-plugin" ng-app="backendApp">
 
 
-  <h1 class="center">Custom Backend!</h1>
+  <h1 class="center">Schools Backend</h1>
   <div ng-controller="backendCtrl">
+   
+   
+   <input type="text" ng-model="search">
+   
    
     <table>
       <tr>
@@ -15,7 +19,7 @@ get_header();
         <td>Last Modified</td>
         <td>Links</td>
       </tr>
-      <tr ng-repeat="school in schools">
+      <tr ng-repeat="school in schools | filter:search">
         <td>===</td>
         <td> {{school._cas_school_name}}</td>
         <td> {{school._cas_school_city}},  {{school._cas_school_state}}</td>

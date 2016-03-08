@@ -10,4 +10,6 @@ angular.module('backendApp', [])
     $scope.schools = response.data;
     console.log($scope.schools);
   });
+  
+  $scope.search = '';
 });
