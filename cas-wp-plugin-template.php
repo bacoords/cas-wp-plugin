@@ -6,8 +6,10 @@ get_header();
 
   <h1 class="center">Custom Backend!</h1>
   <div ng-controller="backendCtrl">
-    <p>{{test}}</p>
-    
+    <ul>
+      
+      <li ng-repeat="school in schools">{{school.title}} &amp; {{school._cas_school_name}}</li>
+    </ul>
     
     
   </div>
