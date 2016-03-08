@@ -44,7 +44,7 @@ angular.module('backendApp', ['wp.api'])
   $scope.showModal = function(i){
     jQuery(document.body).toggleClass('modal-open');
     if(i>-1){
-      $scope.modalSchool = wpAPIResource.query( {
+      $scope.modalSchool = wpAPIResource.get( {
         param1: 'cas_school',
         param2: i
       } );
