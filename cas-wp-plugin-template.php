@@ -48,6 +48,7 @@ get_header();
     <BR><BR><BR><BR><BR>
     
     <div class="cwp-modal-overlay" ng-show="isShowingModal">
+       <a class="cwp-button cwp-modal-close" ng-click="showModal(-1)">Close</a>
       <div class="cwp-modal">
         <div class="cwp-modal__header">
            <div class="cwp-modal__header__logo">
@@ -64,7 +65,7 @@ get_header();
            </div>
           
            
-          <a class="cwp-button" ng-click="showModal(-1)">Close</a>
+          
         </div>
          <div class="cwp-modal__body">
           

@@ -132,6 +132,13 @@ $blue: rgba(101,164,219, 1);
     overflow: scroll;
     z-index: 110000;
   }
+  .cwp-modal-close{
+    position:relative;
+    top:0;
+    border-radius: 300px;    
+    width: 45px;
+    height: 45px;
+  }
   .cwp-modal{
     position:relative;
     top:0;
