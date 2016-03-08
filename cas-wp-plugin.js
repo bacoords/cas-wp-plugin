@@ -43,7 +43,7 @@ angular.module('backendApp', ['wp.api'])
   $scope.isShowingModal = false;
   $scope.showModal = function(i){
     if(i>-1){
-      console.log = i;
+      console.log(i);
       $scope.isShowingModal = true;
       return;
     }else{
