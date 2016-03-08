@@ -9,6 +9,34 @@ $blue: rgba(101,164,219, 1);
 
 .cwp{
   font-family: 'Lato', sans-serif;
+  .cwp-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0px 3px 5px $gray;
+    &__logo{
+      
+    }
+    &__search{
+      flex-grow: 2;
+    }
+    &__calendar{
+      
+    }
+  }
+  
+  
+  //Search Field
+  .cwp-search{
+    height: 90px;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+  }
+  
+  
+  //Table Styles
   table{
     width: 960px;
     margin: 0 auto;    
@@ -34,6 +62,9 @@ $blue: rgba(101,164,219, 1);
       }
     }
   } 
+  
+  
+  //Button Styles
   a.cwp-button{
     display: block;
     padding: 7px;

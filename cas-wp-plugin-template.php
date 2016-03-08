@@ -7,8 +7,17 @@ get_header();
   <h1 class="center">Schools Backend</h1>
   <div ng-controller="backendCtrl">
    
-   
-   <input type="text" ng-model="search">
+   <div class="cwp-header">
+     <div class="cwp-header__logo">
+       CAS
+     </div>
+     <div class="cwp-header__search">
+       <input type="text" ng-model="search" class="cwp-search" placeholder="Search Our Schools">
+     </div>
+     <div class="cwp-header__calendar">
+       CALENDAR THING
+     </div>
+   </div>
    
    
     <table>
@@ -20,7 +29,7 @@ get_header();
         <td>Links</td>
       </tr>
       <tr ng-repeat="school in schools | filter:search | orderBy:'_cas_school_name'">
-        <td><a class="cwp-button cwp-button--blue">INFO</a><a class="cwp-button">EMAIL</a></td>
+        <td><a class="cwp-button cwp-button--blue">+info</a><a class="cwp-button">email</a></td>
         <td> {{school._cas_school_name}}</td>
         <td> {{school._cas_school_city}},  {{school._cas_school_state}}</td>
         <td>{{school.modified | date: 'M/d/yy'}}</td> 
@@ -28,7 +37,7 @@ get_header();
       
       </tr>
     </table>
-    
+    <BR><BR><BR><BR><BR>
     
   </div>
 
