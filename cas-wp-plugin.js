@@ -34,5 +34,8 @@ angular.module('backendApp', ['wp.api'])
     param1: 'users',
     param2: wpAPIData.user_id
     } );
+  
+  //Variables for sort/order
   $scope.search = '';
+  $scope.order_col = '_cas_school_name';
 });
