@@ -56,7 +56,11 @@ get_header();
              <img ng-src="{{modalSchool._cas_school_logo}}" alt="{{modalSchool._cas_school_name}} Logo">
            </div>
            <div class="cwp-modal__header__desc padding">
-             <span class="cwp-modal__header__desc__title">{{modalSchool._cas_school_name}} </span><br>
+             <span class="cwp-modal__header__desc__title">
+               <strong>{{modalSchool._cas_school_name}} </strong>
+               <br>
+               {{modalSchool._cas_school_subheading}} 
+             </span><br>
              {{modalSchool._cas_school_address}} {{modalSchool._cas_school_city}}, {{modalSchool._cas_school_state}} {{modalSchool._cas_school_zip}} <BR>
              Product: <strong>{{modalSchool._cas_school_poster_program}}</strong>
              Seasons: <strong>{{modalSchool._cas_school_season_sports}}</strong>
@@ -107,7 +111,7 @@ get_header();
                   <!-- nearby Schools -->
                   
                   
-                  <div class="cwp-map" ng-bind-html="showMap(modalSchool._cas_school_address, modalSchool._cas_school_city, modalSchool._cas_school_state, modalSchool._cas_school_zip)">
+                  <div class="cwp-map" ng-bind-html="createMap(modalSchool._cas_school_address, modalSchool._cas_school_city, modalSchool._cas_school_state, modalSchool._cas_school_zip)">
                     
                   </div>
                   
