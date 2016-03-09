@@ -271,6 +271,9 @@ if(is_user_logged_in ()){ ?>
     </div>
     <div class="cwp-login-form_body">
        <?php wp_login_form(); ?>
+       <br>
+       <p class="center">Password is changed periodically, ask management for current password.</p>
+       <br>
     </div>
     
   </div>

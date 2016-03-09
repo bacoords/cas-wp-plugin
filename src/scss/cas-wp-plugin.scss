@@ -268,7 +268,10 @@ $blue: rgba(101,164,219, 1);
 
 .cwp-login-form{
   width:500px;
-  margin:0 auto;
+  margin:0 auto;border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 3px 18px rgba(0,0,0,0.5);
+
   &_header{
     background:rgba(220,32,43,1);
     img{
@@ -280,12 +283,17 @@ $blue: rgba(101,164,219, 1);
   &_body{
     background:$white;
     padding:40px;
+    p{
+      display: block;
+      text-align: center;
+      font-size: 14px;
+    }
   }
   #loginform{
     label{
       display:none;
     }
-    input[type=text]{
+    input[type=text], input[type=password]{
       padding: 15px;
       background: #fff;
       border-radius: 3px;
@@ -298,6 +306,7 @@ $blue: rgba(101,164,219, 1);
       background: #ccc;
       border: none;
       padding: 15px;
+      cursor: pointer;
       border-radius: 5px;
       width: 100px;
       font-size: 20px;
