@@ -76,7 +76,7 @@ if(is_user_logged_in ()){ ?>
     <br><br><br>
     
     <div class="cwp-modal-overlay ng-hide" ng-show="isShowingModal">
-      <div class="cwp-modal">
+      <div class="cwp-modal cwp-modal__print">
        
        <a class="cwp-button cwp-modal-close" ng-click="showModal(-1)">&#10006;</a>
         <div class="cwp-modal__header">
