@@ -62,9 +62,9 @@ get_header();
              Seasons: <strong>{{modalSchool._cas_school_season_sport}}</strong>
            </div>
            <div class="cwp-modal__header__buttons">
-             <a href="#" class="cwp-button cwp-button--full cwp-button--large cwp-button-faded">send email</a><BR>
-             <a href="#" class="cwp-button cwp-button--full cwp-button--large cwp-button-faded">current sales</a><BR>
-             <a href="#" class="cwp-button cwp-button--full cwp-button--large cwp-button-faded">print page</a><BR>
+             <a href="#" class="cwp-button cwp-button--full cwp-button--large cwp-button--faded">send email</a><BR>
+             <a href="#" class="cwp-button cwp-button--full cwp-button--large cwp-button--faded">current sales</a><BR>
+             <a href="#" class="cwp-button cwp-button--full cwp-button--large cwp-button--faded">print page</a><BR>
            </div>
           
            
