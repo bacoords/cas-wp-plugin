@@ -28,7 +28,7 @@ get_header();
         <td>Last Modified</td>
         <td>Links</td>
       </tr>
-      <tr ng-repeat="school in schools | filter:search | orderBy:'_cas_school_name'">
+      <tr ng-repeat="school in schools | filter:search | orderBy:sortType:sortReverse">
         <td>
           <a class="cwp-button cwp-button--blue" ng-click="showModal(school.id)">+info</a>
           <a class="cwp-button">email</a>
