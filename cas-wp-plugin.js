@@ -73,7 +73,7 @@ angular.module('backendApp', ['wp.api'])
   
   //get nearby schools
   $scope.nearbySchools = function(a){
-    if(a.length > 0){
+    if(a){
       var z = [];
       for(var i = 0; i < a.length; i++){
         z.push(wpAPIResource.get( {
