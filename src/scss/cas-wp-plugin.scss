@@ -7,6 +7,14 @@ $gray--light: #eee;
 $white: #fff;
 $blue: rgba(101,164,219, 1);
 
+
+//override nav
+
+.cas-nav-top, .cas-nav, cn-nav-shim{
+  display:none !important;
+}
+
+
 .cwp{
   font-family: 'Lato', sans-serif;
   background:#f3f3f3;
@@ -190,6 +198,9 @@ $blue: rgba(101,164,219, 1);
       }
       &__desc{
         flex-grow: 3;
+        &__title{
+          font-size:20px;
+        }
       }
       &__buttons{
         
