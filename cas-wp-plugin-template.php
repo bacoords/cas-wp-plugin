@@ -37,8 +37,8 @@ get_header();
         <td> {{school._cas_school_city}},  {{school._cas_school_state}}</td>
         <td>{{school.modified | date: 'M/d/yy'}}</td> 
         <td>
-          <a ng-href="{{school.link}}" class="cwp-button" target="_blank">CAS</a>
-          <a ng-href="{{school._cas_school_team_bank_url}}" class="cwp-button" target="_blank">TB</a>
+          <a ng-href="{{school.link}}" class="cwp-button" target="_blank"><img src="https://communityallstars.com/wp-content/uploads/2016/03/casicontiny.png" alt="CAS Icon"></a>
+          <a ng-href="{{school._cas_school_team_bank_url}}" class="cwp-button" target="_blank"><img src="https://communityallstars.com/wp-content/uploads/2016/03/teambankicon.png" alt="TB Icon"></a>
         </td>
       
       </tr>
@@ -71,12 +71,12 @@ get_header();
               </div>
             </div>
             <div class="frame">
-              <div class="bit-2">
+              <div class="bit-40">
                 <div class="padding">
                   Product: <strong><span class="cwp-modal__header__desc__product">{{modalSchool._cas_school_poster_program}}</span></strong>
                 </div>
               </div>
-              <div class="bit-2">
+              <div class="bit-60">
                 <div class="padding">
                   Seasons: <strong>{{modalSchool._cas_school_season_sports}}</strong>
                 </div>
@@ -154,14 +154,16 @@ get_header();
                   <div class="frame">
                     <div class="bit-1">
                       <div class="padding">
-                        <a ng-href="{{modalSchool.link}}" class="cwp-button" target="_blank">CAS</a> {{modalSchool.link}}
+                        <a ng-href="{{modalSchool.link}}" class="cwp-button" target="_blank"><img src="https://communityallstars.com/wp-content/uploads/2016/03/casicontiny.png" alt="CAS Icon"></a> {{modalSchool.link}}
                       </div>
                     </div>
                   </div>
                   <div class="frame">
                     <div class="bit-1">
                       <div class="padding">
-                        <a ng-href="{{modalSchool._cas_school_team_bank_url}}" class="cwp-button" target="_blank">TB</a> {{modalSchool._cas_school_team_bank_url}}
+                        <a ng-href="{{modalSchool._cas_school_team_bank_url}}" class="cwp-button" target="_blank">
+                          <img src="https://communityallstars.com/wp-content/uploads/2016/03/teambankicon.png" alt="TB Icon">
+                        </a> {{modalSchool._cas_school_team_bank_url}}
                       </div>
                     </div>
                   </div>

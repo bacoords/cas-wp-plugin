@@ -187,7 +187,6 @@ $blue: rgba(101,164,219, 1);
     background:$white;
     border-radius: 5px;
     box-shadow: 0 3px 25px $black;
-    line-height: 1.4;
     &__header{
       background:$gray--light;
       display:flex;
@@ -226,6 +225,7 @@ $blue: rgba(101,164,219, 1);
       background:$white;
       padding:30px;
       font-weight:300;
+    line-height: 1.5;
       overflow: hidden;
     border-radius: 0px 0px 5px 5px ;
     }

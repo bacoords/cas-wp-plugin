@@ -360,6 +360,14 @@ function cas_plugin_register_custom_meta() {
             'schema'          => null,
         )
     );
+    register_rest_field( 'cas_school',
+        '_cas_school_attached_cmb2_attached_posts',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
 }
 
 /**
