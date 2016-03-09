@@ -62,9 +62,9 @@ angular.module('backendApp', ['wp.api'])
   
   //google map creator
   $scope.createMap = function(i, j, k, l){
-    var map = '<div class="google-maps"><iframe width="800" height="200" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAF9M0oLUumyRJ-0NMlKt-rmXyik_4K7ag&q=';
-		map += i + '+' + j + ',' +k + '+' + l;		
-    map += '"></iframe></div>';
-    return $sce.trustAsResourceUrl(map);
+    var map = 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAF9M0oLUumyRJ-0NMlKt-rmXyik_4K7ag&q=' += i + '+' + j + ',' +k + '+' + l;		
+    console.log(map);
+    var safe = $sce.trustAsResourceUrl(map)
+    return safe;
   }
 });
