@@ -247,10 +247,23 @@ if(is_user_logged_in ()){ ?>
   </div>
 </div>
 <?php }else{ ?>
+<div class="cwp cas-wp-plugin" >
 
- 
-  <h1 class="center">Please <a href="<?php echo wp_login_url( get_permalink() ); ?>" title="Login">Login</a></h1>
+
    
+   <div class="cwp-header">
+     <div class="cwp-header__logo">
+       <img src="http://cas.threecordsstudio.com/wp-content/uploads/2015/11/cropped-webclip.png" alt="CAS LOGO">
+     </div>
+     <div class="cwp-header__search">
+        <h1>Schools Portal</h1>
+     </div>
+  </div>
+  <BR><BR><BR><BR><BR><BR>
+ <?php wp_login_form(); ?>
+ <BR><BR><BR><BR><BR><BR>
+</div>
+      
 <?php 
 }
 
