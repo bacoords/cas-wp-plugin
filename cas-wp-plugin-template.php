@@ -55,11 +55,11 @@ get_header();
            <div class="cwp-modal__header__logo">
              <img ng-src="{{modalSchool._cas_school_logo}}" alt="{{modalSchool._cas_school_name}} Logo">
            </div>
-           <div class="cwp-modal__header__desc">
+           <div class="cwp-modal__header__desc padding">
              {{modalSchool._cas_school_name}} <br>
              {{modalSchool._cas_school_address}} {{modalSchool._cas_school_city}}, {{modalSchool._cas_school_state}} {{modalSchool._cas_school_zip}} <BR>
              Product: <strong>{{modalSchool._cas_school_poster_program}}</strong>
-             Seasons: <strong>{{modalSchool._cas_school_season_sport}}</strong>
+             Seasons: <strong>{{modalSchool._cas_school_season_sports}}</strong>
            </div>
            <div class="cwp-modal__header__buttons">
              <a href="#" class="cwp-button cwp-button--full cwp-button--large cwp-button--faded">send email</a><BR>
@@ -85,6 +85,14 @@ get_header();
                      <div class="padding">
                         {{modalSchool._cas_school_contact_phone}}<BR>
                         {{modalSchool._cas_school_contact_email}}
+                     </div>
+                   </div>
+                 </div>
+                 <div class="frame">
+                   <div class="bit-1">
+                     <div class="padding">
+                       <strong>About the School:</strong><br>
+                       <p>{{modalSchool._cas_school_description}}</p>
                      </div>
                    </div>
                  </div>
