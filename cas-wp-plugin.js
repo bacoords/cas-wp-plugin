@@ -19,7 +19,7 @@
 
 angular.module('backendApp', ['wp.api'])
 
-.controller('backendCtrl', function($scope, $http, wpAPIResource){
+.controller('backendCtrl', function($scope, $sce, $http, wpAPIResource){
 //  $http.get('http://cas.threecordsstudio.com/wp-json/wp/v2/cas_school')
 //    .then(function(response){
 //    $scope.schools = response.data;
@@ -65,6 +65,6 @@ angular.module('backendApp', ['wp.api'])
     var map = '<div class="google-maps"><iframe width="800" height="200" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAF9M0oLUumyRJ-0NMlKt-rmXyik_4K7ag&q=';
 		map += i + '+' + j + ',' +k + '+' + l;		
     map += '"></iframe></div>';
-    return map;
+    return $sce.trustAsResourceUrl(map);
   }
 });
