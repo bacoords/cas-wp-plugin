@@ -20,7 +20,7 @@ angular.module('backendApp', ['wp.api'])
   //Variables for sort/order
   $scope.search = '';
   $scope.sortType = '_cas_school_name';
-  $scope.sortReverse = true;
+  $scope.sortReverse = false;
   
   //Modal
   $scope.isShowingModal = false;

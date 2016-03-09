@@ -105,7 +105,7 @@ get_header();
              
            </div>
            <div class="cwp-modal__header__buttons">
-             <a class="cwp-button cwp-button--full cwp-button--large cwp-button--faded" ng-click="showEmail(school.id)">send email</a><BR>
+             <a class="cwp-button cwp-button--full cwp-button--large cwp-button--faded" ng-click="showEmail(modalSchool.id)">send email</a><BR>
              <a class="cwp-button cwp-button--full cwp-button--large cwp-button--faded">current sales</a><BR>
              <a class="cwp-button cwp-button--full cwp-button--large cwp-button--faded">print page</a><BR>
            </div>

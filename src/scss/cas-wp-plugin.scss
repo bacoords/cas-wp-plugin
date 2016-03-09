@@ -206,10 +206,7 @@ $blue: rgba(101,164,219, 1);
     background:$white;
     border-radius: 5px;
     box-shadow: 0 3px 25px $black;
-    
-    &__email{
-      width:600px;
-    }
+ 
     
     &__header{
       background:$gray--light;
@@ -252,6 +249,15 @@ $blue: rgba(101,164,219, 1);
     line-height: 1.5;
       overflow: hidden;
     border-radius: 0px 0px 5px 5px ;
+    }
+    
+       
+    &__email{
+      width:600px;
+      
+      &__header{
+        padding:10px;
+      }
     }
   }
   
