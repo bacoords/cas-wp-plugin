@@ -27,8 +27,9 @@ angular.module('backendApp', ['wp.api'])
   $scope.modalSchool = null;
   $scope.nearbySchoolsObj = null;
   $scope.showModal = function(i){
-    jQuery(document.body).toggleClass('modal-open');
+    
     if(i>-1){
+      jQuery(document.body).addClass('modal-open');
       $scope.modalSchool = wpAPIResource.get( {
         param1: 'cas_school',
         param2: i
@@ -36,6 +37,7 @@ angular.module('backendApp', ['wp.api'])
       $scope.isShowingModal = true;
       return;
     }else{
+      jQuery(document.body).removeClass('modal-open');
       $scope.modalSchool = null;
       $scope.nearbySchoolsObj = null;
       $scope.isShowingModal = false;
@@ -49,8 +51,9 @@ angular.module('backendApp', ['wp.api'])
   
   $scope.emailSchool = null;
   $scope.showEmail = function(i){
-    jQuery(document.body).toggleClass('modal-open');
+   
     if(i>-1){
+      jQuery(document.body).addClass('modal-open');
       $scope.emailSchool = wpAPIResource.get( {
         param1: 'cas_school',
         param2: i
@@ -58,6 +61,7 @@ angular.module('backendApp', ['wp.api'])
       $scope.isShowingEmail = true;
       return;
     }else{
+      jQuery(document.body).removeClass('modal-open');
       $scope.emailSchool = null;
       $scope.isShowingEmail = false;
       return;

@@ -235,6 +235,7 @@ get_header();
           
         </div>
         <div class="cwp-modal__body">
+          body stuff
         </div>
       </div>
    </div>
