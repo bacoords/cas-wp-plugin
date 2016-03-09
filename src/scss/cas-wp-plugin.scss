@@ -112,7 +112,7 @@ $blue: rgba(101,164,219, 1);
     border: 1px solid $black;
     margin: 3px;
     color:$black;
-    border-radius: 3px;
+    border-radius: 4px;
     font-size: 14px;
     transition:all 300ms ease;
     text-decoration: none;
@@ -145,7 +145,8 @@ $blue: rgba(101,164,219, 1);
       }
     }
     &--hasicon{
-      img{display: block;}
+      img{display: block; margin:0 auto;}
+      width:65px;
       background:$white;
       &:hover{
         background:$white;

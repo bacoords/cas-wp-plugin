@@ -42,6 +42,7 @@ angular.module('backendApp', ['wp.api'])
   //Modal
   $scope.isShowingModal = false;
   $scope.modalSchool = null;
+
   $scope.showModal = function(i){
     jQuery(document.body).toggleClass('modal-open');
     if(i>-1){
@@ -49,6 +50,7 @@ angular.module('backendApp', ['wp.api'])
         param1: 'cas_school',
         param2: i
       } );
+      $scope.modalSchool.nearbySchools = $scope.nearbySchools($scope.modalSchool._attached_cmb2_attached_posts);
       $scope.isShowingModal = true;
       return;
     }else{
@@ -67,4 +69,19 @@ angular.module('backendApp', ['wp.api'])
     var safe = $sce.trustAsResourceUrl(map)
     return safe;
   }
+  
+  
+  //get nearby schools
+  $scope.nearbySchools = function(a){
+    var z = [];
+    for(var i = 0; i < a.length; i++){
+      z.push(wpAPIResource.get( {
+        param1: 'cas_school',
+        param2: a[i]
+      } ));     
+    }
+    console.log(z);
+    return z;
+  }
+  
 });

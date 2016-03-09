@@ -175,7 +175,7 @@ get_header();
                       <div class="padding">
                         <strong>Schools Nearby</strong>
                         <br>
-                        
+                        <p ng-repeat="nearby in modalSchool.nearbySchools">{{nearby._cas_school_name}}</p>
                       </div>
                     </div>
                   </div>
