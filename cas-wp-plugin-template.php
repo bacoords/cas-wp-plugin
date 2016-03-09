@@ -19,13 +19,32 @@ get_header();
 -->
    </div>
    <BR><BR><BR><BR>
-   
+
     <table>
       <tr>
        <td>Shortcuts</td>
-        <td><a href="#" ng-click="sortType = '_cas_school_name'; sortReverse = !sortReverse">School</a></td>
-        <td><a href="#" ng-click="sortType = '_cas_school_city'; sortReverse = !sortReverse">Location</a></td>
-        <td><a href="#" ng-click="sortType = 'modified'; sortReverse = !sortReverse">Last Modified</a></td>
+        <td>
+          <a href="#" ng-click="sortType = '_cas_school_name'; sortReverse = !sortReverse">
+           School
+            <span ng-show="sortType == 'tastiness' && !sortReverse">&#9650;</span>
+            <span ng-show="sortType == 'tastiness' && sortReverse">&#9660;</span>
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = '_cas_school_city'; sortReverse = !sortReverse">
+            Location
+            <span ng-show="sortType == '_cas_school_city' && !sortReverse">&#9650;</span>
+            <span ng-show="sortType == '_cas_school_city' && sortReverse">&#9660;</span>
+          
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = 'modified'; sortReverse = !sortReverse">
+            Modified
+            <span ng-show="sortType == 'modified' && !sortReverse">&#9650;</span>
+            <span ng-show="sortType == 'modified' && sortReverse">&#9660;</span>
+          </a>
+        </td>
         <td>Links</td>
       </tr>
       <tr ng-repeat="school in schools | filter:search | orderBy:sortType:sortReverse">
