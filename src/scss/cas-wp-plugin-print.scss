@@ -1,6 +1,21 @@
-
-  table, footer, .cas-nav-top, .cas-nav, .cn-nav-shim, .cwp-header, .cwp-modal__email {
-    display: none;
-  }
-  body{overflow: inherit !important;}
-  .cwp-modal__print{     width: auto;     border: 0;     margin: 0 5%;     padding: 0;     float: none;     position: static;     overflow: visible; }
+table,
+footer,
+.cas-nav-top,
+.cas-nav,
+.cn-nav-shim,
+.cwp-header,
+.cwp-modal__email {
+  display: none !important;
+}
+body {
+  overflow: inherit !important;
+}
+.cwp-modal__print {
+  width: auto !important;
+  border: 0 !important;
+  margin: 0 5% !important;
+  padding: 0 !important;
+  float: none !important;
+  position: static !important;
+  overflow: visible !important;
+}
