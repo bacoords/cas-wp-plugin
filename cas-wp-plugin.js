@@ -24,7 +24,7 @@ angular.module('backendApp', ['wp.api'])
   //Modal
   $scope.isShowingModal = false;
   $scope.modalSchool = null;
-
+  $scope.nearbySchoolsObj = null;
   $scope.showModal = function(i){
     jQuery(document.body).toggleClass('modal-open');
     if(i>-1){
@@ -36,6 +36,7 @@ angular.module('backendApp', ['wp.api'])
       return;
     }else{
       $scope.modalSchool = null;
+      $scope.nearbySchoolsObj = null;
       $scope.isShowingModal = false;
       return;
     }
@@ -46,7 +47,6 @@ angular.module('backendApp', ['wp.api'])
   //google map creator
   $scope.createMap = function(i, j, k, l){
     var map = 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAF9M0oLUumyRJ-0NMlKt-rmXyik_4K7ag&q=' + i + '+' + j + ',' +k + '+' + l;		
-    console.log(map);
     var safe = $sce.trustAsResourceUrl(map)
     return safe;
   }
@@ -54,16 +54,18 @@ angular.module('backendApp', ['wp.api'])
   
   //get nearby schools
   $scope.nearbySchools = function(a){
-    if(a){
-        var z = (wpAPIResource.get( {
+    
+    if((a) && ($scope.nearbySchoolsObj === null)){
+        $scope.nearbySchoolsObj = (wpAPIResource.get( {
           param1: 'cas_school',
           param2: a
         } ));     
-      console.log(z);
-      return z;
-    } else {
-      return;
+      console.log($scope.nearbySchoolsObj);
     }
+    
+    
+    return $scope.nearbySchoolsObj;
+    
   }
   
 });
