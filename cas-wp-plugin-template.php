@@ -111,7 +111,7 @@ get_header();
                   <!-- nearby Schools -->
                   
                   
-                  <div class="google-maps"><iframe width="800" height="200" frameborder="0" style="border:0" src="createMap(modalSchool._cas_school_address, modalSchool._cas_school_city, modalSchool._cas_school_state, modalSchool._cas_school_zip)"></iframe></div>
+                  <div class="google-maps"><iframe width="800" height="200" frameborder="0" style="border:0" ng-src="createMap(modalSchool._cas_school_address, modalSchool._cas_school_city, modalSchool._cas_school_state, modalSchool._cas_school_zip)"></iframe></div>
                     
                   </div>
                   
