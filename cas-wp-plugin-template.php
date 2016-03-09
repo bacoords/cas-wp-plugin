@@ -1,6 +1,8 @@
 <?php
 get_header();
-?>
+
+
+if(is_user_logged_in ()){ ?>
 <div class="cwp cas-wp-plugin" ng-app="backendApp">
 
   <div ng-controller="backendCtrl">
@@ -244,7 +246,13 @@ get_header();
     
   </div>
 </div>
+<?php }else{ ?>
+
+ 
+  <h1 class="center">Please <a href="<?php echo wp_login_url( get_permalink() ); ?>" title="Login">Login</a></h1>
+   
 <?php 
+}
 
 get_footer(); 
 
