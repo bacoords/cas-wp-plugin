@@ -52,20 +52,20 @@ angular.module('backendApp', ['wp.api'])
   }
   
   
-  //get nearby schools
-  $scope.nearbySchools = function(a){
-    
-    if((a) && ($scope.nearbySchoolsObj === null)){
-        $scope.nearbySchoolsObj = (wpAPIResource.get( {
-          param1: 'cas_school',
-          param2: a
-        } ));     
-      console.log($scope.nearbySchoolsObj);
-    }
-    
-    
-    return $scope.nearbySchoolsObj;
-    
-  }
-  
+//  //get nearby schools
+//  $scope.nearbySchools = function(a){
+//    
+//    if((a) && ($scope.nearbySchoolsObj === null)){
+//        $scope.nearbySchoolsObj = (wpAPIResource.get( {
+//          param1: 'cas_school',
+//          param2: a
+//        } ));     
+//      console.log($scope.nearbySchoolsObj);
+//    }
+//    
+//    
+//    return $scope.nearbySchoolsObj;
+//    
+//  }
+//  
 });
