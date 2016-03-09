@@ -290,8 +290,8 @@ $blue: rgba(101,164,219, 1);
     }
   }
   #loginform{
-    label{
-      display:none;
+    .login-username, .login-password{
+      label{display:none;}
     }
     input[type=text], input[type=password]{
       padding: 15px;

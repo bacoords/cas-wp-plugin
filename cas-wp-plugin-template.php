@@ -64,9 +64,18 @@ if(is_user_logged_in ()){ ?>
       
       </tr>
     </table>
-    <BR><BR><BR><BR><BR>
+    <BR><BR><BR>
+    <div class="frame">
+      <div class="bit-1">
+        <div class="center padding">
+          
+          <a href="<?php echo wp_logout_url(); ?>" class="cwp-button">Logout</a>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
     
-    <div class="cwp-modal-overlay" ng-show="isShowingModal">
+    <div class="cwp-modal-overlay ng-hide" ng-show="isShowingModal">
       <div class="cwp-modal">
        
        <a class="cwp-button cwp-modal-close" ng-click="showModal(-1)">&#10006;</a>
@@ -222,7 +231,7 @@ if(is_user_logged_in ()){ ?>
 
    
       
-    <div class="cwp-modal-overlay" ng-show="isShowingEmail">
+    <div class="cwp-modal-overlay ng-hide" ng-show="isShowingEmail">
       <div class="cwp-modal cwp-modal__email">
        
        <a class="cwp-button cwp-modal-close" ng-click="showEmail(-1)">&#10006;</a>
