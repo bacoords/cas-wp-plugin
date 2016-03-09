@@ -144,6 +144,13 @@ $blue: rgba(101,164,219, 1);
         color:$gray--dark;
       }
     }
+    &--hasicon{
+      img{display: block;}
+      background:$white;
+      &:hover{
+        background:$white;
+      }
+    }
   }
   
   
