@@ -175,7 +175,9 @@ if(is_user_logged_in ()){ ?>
                   <div class="frame">
                     <div class="bit-1">
                       <div class="padding">
-                        <a ng-href="{{modalSchool.link}}" class="cwp-button cwp-button--hasicon" target="_blank"><img src="https://communityallstars.com/wp-content/uploads/2016/03/casicontiny.png" alt="CAS Icon"></a> {{modalSchool.link}}
+                        <a ng-href="{{modalSchool.link}}" class="cwp-button cwp-button--hasicon" target="_blank"><img src="https://communityallstars.com/wp-content/uploads/2016/03/casicontiny.png" alt="CAS Icon"></a> 
+                        <a ng-href="{{modalSchool.link}}" class="cwp-button cwp-button--no-border" target="_blank">{{modalSchool.link}}</a> 
+                        
                       </div>
                     </div>
                   </div>
@@ -184,7 +186,10 @@ if(is_user_logged_in ()){ ?>
                       <div class="padding">
                         <a ng-href="{{modalSchool._cas_school_team_bank_url}}" class="cwp-button cwp-button--hasicon" target="_blank">
                           <img src="https://communityallstars.com/wp-content/uploads/2016/03/teambankicon.png" alt="TB Icon">
-                        </a> {{modalSchool._cas_school_team_bank_url}}
+                        </a>
+                         <a ng-href="{{modalSchool._cas_school_team_bank_url}}" class="cwp-button cwp-button--no-border" target="_blank">
+                          {{modalSchool._cas_school_team_bank_url}}
+                        </a> 
                       </div>
                     </div>
                   </div>
