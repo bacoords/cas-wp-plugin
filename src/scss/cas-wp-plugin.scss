@@ -33,6 +33,10 @@ $blue: rgba(101,164,219, 1);
       background:$red;
       color:$white;
       display:block;
+      img{
+        max-height: 90px;
+        width:auto;
+      }
     }
     &__search{
       flex-grow: 2;
@@ -181,6 +185,7 @@ $blue: rgba(101,164,219, 1);
     background:$white;
     border-radius: 5px;
     box-shadow: 0 3px 25px $black;
+    line-height: 1.4;
     &__header{
       background:$gray--light;
       display:flex;

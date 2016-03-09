@@ -6,11 +6,9 @@ get_header();
   <div ng-controller="backendCtrl">
    
    <div class="cwp-header">
-<!--
      <div class="cwp-header__logo">
-       CAS
+       <img src="http://cas.threecordsstudio.com/wp-content/uploads/2015/11/cropped-webclip.png" alt="CAS LOGO">
      </div>
--->
      <div class="cwp-header__search">
        <input type="text" ng-model="search" class="cwp-search" placeholder="Search Our Schools">
      </div>
@@ -92,11 +90,38 @@ get_header();
                      </div>
                    </div>
                  </div>
+                 <BR><BR><BR>
                  <div class="frame">
                    <div class="bit-1">
                      <div class="padding">
-                       <strong>About the School:</strong><br>
+                       <p>{{modalSchool._cas_school_info_field_sports}}</p>
+                     </div>
+                   </div>
+                 </div>
+                 <BR><BR><BR>
+                 <div class="frame">
+                   <div class="bit-1">
+                     <div class="padding">
+                       <strong>About the School:</strong><br><BR>
                        <p>{{modalSchool._cas_school_description}}</p>
+                     </div>
+                   </div>
+                 </div>
+                 <BR><BR><BR>
+                 <div class="frame">
+                   <div class="bit-1">
+                     <div class="padding">
+                       <strong>About the City:</strong><br><br>
+                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quos quidem placeat non distinctio! Quidem maiores reprehenderit est amet quam officiis nesciunt labore voluptatum, architecto, odio repudiandae incidunt inventore quaerat.</p>
+                     </div>
+                   </div>
+                 </div>
+                 <BR><BR><BR>
+                 <div class="frame">
+                   <div class="bit-1">
+                     <div class="padding">
+                       <strong>Sports Achievements:</strong><br><br>
+                       <p>{{modalSchool._cas_school_testimonial_achievements}}</p>
                      </div>
                    </div>
                  </div>
@@ -104,23 +129,47 @@ get_header();
              </div>
              <div class="bit-40">
                <div class="padding">
-                  <a ng-href="{{modalSchool.link}}" class="cwp-button" target="_blank">CAS</a> {{modalSchool.link}}
-                  <BR>
-                  <a ng-href="{{modalSchool._cas_school_team_bank_url}}" class="cwp-button" target="_blank">TB</a> {{modalSchool._cas_school_team_bank_url}}
-                  
-                  <!-- nearby Schools -->
-                  
-                  
-                  <div class="google-maps"><iframe width="800" height="200" frameborder="0" style="border:0" ng-src="{{createMap(modalSchool._cas_school_address, modalSchool._cas_school_city, modalSchool._cas_school_state, modalSchool._cas_school_zip)}}"></iframe></div>
-                    
+                  <div class="frame">
+                    <div class="bit-1">
+                      <div class="padding">
+                        <a ng-href="{{modalSchool.link}}" class="cwp-button" target="_blank">CAS</a> {{modalSchool.link}}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="frame">
+                    <div class="bit-1">
+                      <div class="padding">
+                        <a ng-href="{{modalSchool._cas_school_team_bank_url}}" class="cwp-button" target="_blank">TB</a> {{modalSchool._cas_school_team_bank_url}}
+                      </div>
+                    </div>
                   </div>
                   
-               </div>
+                  <BR>
+                  
+                  <div class="frame">
+                    <div class="bit-1">
+                      <div class="padding">
+                        <strong>Schools Nearby</strong>
+                        <br>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <BR>
+                  
+                  <div class="frame">
+                    <div class="bit-1">
+                      <div class="google-maps"><iframe width="300" height="300" frameborder="0" style="border:0" ng-src="{{createMap(modalSchool._cas_school_address, modalSchool._cas_school_city, modalSchool._cas_school_state, modalSchool._cas_school_zip)}}"></iframe></div>
+                    </div>
+                  </div>
+                </div>
              </div>
            </div>
-        </div>
+         </div>
       </div>
     </div>
+
     
   </div>
 

@@ -344,6 +344,22 @@ function cas_plugin_register_custom_meta() {
             'schema'          => null,
         )
     );
+    register_rest_field( 'cas_school',
+        '_cas_school_info_field_sports',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+    register_rest_field( 'cas_school',
+        '_cas_school_testimonial_achievements',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
 }
 
 /**
