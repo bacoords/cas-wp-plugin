@@ -54,14 +54,36 @@ get_header();
              <img ng-src="{{modalSchool._cas_school_logo}}" alt="{{modalSchool._cas_school_name}} Logo">
            </div>
            <div class="cwp-modal__header__desc padding">
-             <span class="cwp-modal__header__desc__title">
-               <strong>{{modalSchool._cas_school_name}} </strong>
-               <br>
-               {{modalSchool._cas_school_subheading}} 
-             </span><br>
-             {{modalSchool._cas_school_address}} {{modalSchool._cas_school_city}}, {{modalSchool._cas_school_state}} {{modalSchool._cas_school_zip}} <BR>
-             Product: <strong>{{modalSchool._cas_school_poster_program}}</strong>
-             Seasons: <strong>{{modalSchool._cas_school_season_sports}}</strong>
+            <div class="frame">
+              <div class="bit-1">
+                <div class="padding">
+                  
+                   <span class="cwp-modal__header__desc__title">
+                     <strong>{{modalSchool._cas_school_name}} </strong>
+                     <br>
+                     {{modalSchool._cas_school_subheading}} 
+                   </span>
+                   <br>
+                  <span class="cwp-modal__header__desc__address">
+                   {{modalSchool._cas_school_address}} {{modalSchool._cas_school_city}}, {{modalSchool._cas_school_state}} {{modalSchool._cas_school_zip}}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="frame">
+              <div class="bit-2">
+                <div class="padding">
+                  Product: <strong><span class="cwp-modal__header__desc__product">{{modalSchool._cas_school_poster_program}}</span></strong>
+                </div>
+              </div>
+              <div class="bit-2">
+                <div class="padding">
+                  Seasons: <strong>{{modalSchool._cas_school_season_sports}}</strong>
+                </div>
+              </div>
+            </div>
+             
+             
            </div>
            <div class="cwp-modal__header__buttons">
              <a href="#" class="cwp-button cwp-button--full cwp-button--large cwp-button--faded">send email</a><BR>

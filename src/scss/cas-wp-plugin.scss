@@ -205,6 +205,15 @@ $blue: rgba(101,164,219, 1);
         flex-grow: 3;
         &__title{
           font-size:30px;
+          font-weight: 300;
+        }
+        &__address{
+          font-size:20px;
+          color:$gray--dark;
+          margin-bottom: 10px;
+        }
+        &__product{
+          text-transform: capitalize;
         }
       }
       &__buttons{
