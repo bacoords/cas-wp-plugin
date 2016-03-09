@@ -50,7 +50,7 @@ get_header();
       <tr ng-repeat="school in schools | filter:search | orderBy:sortType:sortReverse">
         <td>
           <a class="cwp-button cwp-button--blue" ng-click="showModal(school.id)">+info</a>
-          <a class="cwp-button">email</a>
+          <a class="cwp-button" ng-click="showEmail(school.id)">email</a>
         </td>
         <td> {{school._cas_school_name}}</td>
         <td> {{school._cas_school_city}},  {{school._cas_school_state}}</td>
@@ -105,9 +105,9 @@ get_header();
              
            </div>
            <div class="cwp-modal__header__buttons">
-             <a href="#" class="cwp-button cwp-button--full cwp-button--large cwp-button--faded">send email</a><BR>
-             <a href="#" class="cwp-button cwp-button--full cwp-button--large cwp-button--faded">current sales</a><BR>
-             <a href="#" class="cwp-button cwp-button--full cwp-button--large cwp-button--faded">print page</a><BR>
+             <a class="cwp-button cwp-button--full cwp-button--large cwp-button--faded" ng-click="showEmail(school.id)">send email</a><BR>
+             <a class="cwp-button cwp-button--full cwp-button--large cwp-button--faded">current sales</a><BR>
+             <a class="cwp-button cwp-button--full cwp-button--large cwp-button--faded">print page</a><BR>
            </div>
           
            
@@ -213,9 +213,35 @@ get_header();
       </div>
     </div>
 
+   
+      
+    <div class="cwp-modal-overlay" ng-show="isShowingEmail">
+      <div class="cwp-modal cwp-modal__email">
+       
+       <a class="cwp-button cwp-modal-close" ng-click="showEmail(-1)">&#10006;</a>
+        <div class="cwp-modal__header">
+           <div class="frame">
+             <div class="bit-2">
+               <div class="padding">
+                 Email For: <strong>{{emailSchool._cas_school_name}}</strong>
+               </div>
+             </div>
+             <div class="bit-2">
+               <div class="padding">
+                 
+               </div>
+             </div>
+           </div>
+          
+        </div>
+        <div class="cwp-modal__body">
+        </div>
+      </div>
+   </div>
+   
+   
     
   </div>
-
 </div>
 <?php 
 

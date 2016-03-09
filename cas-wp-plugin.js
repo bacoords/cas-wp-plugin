@@ -43,6 +43,27 @@ angular.module('backendApp', ['wp.api'])
     }
   }
   
+  //email modal
+  
+  $scope.isShowingEmail = false;
+  
+  $scope.emailSchool = null;
+  $scope.showEmail = function(i){
+    jQuery(document.body).toggleClass('modal-open');
+    if(i>-1){
+      $scope.emailSchool = wpAPIResource.get( {
+        param1: 'cas_school',
+        param2: i
+      } );
+      $scope.isShowingEmail = true;
+      return;
+    }else{
+      $scope.emailSchool = null;
+      $scope.isShowingEmail = false;
+      return;
+    }
+  }
+  
   
   
   //google map creator

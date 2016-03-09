@@ -206,6 +206,11 @@ $blue: rgba(101,164,219, 1);
     background:$white;
     border-radius: 5px;
     box-shadow: 0 3px 25px $black;
+    
+    &__email{
+      width:600px;
+    }
+    
     &__header{
       background:$gray--light;
       display:flex;
