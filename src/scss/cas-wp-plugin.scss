@@ -119,6 +119,17 @@ $blue: rgba(101,164,219, 1);
       width:100%;
       text-align: center;
     }
+    &--large{
+      padding:10px 20px;
+    }
+    &--faded{
+      background: #fff;
+      border: 1px solid $gray;
+      &:hover{
+        background:$gray;
+        color:$gray--dark;
+      }
+    }
   }
   
   
@@ -162,9 +173,10 @@ $blue: rgba(101,164,219, 1);
       display:flex;
       justify-content: space-between;
       align-items: stretch;
-      padding:10px;
+      padding:30px;
       overflow: hidden;
-    border-radius: 5px 5px 0px 0px;
+      border-radius: 5px 5px 0px 0px;
+      border-bottom: 1px solid $gray--dark;
       &__logo{
         img{max-width: 200px;height:auto;}
       }
@@ -177,7 +189,7 @@ $blue: rgba(101,164,219, 1);
     }
     &__body{
       background:$white;
-      padding:10px;
+      padding:30px;
       
       overflow: hidden;
     border-radius: 0px 0px 5px 5px ;

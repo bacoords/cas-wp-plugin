@@ -58,13 +58,13 @@ get_header();
            <div class="cwp-modal__header__desc">
              {{modalSchool._cas_school_name}} <br>
              {{modalSchool._cas_school_address}} {{modalSchool._cas_school_city}}, {{modalSchool._cas_school_state}} {{modalSchool._cas_school_zip}} <BR>
-             Product: <strong>{{modalSchool._cas_school}}</strong>
-             Seasons: <strong>{{modalSchool._cas_school}}</strong>
+             Product: <strong>{{modalSchool._cas_school_poster_program}}</strong>
+             Seasons: <strong>{{modalSchool._cas_school_season_sport}}</strong>
            </div>
            <div class="cwp-modal__header__buttons">
-             <a href="#" class="cwp-button cwp-button--full">send email</a><BR>
-             <a href="#" class="cwp-button cwp-button--full">current sales</a><BR>
-             <a href="#" class="cwp-button cwp-button--full">print page</a><BR>
+             <a href="#" class="cwp-button cwp-button--full cwp-button--large cwp-button-faded">send email</a><BR>
+             <a href="#" class="cwp-button cwp-button--full cwp-button--large cwp-button-faded">current sales</a><BR>
+             <a href="#" class="cwp-button cwp-button--full cwp-button--large cwp-button-faded">print page</a><BR>
            </div>
           
            
@@ -72,13 +72,13 @@ get_header();
         </div>
          <div class="cwp-modal__body">
            <div class="frame">
-             <div class="bit-40">
+             <div class="bit-60">
                <div class="padding">
                  <div class="frame">
                    <div class="bit-2">
                      <div class="padding">
-                      {{modalSchool._cas_school_contact_name}}:<BR> 
-                      <strong>{{modalSchool._cas_school_contact_title}} </strong>
+                      {{modalSchool._cas_school_contact_title}}:<BR> 
+                      <strong>{{modalSchool._cas_school_contact_name}} </strong>
                      </div>
                    </div>
                    <div class="bit-2">
