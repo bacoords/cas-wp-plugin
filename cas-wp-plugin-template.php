@@ -69,7 +69,7 @@ if(is_user_logged_in ()){ ?>
       <div class="bit-1">
         <div class="center padding">
           
-          <a href="<?php echo wp_logout_url(home_url() )); ?>" class="cwp-button">Logout</a>
+          <a href="<?php echo wp_logout_url(home_url() ); ?>" class="cwp-button">Logout</a>
         </div>
       </div>
     </div>
