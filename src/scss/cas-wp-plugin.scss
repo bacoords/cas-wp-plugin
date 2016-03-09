@@ -267,7 +267,7 @@ $blue: rgba(101,164,219, 1);
 }
 
 .cwp-login-form{
-  width:500px;
+  width:600px;
   margin:0 auto;border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 3px 18px rgba(0,0,0,0.5);
@@ -282,8 +282,8 @@ $blue: rgba(101,164,219, 1);
   }
   &_body{
     background:$white;
-    padding:40px;
-    p{
+    padding:20px 50px;
+    .disclaimer{
       display: block;
       text-align: center;
       font-size: 14px;
