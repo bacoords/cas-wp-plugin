@@ -19,7 +19,9 @@ $blue: rgba(101,164,219, 1);
   font-family: 'Lato', sans-serif;
   background:#f3f3f3;
   
-  
+  .text-gray--dark{
+    color:$gray--dark;
+  }
   //header
   .cwp-header {
     display: flex;
@@ -223,7 +225,7 @@ $blue: rgba(101,164,219, 1);
     &__body{
       background:$white;
       padding:30px;
-      
+      font-weight:300;
       overflow: hidden;
     border-radius: 0px 0px 5px 5px ;
     }

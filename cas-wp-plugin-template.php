@@ -116,7 +116,7 @@ get_header();
                  <div class="frame">
                    <div class="bit-1">
                      <div class="padding">
-                       <p>{{modalSchool._cas_school_info_field_sports}}</p>
+                       <p class="text-gray--dark">{{modalSchool._cas_school_info_field_sports}}</p>
                      </div>
                    </div>
                  </div>
@@ -125,7 +125,7 @@ get_header();
                    <div class="bit-1">
                      <div class="padding">
                        <strong>About the School:</strong><br><BR>
-                       <p>{{modalSchool._cas_school_description}}</p>
+                       <p class="text-gray--dark">{{modalSchool._cas_school_description}}</p>
                      </div>
                    </div>
                  </div>
@@ -134,7 +134,7 @@ get_header();
                    <div class="bit-1">
                      <div class="padding">
                        <strong>About the City:</strong><br><br>
-                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quos quidem placeat non distinctio! Quidem maiores reprehenderit est amet quam officiis nesciunt labore voluptatum, architecto, odio repudiandae incidunt inventore quaerat.</p>
+                       <p class="text-gray--dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quos quidem placeat non distinctio! Quidem maiores reprehenderit est amet quam officiis nesciunt labore voluptatum, architecto, odio repudiandae incidunt inventore quaerat.</p>
                      </div>
                    </div>
                  </div>
@@ -143,7 +143,7 @@ get_header();
                    <div class="bit-1">
                      <div class="padding">
                        <strong>Sports Achievements:</strong><br><br>
-                       <p>{{modalSchool._cas_school_testimonial_achievements}}</p>
+                       <p class="text-gray--dark">{{modalSchool._cas_school_testimonial_achievements}}</p>
                      </div>
                    </div>
                  </div>
