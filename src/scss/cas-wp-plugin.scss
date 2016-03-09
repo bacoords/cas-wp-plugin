@@ -62,7 +62,8 @@ $blue: rgba(101,164,219, 1);
     border: none;
     transition:all 300ms ease;
     &:focus{
-      text-align: left;
+//      text-align: left;
+//      padding-left:15px;
     }
   }
   
