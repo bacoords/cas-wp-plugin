@@ -265,7 +265,16 @@ if(is_user_logged_in ()){ ?>
      </div>
   </div>
   <BR><BR><BR><BR><BR><BR>
- <?php wp_login_form(); ?>
+  <div class="cwp-login-form">
+    <div class="cwp-login-form_header">
+      <img src="http://cas.threecordsstudio.com/wp-content/uploads/2015/11/cropped-webclip.png" alt="CAS LOGO">
+    </div>
+    <div class="cwp-login-form_body">
+       <?php wp_login_form(); ?>
+    </div>
+    
+  </div>
+
  <BR><BR><BR><BR><BR><BR>
 </div>
       
