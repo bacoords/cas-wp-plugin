@@ -73,15 +73,19 @@ angular.module('backendApp', ['wp.api'])
   
   //get nearby schools
   $scope.nearbySchools = function(a){
-    var z = [];
-    for(var i = 0; i < a.length; i++){
-      z.push(wpAPIResource.get( {
-        param1: 'cas_school',
-        param2: a[i]
-      } ));     
+    if(a.length > 0){
+      var z = [];
+      for(var i = 0; i < a.length; i++){
+        z.push(wpAPIResource.get( {
+          param1: 'cas_school',
+          param2: a[i]
+        } ));     
+      }
+      console.log(z);
+      return z;
+    } else {
+      return;
     }
-    console.log(z);
-    return z;
   }
   
 });
