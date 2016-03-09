@@ -62,7 +62,7 @@ angular.module('backendApp', ['wp.api'])
   
   //google map creator
   $scope.createMap = function(i, j, k, l){
-    var map = 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAF9M0oLUumyRJ-0NMlKt-rmXyik_4K7ag&q=' += i + '+' + j + ',' +k + '+' + l;		
+    var map = 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAF9M0oLUumyRJ-0NMlKt-rmXyik_4K7ag&q=' + i + '+' + j + ',' +k + '+' + l;		
     console.log(map);
     var safe = $sce.trustAsResourceUrl(map)
     return safe;
