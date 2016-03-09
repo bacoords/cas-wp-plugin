@@ -23,9 +23,9 @@ get_header();
     <table>
       <tr>
        <td>Shortcuts</td>
-        <td>School</td>
-        <td>Location</td>
-        <td>Last Modified</td>
+        <td><a href="#" ng-click="sortType = '_cas_school_name'; sortReverse = !sortReverse">School</a></td>
+        <td><a href="#" ng-click="sortType = '_cas_school_city'; sortReverse = !sortReverse">Location</a></td>
+        <td><a href="#" ng-click="sortType = 'modified'; sortReverse = !sortReverse">Last Modified</a></td>
         <td>Links</td>
       </tr>
       <tr ng-repeat="school in schools | filter:search | orderBy:sortType:sortReverse">
