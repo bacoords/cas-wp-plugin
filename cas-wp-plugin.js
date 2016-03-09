@@ -1,21 +1,3 @@
-//
-//window.wp = window.wp || {};
-//
-//wp.api = wp.api || angular.module( 'wp.api', [ 'ngResource' ] )
-// 
-//	// API resource
-//	.factory( 'wpAPIResource', [ '$resource', function ( $resource ) {
-//
-//		return $resource(
-//			wpAPIData.base + '/:param1/:param2/:param3/:param4/:param5/:param6/:param7/',
-//			{
-//				_wp_json_nonce: wpAPIData.nonce
-//			}
-//		);
-//
-//	}]);
-
-
 
 angular.module('backendApp', ['wp.api'])
 
@@ -50,7 +32,6 @@ angular.module('backendApp', ['wp.api'])
         param1: 'cas_school',
         param2: i
       } );
-      $scope.modalSchool.nearbySchools = $scope.nearbySchools($scope.modalSchool._attached_cmb2_attached_posts);
       $scope.isShowingModal = true;
       return;
     }else{
@@ -74,13 +55,10 @@ angular.module('backendApp', ['wp.api'])
   //get nearby schools
   $scope.nearbySchools = function(a){
     if(a){
-      var z = [];
-      for(var i = 0; i < a.length; i++){
-        z.push(wpAPIResource.get( {
+        var z = (wpAPIResource.get( {
           param1: 'cas_school',
-          param2: a[i]
+          param2: a
         } ));     
-      }
       console.log(z);
       return z;
     } else {
