@@ -20,7 +20,8 @@ if(is_user_logged_in ()){ ?>
      </div>
 -->
    </div>
-   <BR><BR><BR><BR>
+   <div class="no-print"><BR><BR><BR><BR></div>
+   
 
     <table>
       <tr>
@@ -64,17 +65,18 @@ if(is_user_logged_in ()){ ?>
       
       </tr>
     </table>
-    <BR><BR><BR>
-    <div class="frame">
-      <div class="bit-1">
-        <div class="center padding">
-          
-          <a href="<?php echo wp_logout_url(home_url() ); ?>" class="cwp-button">Logout</a>
+    <div class="no-print">
+      <BR><BR><BR>
+      <div class="frame">
+        <div class="bit-1">
+          <div class="center padding">
+
+            <a href="<?php echo wp_logout_url(home_url() ); ?>" class="cwp-button">Logout</a>
+          </div>
         </div>
       </div>
+      <br><br><br>
     </div>
-    <br><br><br>
-    
     <div class="cwp-modal-overlay ng-hide" ng-show="isShowingModal">
       <div class="cwp-modal cwp-modal__print">
        
