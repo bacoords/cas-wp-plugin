@@ -24,14 +24,14 @@ get_header();
       <tr>
        <td>Shortcuts</td>
         <td>
-          <a href="#" ng-click="sortType = '_cas_school_name'; sortReverse = !sortReverse">
+          <a ng-click="sortType = '_cas_school_name'; sortReverse = !sortReverse">
            School
-            <span ng-show="sortType == 'tastiness' && !sortReverse">&#9650;</span>
-            <span ng-show="sortType == 'tastiness' && sortReverse">&#9660;</span>
+            <span ng-show="sortType == '_cas_school_name' && !sortReverse">&#9650;</span>
+            <span ng-show="sortType == '_cas_school_name' && sortReverse">&#9660;</span>
           </a>
         </td>
         <td>
-          <a href="#" ng-click="sortType = '_cas_school_city'; sortReverse = !sortReverse">
+          <a ng-click="sortType = '_cas_school_city'; sortReverse = !sortReverse">
             Location
             <span ng-show="sortType == '_cas_school_city' && !sortReverse">&#9650;</span>
             <span ng-show="sortType == '_cas_school_city' && sortReverse">&#9660;</span>
@@ -39,7 +39,7 @@ get_header();
           </a>
         </td>
         <td>
-          <a href="#" ng-click="sortType = 'modified'; sortReverse = !sortReverse">
+          <a ng-click="sortType = 'modified'; sortReverse = !sortReverse">
             Modified
             <span ng-show="sortType == 'modified' && !sortReverse">&#9650;</span>
             <span ng-show="sortType == 'modified' && sortReverse">&#9660;</span>

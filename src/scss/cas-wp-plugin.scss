@@ -91,7 +91,9 @@ $blue: rgba(101,164,219, 1);
         }
       }
       &:nth-of-type(1){ 
-        background:$gray;
+        background:$gray;    
+        height: 50px;
+
         td{
           color:$white;
           padding:10px;
