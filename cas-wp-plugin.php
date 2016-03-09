@@ -160,6 +160,7 @@ add_action( 'wp_enqueue_scripts', 'cas_plugin_enqueue_script' );
 function cas_plugin_enqueue_style() {
   if(is_page_template( 'cas-wp-plugin-template.php')){
     wp_enqueue_style( 'cas-plugin-style', 'http://cas.threecordsstudio.com/wp-content/plugins/cas-wp-plugin/dist/css/cas-wp-plugin.css' ); 
+    wp_enqueue_style( 'cas-plugin-style-print', 'http://cas.threecordsstudio.com/wp-content/plugins/cas-wp-plugin/dist/css/cas-wp-plugin-print.css', array(),false,'print' ); 
   }
 }
 add_action( 'wp_enqueue_scripts', 'cas_plugin_enqueue_style' );

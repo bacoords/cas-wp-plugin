@@ -69,7 +69,7 @@ if(is_user_logged_in ()){ ?>
       <div class="bit-1">
         <div class="center padding">
           
-          <a href="<?php echo wp_logout_url(); ?>" class="cwp-button">Logout</a>
+          <a href="<?php echo wp_logout_url(home_url() )); ?>" class="cwp-button">Logout</a>
         </div>
       </div>
     </div>
@@ -118,7 +118,7 @@ if(is_user_logged_in ()){ ?>
            <div class="cwp-modal__header__buttons">
              <a class="cwp-button cwp-button--full cwp-button--large cwp-button--faded" ng-click="showEmail(modalSchool.id)">send email</a><BR>
              <a class="cwp-button cwp-button--full cwp-button--large cwp-button--faded">current sales</a><BR>
-             <a class="cwp-button cwp-button--full cwp-button--large cwp-button--faded">print page</a><BR>
+             <a href="javascript:window.print()" class="cwp-button cwp-button--full cwp-button--large cwp-button--faded">print page</a><BR>
            </div>
           
            
