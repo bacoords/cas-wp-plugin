@@ -249,6 +249,22 @@ function cas_plugin_register_custom_meta() {
         )
     );
     register_rest_field( 'cas_school',
+        '_cas_school_address',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+    register_rest_field( 'cas_school',
+        '_cas_school_zip',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+    register_rest_field( 'cas_school',
         '_cas_school_team_bank_url',
         array(
             'get_callback'    => 'cas_plugin_get_custom_meta',
@@ -258,6 +274,54 @@ function cas_plugin_register_custom_meta() {
     );
     register_rest_field( 'cas_school',
         '_cas_school_logo',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+    register_rest_field( 'cas_school',
+        '_cas_school_poster_program',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+    register_rest_field( 'cas_school',
+        '_cas_school_season_sports',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+    register_rest_field( 'cas_school',
+        '_cas_school_contact_name',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+    register_rest_field( 'cas_school',
+        '_cas_school_contact_title',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+    register_rest_field( 'cas_school',
+        '_cas_school_contact_phone',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+    register_rest_field( 'cas_school',
+        '_cas_school_contact_email',
         array(
             'get_callback'    => 'cas_plugin_get_custom_meta',
             'update_callback' => null,
