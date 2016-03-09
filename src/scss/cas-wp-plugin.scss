@@ -274,13 +274,14 @@ $blue: rgba(101,164,219, 1);
     img{
       display: block;
       margin:0 auto;
+      max-width: 100px;
     }
   }
   &_body{
     background:$white;
     padding:40px;
   }
-  #login-form{
+  #loginform{
     label{
       display:none;
     }

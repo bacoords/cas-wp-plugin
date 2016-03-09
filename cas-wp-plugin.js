@@ -1,3 +1,11 @@
+jQuery(document).ready(function(){
+  if(jQuery('#loginform')){
+    jQuery('#user_login').attr( 'placeholder', 'Username' );
+    jQuery('#user_pass').attr( 'placeholder', 'Password' );
+  }
+});
+
+
 
 angular.module('backendApp', ['wp.api'])
 
