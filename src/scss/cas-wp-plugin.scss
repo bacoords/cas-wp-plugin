@@ -316,7 +316,7 @@ $blue: rgba(101,164,219, 1);
       }
       &__body{  
         
-        input[type=text], input[type=password], textarea{
+        input[type=text], input[type=password], textarea, select{
           padding: 15px;
           background: #fff;
           border-radius: 3px;

@@ -396,7 +396,7 @@ function cas_plugin_get_custom_meta( $object, $field_name, $request ) {
 
 
 //  *********************************************************************************
-// Custom Post Type - Mail Forms
+// Custom Post Type - Mail templates
 //  *********************************************************************************
 // Creates the custom post type
 add_action( 'init', 'cwp_create_post_type' );
@@ -426,23 +426,28 @@ function cwp_create_post_type() {
 		)
 	);
 }
+//disable wysiwyg for email templates
+add_filter('user_can_richedit', 'disable_wyswyg_for_custom_post_type');
+function disable_wyswyg_for_custom_post_type( $default ){
+  if( get_post_type() === 'cas_email_template') return false;
+  return $default;
+}
+/**
+* Add REST API support to email templates.
+*/
+add_action( 'init', 'cas_email_template_post_type_rest_support', 25 );
+function cas_email_template_post_type_rest_support() {
+  global $wp_post_types;
 
-  /**
-  * Add REST API support to an already registered post type.
-  */
-  add_action( 'init', 'cas_email_template_post_type_rest_support', 25 );
-  function cas_email_template_post_type_rest_support() {
-    global $wp_post_types;
-
-    //be sure to set this to the name of your post type!
-    $post_type_name = 'cas_email_template';
-    if( isset( $wp_post_types[ $post_type_name ] ) ) {
-        $wp_post_types[$post_type_name]->show_in_rest = true;
-        $wp_post_types[$post_type_name]->rest_base = $post_type_name;
-        $wp_post_types[$post_type_name]->rest_controller_class = 'WP_REST_Posts_Controller';
-    }
-
+  //be sure to set this to the name of your post type!
+  $post_type_name = 'cas_email_template';
+  if( isset( $wp_post_types[ $post_type_name ] ) ) {
+      $wp_post_types[$post_type_name]->show_in_rest = true;
+      $wp_post_types[$post_type_name]->rest_base = $post_type_name;
+      $wp_post_types[$post_type_name]->rest_controller_class = 'WP_REST_Posts_Controller';
   }
+
+}
 
 
 /**
