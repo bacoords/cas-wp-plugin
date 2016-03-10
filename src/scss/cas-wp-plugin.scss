@@ -314,6 +314,34 @@ $blue: rgba(101,164,219, 1);
       &__header{
         padding:10px;
       }
+      &__body{
+        input[type=text], input[type=password]{
+          padding: 15px;
+          background: #fff;
+          border-radius: 3px;
+          border: 1px solid #ccc;
+          width: 100%;
+          margin: 25px auto;    
+          font-size: 16px;
+        }
+        input[type=submit]{
+          background: #ccc;
+          border: none;
+          padding: 15px;
+          cursor: pointer;
+          border-radius: 5px;
+          width: 100px;
+          font-size: 20px;
+          font-weight: 300;
+          display: block;
+          margin: 25px auto;
+          transition:all 300ms ease;
+          &:hover{
+            color:$white;
+            background:$gray--dark;
+          }
+        }        
+      }
     }
   }
   

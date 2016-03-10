@@ -103,16 +103,16 @@ angular.module('backendApp', ['wp.api'])
   $scope.emailSubmit = function(){
     var z = '';
     if($scope.emailToAddress && $scope.emailBody){
-      var a = encodeURI($scope.emailToName);
-      var b = encodeURI($scope.emailToAddress);
-      var c = encodeURI($scope.emailCC);
-      var d = encodeURI($scope.emailBody);
+      var a = encodeURIComponent($scope.emailToName);
+      var b = encodeURIComponent($scope.emailToAddress);
+      var c = encodeURIComponent($scope.emailCC);
+      var d = encodeURIComponent($scope.emailBody);
 
-      z += 'mailto:' + a + '<' + b + '>?';
+      z += 'window.location.href = "mailto:' + a + '<' + b + '>?';
       if($scope.emailCC){
         z += 'cc=' + c + '&';
       }
-      z += 'body=' + d;
+      z += 'body=' + d + '"';
     }
     return z;
   }

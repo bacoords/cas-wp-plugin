@@ -260,11 +260,12 @@ if(is_user_logged_in ()){ ?>
           <div class="cwp-modal__body">
             
             <form>
-              <input type="text" ng-model="emailToName">
-              <input type="text" ng-model="emailToAddress">
-              <input type="text" ng-model="emailCC">
+               
+              <input type="text" ng-model="emailToName" placeholder="To">
+              <input type="text" ng-model="emailToAddress" placeholder="Email Address">
+              <input type="text" ng-model="emailCC" placeholder="CC">
               <textarea ng-model="emailBody"></textarea>
-              <a ng-href="emailSubmit()" class="cwp-button"></a>
+              <a ng-click="emailSubmit()" class="cwp-button" target="_blank">send email</a>
             </form>
           </div>
         </div>
