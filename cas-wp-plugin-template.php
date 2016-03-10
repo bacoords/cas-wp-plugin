@@ -248,9 +248,9 @@ if(is_user_logged_in ()){ ?>
                  </div>
                </div>
                <div class="bit-2">
-                 <div class="padding">
-                 <select name="" id="">
-                   <option ng-repeat="email in emails track by email.id" value="email.id">{{email.title.rendered}}</option>
+                 <div class="padding">Template:
+                 <select ng-model="emailSelect" ng-options="email.title.rendered for email in emails">
+                   <option value="">SELECT TEMPLATE</option>
                  </select>
                  </div>
                </div>
@@ -264,8 +264,8 @@ if(is_user_logged_in ()){ ?>
               <input type="text" ng-model="emailToName" placeholder="To">
               <input type="text" ng-model="emailToAddress" placeholder="Email Address">
               <input type="text" ng-model="emailCC" placeholder="CC">
-              <textarea ng-model="emailBody"></textarea>
-              <a ng-click="emailSubmit()" class="cwp-button" target="_blank">send email</a>
+<!--              <textarea ng-model="emailBody"></textarea>-->
+              <a ng-click="emailSubmit()" class="cwp-button" target="_blank">go to email</a>
             </form>
           </div>
         </div>

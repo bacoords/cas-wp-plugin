@@ -309,14 +309,14 @@ $blue: rgba(101,164,219, 1);
     
        
     &__email{
-      width:600px;
+      width:700px;
       
       &__header{
         padding:10px;
       }
       &__body{  
         
-        input[type=text], input[type=password]{
+        input[type=text], input[type=password], textarea{
           padding: 15px;
           background: #fff;
           border-radius: 3px;

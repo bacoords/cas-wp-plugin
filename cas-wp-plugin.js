@@ -81,6 +81,7 @@ angular.module('backendApp', ['wp.api'])
   $scope.emailToAddress = '';
   $scope.emailCC = '';
   $scope.emailBody = '';
+  $scope.emailSelect = '';
   $scope.emailSchool = null;
   $scope.showEmail = function(i){
    
@@ -100,21 +101,36 @@ angular.module('backendApp', ['wp.api'])
     }
   }
   
+//  $scope.templateSelect = function(i){
+//    $scope.emailBody = $scope.emails[i];
+//  }
+  
   $scope.emailSubmit = function(){
     var z = '';
     if($scope.emailToAddress && $scope.emailBody){
+      //set up variables
       var a = encodeURIComponent($scope.emailToName);
       var b = encodeURIComponent($scope.emailToAddress);
       var c = encodeURIComponent($scope.emailCC);
-      var d = encodeURIComponent($scope.emailBody);
-
-      z += 'mailto:' + a + '<' + b + '>?';
+      var d = encodeURIComponent($scope.emailSelect.content.rendered);  
+      
+      if($scope.emailToName){
+        z += 'mailto:' + a + '<' + b + '>?';
+      }else{
+        z += 'mailto:' + b + '?';
+      }
+      
       if($scope.emailCC){
         z += 'cc=' + c + '&';
       }
+      
       z += 'body=' + d + '';
+      
+      window.open(
+        z,
+        '_blank' // <- This is what makes it open in a new window.
+      );
     }
-    window.location.href = z;
     return;
   }
 //      <input type="text" ng-model="emailToName">
