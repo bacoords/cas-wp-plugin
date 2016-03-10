@@ -14,11 +14,9 @@ if(is_user_logged_in ()){ ?>
      <div class="cwp-header__search">
        <input type="text" ng-model="search" class="cwp-search" placeholder="Search Our Schools">
      </div>
-<!--
      <div class="cwp-header__calendar">
-       CALENDAR THING
+       <img src="https://communityallstars.com/wp-content/uploads/2016/03/cwpiconcal.png" alt="Cal Link">
      </div>
--->
    </div>
    <div class="no-print"><BR><BR><BR><BR></div>
    
