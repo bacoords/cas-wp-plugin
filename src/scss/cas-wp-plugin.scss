@@ -220,7 +220,9 @@ $blue: rgba(101,164,219, 1);
     box-shadow: 0 3px 25px $black;
     color:$white;
     background:none;
-    transition:all 300ms ease;
+    transition:all 300ms ease; font-size: 22px;
+    padding: 1px 6px;
+
     &:hover{
       color:$red;
       border: 3px solid $red;

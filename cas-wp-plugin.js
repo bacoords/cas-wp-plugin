@@ -25,10 +25,16 @@ angular.module('backendApp', ['wp.api'])
     param2: wpAPIData.user_id
     } );
   
-  //Variables for sort/order
+  //Variables for sort/order/view
   $scope.search = '';
   $scope.sortType = '_cas_school_name';
   $scope.sortReverse = false;
+  
+  
+  //Swap CIew
+  $scope.currentView = true;
+
+  
   
   //Modal
   $scope.isShowingModal = false;

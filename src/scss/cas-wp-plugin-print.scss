@@ -25,3 +25,7 @@ body, .cwp, .cwp-modal-overlay, .cwp-modal__print {
 .cwp-modal__header__buttons{
   display: none !important;
 }
+.cwp-modal{
+  box-shadow: none;
+  border:none;
+}
