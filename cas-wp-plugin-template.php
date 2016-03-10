@@ -12,7 +12,7 @@ if(is_user_logged_in ()){ ?>
        <img src="https://communityallstars.com/wp-content/uploads/2016/03/casschoolsportallogo.png" alt="CAS LOGO">
      </div>
      <div class="cwp-header__search">
-       <input type="text" ng-model="search" class="cwp-search" placeholder="Search Our Schools">
+       <input type="text" ng-model="search" class="cwp-search ng-class:{!currentView:disabled}" placeholder="Search Our Schools">
      </div>
      <div class="cwp-header__calendar">
        <a ng-click="currentView = !currentView">
@@ -268,14 +268,14 @@ if(is_user_logged_in ()){ ?>
       <table class="cwp-cal-table"> 
         <tr>
           <td>
-            <a ng-click="sortTypeCal = 'gsx$school.$t'; sortReverseCal = !sortReverse">
+            <a ng-click="sortTypeCal = 'gsx$school.$t'; sortReverseCal = !sortReverseCal">
              School
               <span ng-show="sortTypeCal == 'gsx$school.$t' && !sortReverseCal">&#9650;</span>
               <span ng-show="sortTypeCal == 'gsx$school.$t' && sortReverseCal">&#9660;</span>
             </a>
           </td>
           <td>
-            <a ng-click="sortTypeCal = 'gsx$closedate.$t'; sortReverseCal = !sortReverse">
+            <a ng-click="sortTypeCal = 'gsx$closedate.$t'; sortReverseCal = !sortReverseCal">
               Date
               <span ng-show="sortTypeCal == 'gsx$closedate.$t' && !sortReverseCal">&#9650;</span>
               <span ng-show="sortTypeCal == 'gsx$closedate.$t' && sortReverseCal">&#9660;</span>

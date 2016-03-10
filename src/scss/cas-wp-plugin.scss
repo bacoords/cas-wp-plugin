@@ -10,7 +10,7 @@ $blue: rgba(101,164,219, 1);
 
 //override nav
 
-.cas-nav-top, .cas-nav, .cn-nav-shim{
+.cas-nav-top, .cas-nav, .cn-nav-shim, .footer-grey{
   display:none !important;
 }
 
@@ -85,6 +85,10 @@ $blue: rgba(101,164,219, 1);
     &:focus{
 //      text-align: left;
 //      padding-left:15px;
+    }
+    &.disabled{
+      opacity: 0;
+      pointer-events: none;
     }
   }
   
