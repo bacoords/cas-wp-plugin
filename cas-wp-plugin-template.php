@@ -15,7 +15,7 @@ if(is_user_logged_in ()){ ?>
        <input type="text" ng-model="search" class="cwp-search" placeholder="Search Our Schools">
      </div>
      <div class="cwp-header__calendar">
-       <a ng-click="currentView != currentView">
+       <a ng-click="currentView = !currentView">
          <img src="https://communityallstars.com/wp-content/uploads/2016/03/cwpiconcal.png" class="ng-hide" alt="Cal Link" ng-show="currentView">
          <img src="https://communityallstars.com/wp-content/uploads/2016/03/capiconsch.png" class="ng-hide" alt="Cal Link" ng-show="!currentView">
        </a>
