@@ -147,6 +147,9 @@ $blue: rgba(101,164,219, 1);
       background:$black;
       color:$white;
     }
+    &:active{
+        box-shadow: inset 0 0 7px 0px rgba(0,0,0,0.3);
+    }
     &--blue{
       border-color:$blue;
       color:$blue;
@@ -181,6 +184,7 @@ $blue: rgba(101,164,219, 1);
       border:1px solid transparent;
       &:hover{
         background:$white;
+        color:inherit;
       }
     }
     &--link{

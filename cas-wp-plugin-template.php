@@ -154,7 +154,7 @@ if(is_user_logged_in ()){ ?>
                  <div class="frame">
                    <div class="bit-1">
                      <div class="padding">
-                       <strong>About the School:</strong><br><BR>
+                       <strong>About the School:</strong><br>
                        <p class="text-gray--dark">{{modalSchool._cas_school_description}}</p>
                      </div>
                    </div>
@@ -163,7 +163,7 @@ if(is_user_logged_in ()){ ?>
                  <div class="frame">
                    <div class="bit-1">
                      <div class="padding">
-                       <strong>About the City:</strong><br><br>
+                       <strong>About the City:</strong><br>
                        <p class="text-gray--dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quos quidem placeat non distinctio! Quidem maiores reprehenderit est amet quam officiis nesciunt labore voluptatum, architecto, odio repudiandae incidunt inventore quaerat.</p>
                      </div>
                    </div>
@@ -172,7 +172,7 @@ if(is_user_logged_in ()){ ?>
                  <div class="frame">
                    <div class="bit-1">
                      <div class="padding">
-                       <strong>Sports Achievements:</strong><br><br>
+                       <strong>Sports Achievements:</strong><br>
                        <p class="text-gray--dark">{{modalSchool._cas_school_testimonial_achievements}}</p>
                      </div>
                    </div>
@@ -219,7 +219,7 @@ if(is_user_logged_in ()){ ?>
                   
                   <div class="frame">
                     <div class="bit-1">
-                      <div class="google-maps"><iframe width="300" height="300" frameborder="0" style="border:0" ng-src="{{createMap(modalSchool._cas_school_address, modalSchool._cas_school_city, modalSchool._cas_school_state, modalSchool._cas_school_zip)}}"></iframe></div>
+                      <div class="google-maps"><iframe width="360" height="360" frameborder="0" style="border:0" ng-src="{{createMap(modalSchool._cas_school_address, modalSchool._cas_school_city, modalSchool._cas_school_state, modalSchool._cas_school_zip)}}"></iframe></div>
                     </div>
                   </div>
                 </div>
