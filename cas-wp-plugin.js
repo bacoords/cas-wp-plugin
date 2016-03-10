@@ -108,7 +108,7 @@ angular.module('backendApp', ['wp.api'])
       var c = encodeURI($scope.emailCC);
       var d = encodeURI($scope.emailBody);
 
-      z += 'mailto:' + a + '<' + b + '>?' + ;
+      z += 'mailto:' + a + '<' + b + '>?';
       if($scope.emailCC){
         z += 'cc=' + c + '&';
       }
