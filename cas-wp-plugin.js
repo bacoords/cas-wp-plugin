@@ -112,7 +112,8 @@ angular.module('backendApp', ['wp.api'])
       var a = encodeURIComponent($scope.emailToName);
       var b = encodeURIComponent($scope.emailToAddress);
       var c = encodeURIComponent($scope.emailCC);
-      var d = encodeURIComponent($scope.emailSelect.content.rendered);  
+      var t = jQuery($scope.emailSelect.content.rendered).text();
+      var d = encodeURIComponent(t);  
       
       if($scope.emailToName){
         z += 'mailto:' + a + '<' + b + '>?';
