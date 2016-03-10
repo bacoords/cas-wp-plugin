@@ -395,6 +395,37 @@ function cas_plugin_get_custom_meta( $object, $field_name, $request ) {
 
 
 
+//  *********************************************************************************
+// Custom Post Type - Mail Forms
+//  *********************************************************************************
+// Creates the custom post type
+add_action( 'init', 'cwp-create_post_type' );
+function create_post_type() {
+	register_post_type( 'cas_email_template',
+		array(
+			'labels' => array(
+				'name' => __( 'Email Templates' ),
+				'singular_name' => __( 'Template' ),
+				'add_new_item'  => __( 'Add New Template' ),
+				'new_item'       => __( 'New Template' ),
+				'edit_item'          => __( 'Edit Template' ),
+				'view_item'          => __( 'View Template' ),
+				'all_items'          => __( 'All Templates' )
+
+			),
+		'public' => false,
+		'show_ui' => true,
+		'has_archive' => false,
+		'menu_position' => 20,
+		'menu_icon' => 'dashicons-email-alt',
+		'supports' => array(
+				'title', 'editor', 'revisions',
+				),
+//		'rewrite' => array('slug' => 'schools'),
+
+		)
+	);
+}
 
 
 
