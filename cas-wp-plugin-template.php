@@ -265,7 +265,31 @@ if(is_user_logged_in ()){ ?>
     
     <div class="cwp-view__calendar ng-hide" ng-show="!currentView">
       
-      CAL VIEW
+      <table class="cwp-cal-table"> 
+        <tr>
+          <td>
+            <a ng-click="sortTypeCal = 'gsx$school.$t'; sortReverseCal = !sortReverse">
+             School
+              <span ng-show="sortTypeCal == 'gsx$school.$t' && !sortReverseCal">&#9650;</span>
+              <span ng-show="sortTypeCal == 'gsx$school.$t' && sortReverseCal">&#9660;</span>
+            </a>
+          </td>
+          <td>
+            <a ng-click="sortTypeCal = 'gsx$closedate.$t'; sortReverseCal = !sortReverse">
+              Location
+              <span ng-show="sortTypeCal == 'gsx$closedate.$t' && !sortReverseCal">&#9650;</span>
+              <span ng-show="sortTypeCal == 'gsx$closedate.$t' && sortReverseCal">&#9660;</span>
+
+            </a>
+          </td>
+        </tr>
+        <tr ng-repeat="cal in calendar | orderBy:sortTypeCal:sortReverseCal">
+          
+          <td> {{cal.gsx$school.$t}}</td>
+          <td> {{cal.gsx$closedate.$t}}</td>
+         
+        </tr>
+      </table>
       
     </div>
     

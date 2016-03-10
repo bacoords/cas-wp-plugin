@@ -25,10 +25,21 @@ angular.module('backendApp', ['wp.api'])
     param2: wpAPIData.user_id
     } );
   
+  
+    //11R4iEUMzOFfozho3GUMX9IXrMJx_bpZ2-0AlUDQQVyQ
+  
+   $http.get('https://spreadsheets.google.com/feeds/list/11R4iEUMzOFfozho3GUMX9IXrMJx_bpZ2-0AlUDQQVyQ/od6/public/values?alt=json')
+    .then(function(response){
+    $scope.calendar = response.data.feed.entry;
+
+  }); 
+  
   //Variables for sort/order/view
   $scope.search = '';
   $scope.sortType = '_cas_school_name';
   $scope.sortReverse = false;
+  $scope.sortTypeCal = '_cas_school_name';
+  $scope.sortReverseCal = false;
   
   
   //Swap CIew
