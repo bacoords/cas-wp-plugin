@@ -399,8 +399,8 @@ function cas_plugin_get_custom_meta( $object, $field_name, $request ) {
 // Custom Post Type - Mail Forms
 //  *********************************************************************************
 // Creates the custom post type
-add_action( 'init', 'cwp-create_post_type' );
-function create_post_type() {
+add_action( 'init', 'cwp_create_post_type' );
+function cwp_create_post_type() {
 	register_post_type( 'cas_email_template',
 		array(
 			'labels' => array(
