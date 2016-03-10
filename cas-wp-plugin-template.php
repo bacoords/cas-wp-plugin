@@ -18,7 +18,7 @@ if(is_user_logged_in ()){ ?>
        <img src="https://communityallstars.com/wp-content/uploads/2016/03/cwpiconcal.png" alt="Cal Link">
      </div>
    </div>
-   <div class="no-print"><BR><BR><BR><BR></div>
+   <div class="no-print"><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR></div>
    
 
     <table>
@@ -185,18 +185,18 @@ if(is_user_logged_in ()){ ?>
                     <div class="bit-1">
                       <div class="padding">
                         <a ng-href="{{modalSchool.link}}" class="cwp-button cwp-button--hasicon" target="_blank"><img src="https://communityallstars.com/wp-content/uploads/2016/03/casicontiny.png" alt="CAS Icon"></a> 
-                        <a ng-href="{{modalSchool.link}}" class="cwp-button cwp-button--no-border" target="_blank">{{modalSchool.link}}</a> 
+                        <a ng-href="{{modalSchool.link}}" class="cwp-button cwp-button--no-border cwp-button--link" target="_blank">{{modalSchool.link}}</a> 
                         
                       </div>
                     </div>
                   </div>
-                  <div class="frame">
+                  <div class="frame" ng-show="modalSchool._cas_school_team_bank_url">
                     <div class="bit-1">
                       <div class="padding">
                         <a ng-href="{{modalSchool._cas_school_team_bank_url}}" class="cwp-button cwp-button--hasicon" target="_blank">
                           <img src="https://communityallstars.com/wp-content/uploads/2016/03/teambankicon.png" alt="TB Icon">
                         </a>
-                         <a ng-href="{{modalSchool._cas_school_team_bank_url}}" class="cwp-button cwp-button--no-border" target="_blank">
+                         <a ng-href="{{modalSchool._cas_school_team_bank_url}}" class="cwp-button cwp-button--no-border cwp-button--link" target="_blank">
                           {{modalSchool._cas_school_team_bank_url}}
                         </a> 
                       </div>
@@ -264,6 +264,7 @@ if(is_user_logged_in ()){ ?>
 <div class="cwp cas-wp-plugin" >
 
 
+<!--
    
    <div class="cwp-header">
      <div class="cwp-header__logo">
@@ -273,10 +274,11 @@ if(is_user_logged_in ()){ ?>
         <h1>Schools Portal</h1>
      </div>
   </div>
+-->
   <BR><BR><BR><BR><BR><BR>
   <div class="cwp-login-form">
     <div class="cwp-login-form_header">
-      <img src="http://cas.threecordsstudio.com/wp-content/uploads/2015/11/cropped-webclip.png" alt="CAS LOGO">
+      <img src="https://communityallstars.com/wp-content/uploads/2016/03/casschoolsportallogo.png" alt="CAS LOGO">
     </div>
     <div class="cwp-login-form_body">
        <?php wp_login_form(); ?>
