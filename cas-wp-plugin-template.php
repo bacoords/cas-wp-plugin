@@ -276,7 +276,7 @@ if(is_user_logged_in ()){ ?>
           </td>
           <td>
             <a ng-click="sortTypeCal = 'gsx$closedate.$t'; sortReverseCal = !sortReverse">
-              Location
+              Date
               <span ng-show="sortTypeCal == 'gsx$closedate.$t' && !sortReverseCal">&#9650;</span>
               <span ng-show="sortTypeCal == 'gsx$closedate.$t' && sortReverseCal">&#9660;</span>
 
@@ -290,6 +290,8 @@ if(is_user_logged_in ()){ ?>
          
         </tr>
       </table>
+      
+      <div class="no-print"><BR><BR><BR><BR><BR><BR></div>
       
     </div>
     

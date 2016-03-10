@@ -38,7 +38,7 @@ angular.module('backendApp', ['wp.api'])
   $scope.search = '';
   $scope.sortType = '_cas_school_name';
   $scope.sortReverse = false;
-  $scope.sortTypeCal = '_cas_school_name';
+  $scope.sortTypeCal = 'gsx$school.$t';
   $scope.sortReverseCal = false;
   
   
