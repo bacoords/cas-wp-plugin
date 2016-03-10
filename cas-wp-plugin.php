@@ -274,6 +274,14 @@ function cas_plugin_register_custom_meta() {
         )
     );
     register_rest_field( 'cas_school',
+        '_cas_school_salesforce_url',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+    register_rest_field( 'cas_school',
         '_cas_school_logo',
         array(
             'get_callback'    => 'cas_plugin_get_custom_meta',

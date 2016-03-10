@@ -9,7 +9,7 @@ if(is_user_logged_in ()){ ?>
    
    <div class="cwp-header">
      <div class="cwp-header__logo">
-       <img src="http://cas.threecordsstudio.com/wp-content/uploads/2015/11/cropped-webclip.png" alt="CAS LOGO">
+       <img src="https://communityallstars.com/wp-content/uploads/2016/03/casschoolsportallogo.png" alt="CAS LOGO">
      </div>
      <div class="cwp-header__search">
        <input type="text" ng-model="search" class="cwp-search" placeholder="Search Our Schools">
@@ -119,7 +119,7 @@ if(is_user_logged_in ()){ ?>
            </div>
            <div class="cwp-modal__header__buttons">
              <a class="cwp-button cwp-button--full cwp-button--large cwp-button--faded" ng-click="showEmail(modalSchool.id)">send email</a><BR>
-             <a class="cwp-button cwp-button--full cwp-button--large cwp-button--faded">current sales</a><BR>
+             <a ng-href="{{school._cas_school_salesforce_url}}" class="cwp-button cwp-button--full cwp-button--large cwp-button--faded">current sales</a><BR>
              <a href="javascript:window.print()" class="cwp-button cwp-button--full cwp-button--large cwp-button--faded">print page</a><BR>
            </div>
           
@@ -269,7 +269,7 @@ if(is_user_logged_in ()){ ?>
    
    <div class="cwp-header">
      <div class="cwp-header__logo">
-       <img src="http://cas.threecordsstudio.com/wp-content/uploads/2015/11/cropped-webclip.png" alt="CAS LOGO">
+       <img src="https://communityallstars.com/wp-content/uploads/2016/03/casschoolsportallogo.png" alt="CAS LOGO">
      </div>
      <div class="cwp-header__search">
         <h1>Schools Portal</h1>
