@@ -108,13 +108,14 @@ angular.module('backendApp', ['wp.api'])
       var c = encodeURIComponent($scope.emailCC);
       var d = encodeURIComponent($scope.emailBody);
 
-      z += 'window.location.href = "mailto:' + a + '<' + b + '>?';
+      z += 'mailto:' + a + '<' + b + '>?';
       if($scope.emailCC){
         z += 'cc=' + c + '&';
       }
-      z += 'body=' + d + '"';
+      z += 'body=' + d + '';
     }
-    return z;
+    window.location.href = z;
+    return;
   }
 //      <input type="text" ng-model="emailToName">
 //              <input type="text" ng-model="emailToAddress">

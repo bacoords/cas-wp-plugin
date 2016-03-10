@@ -240,7 +240,7 @@ if(is_user_logged_in ()){ ?>
         <div class="cwp-modal cwp-modal__email">
 
          <a class="cwp-button cwp-modal-close" ng-click="showEmail(-1)">&#10006;</a>
-          <div class="cwp-modal__header">
+          <div class="cwp-modal__header cwp-modal__email__header">
              <div class="frame">
                <div class="bit-2">
                  <div class="padding">
@@ -257,7 +257,7 @@ if(is_user_logged_in ()){ ?>
              </div>
 
           </div>
-          <div class="cwp-modal__body">
+          <div class="cwp-modal__body cwp-modal__email__body">
             
             <form>
                

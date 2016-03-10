@@ -314,7 +314,8 @@ $blue: rgba(101,164,219, 1);
       &__header{
         padding:10px;
       }
-      &__body{
+      &__body{  
+        
         input[type=text], input[type=password]{
           padding: 15px;
           background: #fff;
@@ -340,7 +341,7 @@ $blue: rgba(101,164,219, 1);
             color:$white;
             background:$gray--dark;
           }
-        }        
+        }
       }
     }
   }
