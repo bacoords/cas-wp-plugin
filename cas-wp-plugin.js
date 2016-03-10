@@ -19,6 +19,10 @@ angular.module('backendApp', ['wp.api'])
       param1: 'cas_school',
       'filter[posts_per_page]': -1
     } );
+    $scope.emails = wpAPIResource.query( {
+      param1: 'cas_email_template',
+      'filter[posts_per_page]': -1
+    } );
 
     $scope.user = wpAPIResource.get( {
     param1: 'users',
@@ -73,7 +77,10 @@ angular.module('backendApp', ['wp.api'])
   //email modal
   
   $scope.isShowingEmail = false;
-  
+  $scope.emailToName = '';
+  $scope.emailToAddress = '';
+  $scope.emailCC = '';
+  $scope.emailBody = '';
   $scope.emailSchool = null;
   $scope.showEmail = function(i){
    
@@ -93,6 +100,26 @@ angular.module('backendApp', ['wp.api'])
     }
   }
   
+  $scope.emailSubmit = function(){
+    var z = '';
+    if($scope.emailToAddress && $scope.emailBody){
+      var a = encodeURI($scope.emailToName);
+      var b = encodeURI($scope.emailToAddress);
+      var c = encodeURI($scope.emailCC);
+      var d = encodeURI($scope.emailBody);
+
+      z += 'mailto:' + a + '<' + b + '>?' + ;
+      if($scope.emailCC){
+        z += 'cc=' + c + '&';
+      }
+      z += 'body=' + d;
+    }
+    return z;
+  }
+//      <input type="text" ng-model="emailToName">
+//              <input type="text" ng-model="emailToAddress">
+//              <input type="text" ng-model="emailCC">
+//              <textarea ng-model="emailBody"> 
   
   
   //google map creator

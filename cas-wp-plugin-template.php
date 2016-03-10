@@ -249,14 +249,23 @@ if(is_user_logged_in ()){ ?>
                </div>
                <div class="bit-2">
                  <div class="padding">
-
+                 <select name="" id="">
+                   <option ng-repeat="email in emails track by email.id" value="email.id">{{email.title.rendered}}</option>
+                 </select>
                  </div>
                </div>
              </div>
 
           </div>
           <div class="cwp-modal__body">
-            body stuff
+            
+            <form>
+              <input type="text" ng-model="emailToName">
+              <input type="text" ng-model="emailToAddress">
+              <input type="text" ng-model="emailCC">
+              <textarea ng-model="emailBody"></textarea>
+              <a ng-href="emailSubmit()" class="cwp-button"></a>
+            </form>
           </div>
         </div>
      </div>
