@@ -142,7 +142,7 @@ if(is_user_logged_in ()){ ?>
                      </div>
                    </div>
                  </div>
-                 <BR><BR><BR>
+                 <BR>
                  <div class="frame">
                    <div class="bit-1">
                      <div class="padding">
@@ -150,7 +150,7 @@ if(is_user_logged_in ()){ ?>
                      </div>
                    </div>
                  </div>
-                 <BR><BR><BR>
+                 <BR>
                  <div class="frame">
                    <div class="bit-1">
                      <div class="padding">
@@ -159,7 +159,7 @@ if(is_user_logged_in ()){ ?>
                      </div>
                    </div>
                  </div>
-                 <BR><BR><BR>
+                 <BR>
                  <div class="frame">
                    <div class="bit-1">
                      <div class="padding">
@@ -168,7 +168,7 @@ if(is_user_logged_in ()){ ?>
                      </div>
                    </div>
                  </div>
-                 <BR><BR><BR>
+                 <BR>
                  <div class="frame">
                    <div class="bit-1">
                      <div class="padding">
