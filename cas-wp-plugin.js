@@ -81,7 +81,7 @@ angular.module('backendApp', ['wp.api'])
   $scope.emailToAddress = '';
   $scope.emailCC = '';
   $scope.emailBody = '';
-  $scope.emailSelect = '';
+  $scope.emailSelect = null;
   $scope.emailSchool = null;
   $scope.showEmail = function(i){
    
@@ -107,7 +107,7 @@ angular.module('backendApp', ['wp.api'])
   
   $scope.emailSubmit = function(){
     var z = '';
-    if($scope.emailToAddress && $scope.emailBody){
+    if($scope.emailToAddress && $scope.emailSelect){
       //set up variables
       var a = encodeURIComponent($scope.emailToName);
       var b = encodeURIComponent($scope.emailToAddress);
