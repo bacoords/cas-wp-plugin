@@ -22,6 +22,7 @@ angular.module('backendApp', ['wp.api'])
       param1: 'cas_school',
       'filter[posts_per_page]': -1
     } ).$promise.then(function (result) {
+      $scope.schools = result;
       $scope.loading = false;
     })
     $scope.emails = wpAPIResource.query( {
