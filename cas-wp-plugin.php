@@ -453,9 +453,17 @@ function wpse128204_edit_form_top( $post )
 {
     if( in_array( $post->post_type, array( 'cas_email_template' ) ) ){
         echo '<div class="postbox-container"><div class="postbox">
-          <h2>Possible Codes</h2>
           <div class="inside">
-          [SCHOOL]
+          <h2>Possible Codes</h2>
+          <p>School Info:</p>
+          <P>[SCHOOL]</p>
+          <P>[SCHOOLURL]</p>
+          <P>Contact Info:</p>
+          <P>[CONTACT]</p>
+          <P>[TITLE]</p>
+          <P>[PHONE]</p>
+          <P>Email Info:</p>
+          <p>[SPONSOR]</p>
           </div></div></div>';
     }
 }
