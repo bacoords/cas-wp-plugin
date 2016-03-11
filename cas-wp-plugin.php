@@ -455,7 +455,7 @@ function wpse128204_edit_form_top( $post )
         echo '<div class="postbox-container"><div class="postbox">
           <h2>Possible Codes</h2>
           <div class="inside">
-          <<SCHOOL>>  
+          [SCHOOL]
           </div></div></div>';
     }
 }
