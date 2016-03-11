@@ -40,7 +40,7 @@ if(is_user_logged_in ()){ ?>
         <div class="bit-1">
           <div class="cwp-subheader cwp-subheader__calendar">
             <div class="cwp-subheader__img">
-              <img src="https://communityallstars.com/wp-content/uploads/2016/03/capiconsch.png" class="ng-hide" alt="Cal Link">
+              <img src="https://communityallstars.com/wp-content/uploads/2016/03/capiconsch.png" alt="Cal Link">
             </div>
             <div class="cwp-subheader__title">
               <span>SCHOOL LIST AND INFO</span>
@@ -303,7 +303,7 @@ if(is_user_logged_in ()){ ?>
         <div class="bit-1">
           <div class="cwp-subheader cwp-subheader__calendar">
             <div class="cwp-subheader__img">
-              <img src="https://communityallstars.com/wp-content/uploads/2016/03/cwpiconcal.png" class="ng-hide" alt="Cal Link">
+              <img src="https://communityallstars.com/wp-content/uploads/2016/03/cwpiconcal.png" alt="Cal Link">
             </div>
             <div class="cwp-subheader__title">
               <span>SALES CLOSE DATE</span>

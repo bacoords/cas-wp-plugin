@@ -156,6 +156,8 @@ $blue: rgba(101,164,219, 1);
   .cwp-subheader{
     display: flex;
     justify-content: flex-start;
+    max-width: 1100px;
+    margin:0 auto;
     &__img{
       img{
         margin:0 auto;
