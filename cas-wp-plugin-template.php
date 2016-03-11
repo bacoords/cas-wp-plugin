@@ -22,6 +22,17 @@ if(is_user_logged_in ()){ ?>
      </div>
    </div>
    
+   
+    <div class="cs-loader no-print" ng-show="loading">
+      <div class="cs-loader-inner">
+        <label>	●</label>
+        <label>	●</label>
+        <label>	●</label>
+        <label>	●</label>
+        <label>	●</label>
+        <label>	●</label>
+      </div>
+    </div>
     <div class="no-print"><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR></div>
     
     <div class="cwp-view__school-list ng-hide" ng-show="currentView">

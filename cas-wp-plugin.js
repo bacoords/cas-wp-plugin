@@ -15,15 +15,20 @@ angular.module('backendApp', ['wp.api'])
 //    $scope.schools = response.data;
 //    console.log($scope.schools);
 //  });
+  
+  
+    $scope.loading = true;
     $scope.schools = wpAPIResource.query( {
       param1: 'cas_school',
       'filter[posts_per_page]': -1
-    } );
+    } ).$promise.then(function (result) {
+      $scope.loading = false;
+    })
     $scope.emails = wpAPIResource.query( {
       param1: 'cas_email_template',
       'filter[posts_per_page]': -1
     } );
-
+    
     $scope.user = wpAPIResource.get( {
     param1: 'users',
     param2: wpAPIData.user_id
