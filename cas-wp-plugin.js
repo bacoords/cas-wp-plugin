@@ -23,7 +23,6 @@ angular.module('backendApp', ['wp.api'])
       'filter[posts_per_page]': -1
     } ).$promise.then(function (result) {
       $scope.schools = result;
-      console.log(result);
       $scope.loading = false;
     })
     $scope.emails = wpAPIResource.query( {
@@ -47,7 +46,7 @@ angular.module('backendApp', ['wp.api'])
   $scope.search = '';
   $scope.sortType = '_cas_school_name';
   $scope.sortReverse = false;
-  $scope.sortTypeCal = 'gsx$school.$t';
+  $scope.sortTypeCal = 'gsx$closedate.$t';
   $scope.sortReverseCal = false;
   
   

@@ -36,6 +36,20 @@ if(is_user_logged_in ()){ ?>
     <div class="no-print"><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR></div>
     
     <div class="cwp-view__school-list ng-hide" ng-show="currentView">
+      <div class="frame">
+        <div class="bit-1">
+          <div class="cwp-subheader cwp-subheader__calendar">
+            <div class="cwp-subheader__img">
+              <img src="https://communityallstars.com/wp-content/uploads/2016/03/capiconsch.png" class="ng-hide" alt="Cal Link">
+            </div>
+            <div class="cwp-subheader__title">
+              <span>SCHOOL LIST AND INFO</span>
+              <span>Find school info, contacts, and email templates</span>
+              <span>Sorted by school descending</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <table> 
         <tr>
@@ -285,7 +299,20 @@ if(is_user_logged_in ()){ ?>
     </div>
     
     <div class="cwp-view__calendar ng-hide" ng-show="!currentView">
-      
+      <div class="frame">
+        <div class="bit-1">
+          <div class="cwp-subheader cwp-subheader__calendar">
+            <div class="cwp-subheader__img">
+              <img src="https://communityallstars.com/wp-content/uploads/2016/03/cwpiconcal.png" class="ng-hide" alt="Cal Link">
+            </div>
+            <div class="cwp-subheader__title">
+              <span>SALES CLOSE DATE</span>
+              <span>See when current campaigns close</span>
+              <span>Sorted by close date descending</span>
+            </div>
+          </div>
+        </div>
+      </div>
       <table class="cwp-cal-table"> 
         <tr>
           <td>
