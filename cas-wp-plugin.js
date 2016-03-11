@@ -101,9 +101,7 @@ angular.module('backendApp', ['wp.api'])
     }
   }
   
-//  $scope.templateSelect = function(i){
-//    $scope.emailBody = $scope.emails[i];
-//  }
+
   
   $scope.emailSubmit = function(){
     var z = '';
@@ -112,8 +110,11 @@ angular.module('backendApp', ['wp.api'])
       var a = encodeURIComponent($scope.emailToName);
       var b = encodeURIComponent($scope.emailToAddress);
       var c = encodeURIComponent($scope.emailCC);
-      var t = jQuery($scope.emailSelect.content.rendered).text();
-      var d = encodeURIComponent(t);  
+      var q = jQuery($scope.emailSelect.content.rendered).text();
+      var r = q.replace("<<SCHOOL>>", $scope.emailSchool._cas_school_name);
+      
+      
+      var d = encodeURIComponent(r);  
       
       if($scope.emailToName){
         z += 'mailto:' + a + '<' + b + '>?';
@@ -134,10 +135,7 @@ angular.module('backendApp', ['wp.api'])
     }
     return;
   }
-//      <input type="text" ng-model="emailToName">
-//              <input type="text" ng-model="emailToAddress">
-//              <input type="text" ng-model="emailCC">
-//              <textarea ng-model="emailBody"> 
+
   
   
   //google map creator

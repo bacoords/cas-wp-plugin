@@ -448,6 +448,19 @@ function cas_email_template_post_type_rest_support() {
   }
 
 }
+add_action('edit_form_top', 'wpse128204_edit_form_top');
+function wpse128204_edit_form_top( $post )
+{
+    if( in_array( $post->post_type, array( 'cas_email_template' ) ) ){
+        echo '<div class="postbox-container">
+          <h2>Possible Codes</h2>
+          </div>';
+    }
+}
+
+
+
+
 
 
 /**
