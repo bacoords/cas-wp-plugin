@@ -456,6 +456,7 @@ $blue: rgba(101,164,219, 1);
 	height: 100%;
 	width: 100%;
   z-index:110001;
+  background:rgba($white, 0.7);
 }
 .cs-loader-inner {
 	transform: translateY(-50%);

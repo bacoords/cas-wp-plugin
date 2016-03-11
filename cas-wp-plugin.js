@@ -23,6 +23,7 @@ angular.module('backendApp', ['wp.api'])
       'filter[posts_per_page]': -1
     } ).$promise.then(function (result) {
       $scope.schools = result;
+      console.log(result);
       $scope.loading = false;
     })
     $scope.emails = wpAPIResource.query( {
@@ -60,20 +61,24 @@ angular.module('backendApp', ['wp.api'])
   $scope.modalSchool = null;
   $scope.nearbySchoolsObj = null;
   $scope.showModal = function(i){
-    
+    $scope.loading = true;
     if(i>-1){
       jQuery(document.body).addClass('modal-open');
-      $scope.modalSchool = wpAPIResource.get( {
+      wpAPIResource.get( {
         param1: 'cas_school',
         param2: i
-      } );
-      $scope.isShowingModal = true;
+      } ).$promise.then(function(result){
+        $scope.modalSchool = result;
+        $scope.isShowingModal = true;
+        $scope.loading = false;
+      });
       return;
     }else{
       jQuery(document.body).removeClass('modal-open');
       $scope.modalSchool = null;
       $scope.nearbySchoolsObj = null;
       $scope.isShowingModal = false;
+      $scope.loading = false;
       return;
     }
   }
@@ -88,19 +93,23 @@ angular.module('backendApp', ['wp.api'])
   $scope.emailSelect = null;
   $scope.emailSchool = null;
   $scope.showEmail = function(i){
-   
+    $scope.loading = true;
     if(i>-1){
       jQuery(document.body).addClass('modal-open');
-      $scope.emailSchool = wpAPIResource.get( {
+      wpAPIResource.get( {
         param1: 'cas_school',
         param2: i
-      } );
-      $scope.isShowingEmail = true;
+      } ).$promise.then(function(result){
+        $scope.emailSchool = result;
+        $scope.isShowingEmail = true;
+        $scope.loading = false;
+      });
       return;
     }else{
       jQuery(document.body).removeClass('modal-open');
       $scope.emailSchool = null;
       $scope.isShowingEmail = false;
+      $scope.loading = false;
       return;
     }
   }
