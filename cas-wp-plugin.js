@@ -111,7 +111,7 @@ angular.module('backendApp', ['wp.api'])
       var b = encodeURIComponent($scope.emailToAddress);
       var c = encodeURIComponent($scope.emailCC);
       var q = jQuery($scope.emailSelect.content.rendered).text();
-      var r = q.replace(/[SCHOOL]/g, $scope.emailSchool._cas_school_name);
+      var r = q.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
       
       
       var d = encodeURIComponent(r);  

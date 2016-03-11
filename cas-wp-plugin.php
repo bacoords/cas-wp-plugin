@@ -459,8 +459,18 @@ function wpse128204_edit_form_top( $post )
           </div></div></div>';
     }
 }
-
-
+//
+//function smashing_add_post_meta_boxes() {
+//
+//  add_meta_box(
+//    'cwp-post-class',      // Unique ID
+//    esc_html__( 'Possible Shortcodes', 'example' ),    // Title
+//    'smashing_post_class_meta_box',   // Callback function
+//    'post',         // Admin page (or post type)
+//    'side',         // Context
+//    'default'         // Priority
+//  );
+//}
 
 
 
