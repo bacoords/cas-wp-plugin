@@ -33,7 +33,7 @@ if(is_user_logged_in ()){ ?>
         <label>	●</label>
       </div>
     </div>
-    <div class="no-print"><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR></div>
+    <div class="no-print"><BR><BR><BR><BR><BR><BR><BR><BR></div>
     
     <div class="cwp-view__school-list ng-hide" ng-show="currentView">
       <div class="frame">
@@ -87,8 +87,8 @@ if(is_user_logged_in ()){ ?>
           <td> {{school._cas_school_city}},  {{school._cas_school_state}}</td>
           <td>{{school.modified | date: 'M/d/yy'}}</td> 
           <td>
-            <a ng-href="{{school.link}}" class="cwp-button cwp-button--hasicon" target="_blank"><img src="https://communityallstars.com/wp-content/uploads/2016/03/casicontiny.png" alt="CAS Icon"></a>
-            <a ng-href="{{school._cas_school_team_bank_url}}" class="cwp-button cwp-button--hasicon" target="_blank" ng-show="modalSchool._cas_school_team_bank_url"><img src="https://communityallstars.com/wp-content/uploads/2016/03/teambankicon.png" alt="TB Icon"></a>
+            <a ng-href="{{school.link}}" class="cwp-button cwp-button--cas-icon" target="_blank">CAS</a>
+            <a ng-href="{{school._cas_school_team_bank_url}}" class="cwp-button cwp-button--cas-icon" target="_blank" ng-show="modalSchool._cas_school_team_bank_url"><img src="https://communityallstars.com/wp-content/uploads/2016/03/teambankicon.png" alt="TB Icon"></a>
           </td>
 
         </tr>
