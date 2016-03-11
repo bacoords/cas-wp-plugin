@@ -290,6 +290,14 @@ function cas_plugin_register_custom_meta() {
         )
     );
     register_rest_field( 'cas_school',
+        '_cas_school_mascot',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+    register_rest_field( 'cas_school',
         '_cas_school_poster_program',
         array(
             'get_callback'    => 'cas_plugin_get_custom_meta',
@@ -458,6 +466,7 @@ function wpse128204_edit_form_top( $post )
           <p>School Info:</p>
           <P>[SCHOOL]</p>
           <P>[SCHOOLURL]</p>
+          <P>[MASCOT]</p>
           <P>Contact Info:</p>
           <P>[CONTACT]</p>
           <P>[TITLE]</p>

@@ -115,6 +115,7 @@ angular.module('backendApp', ['wp.api'])
       var q = q.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
       var q = q.replace(/\[CONTACT\]/g, $scope.emailSchool._cas_school_contact_name);
       var q = q.replace(/\[PHONE\]/g, $scope.emailSchool._cas_school_contact_phone);
+      var q = q.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
       var q = q.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
       var q = q.replace(/\[SPONSOR\]/g, $scope.emailToName);
       
