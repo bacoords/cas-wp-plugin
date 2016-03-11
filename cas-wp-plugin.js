@@ -18,7 +18,7 @@ angular.module('backendApp', ['wp.api'])
   
   
     $scope.loading = true;
-    $scope.schools = wpAPIResource.query( {
+    wpAPIResource.query( {
       param1: 'cas_school',
       'filter[posts_per_page]': -1
     } ).$promise.then(function (result) {
@@ -30,13 +30,11 @@ angular.module('backendApp', ['wp.api'])
       'filter[posts_per_page]': -1
     } );
     
-    $scope.user = wpAPIResource.get( {
-    param1: 'users',
-    param2: wpAPIData.user_id
-    } );
+//    $scope.user = wpAPIResource.get( {
+//    param1: 'users',
+//    param2: wpAPIData.user_id
+//    } );
   
-  
-    //11R4iEUMzOFfozho3GUMX9IXrMJx_bpZ2-0AlUDQQVyQ
   
    $http.get('https://spreadsheets.google.com/feeds/list/11R4iEUMzOFfozho3GUMX9IXrMJx_bpZ2-0AlUDQQVyQ/od6/public/values?alt=json')
     .then(function(response){
