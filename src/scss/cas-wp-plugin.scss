@@ -6,7 +6,7 @@ $gray--dark: #3c3c3c;
 $gray--light: #eee;
 $white: #fff;
 $blue: rgba(101,164,219, 1);
-
+$green: rgba(70,184,101,1);
 
 //override nav
 
@@ -242,9 +242,21 @@ $blue: rgba(101,164,219, 1);
     &--cas-icon{
       background:$white url('https://communityallstars.com/wp-content/uploads/2016/03/casiconbgw.png') center top no-repeat;
       color:rgba(0,0,0,0);
+      width:70px;
       &:hover{
         background:$red url('https://communityallstars.com/wp-content/uploads/2016/03/casiconbgh.png') center top no-repeat;
         color:rgba(0,0,0,0);
+        border:1px solid $red;
+      }
+    }
+    &--tb-icon{
+      background:$white url('https://communityallstars.com/wp-content/uploads/2016/03/tbiconbga.png') center top no-repeat;
+      color:rgba(0,0,0,0);
+      width:70px;
+      &:hover{
+        background:$green url('https://communityallstars.com/wp-content/uploads/2016/03/tbiconbgh.png') center top no-repeat;
+        color:rgba(0,0,0,0);
+        border:1px solid $green;
       }
     }
   }

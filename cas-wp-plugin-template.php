@@ -88,7 +88,7 @@ if(is_user_logged_in ()){ ?>
           <td>{{school.modified | date: 'M/d/yy'}}</td> 
           <td>
             <a ng-href="{{school.link}}" class="cwp-button cwp-button--cas-icon" target="_blank">CAS</a>
-            <a ng-href="{{school._cas_school_team_bank_url}}" class="cwp-button cwp-button--cas-icon" target="_blank" ng-show="modalSchool._cas_school_team_bank_url"><img src="https://communityallstars.com/wp-content/uploads/2016/03/teambankicon.png" alt="TB Icon"></a>
+            <a ng-href="{{school._cas_school_team_bank_url}}" class="cwp-button cwp-button--tb-icon" target="_blank" ng-show="modalSchool._cas_school_team_bank_url">TB</a>
           </td>
 
         </tr>
@@ -216,7 +216,7 @@ if(is_user_logged_in ()){ ?>
                     <div class="frame">
                       <div class="bit-1">
                         <div class="padding">
-                          <a ng-href="{{modalSchool.link}}" class="cwp-button cwp-button--hasicon" target="_blank"><img src="https://communityallstars.com/wp-content/uploads/2016/03/casicontiny.png" alt="CAS Icon"></a> 
+                          <a ng-href="{{modalSchool.link}}" class="cwp-button cwp-button--cas-icon" target="_blank">CAS</a> 
                           <a ng-href="{{modalSchool.link}}" class="cwp-button cwp-button--no-border cwp-button--link" target="_blank">{{modalSchool.link}}</a> 
 
                         </div>
@@ -225,8 +225,8 @@ if(is_user_logged_in ()){ ?>
                     <div class="frame" ng-show="modalSchool._cas_school_team_bank_url">
                       <div class="bit-1">
                         <div class="padding">
-                          <a ng-href="{{modalSchool._cas_school_team_bank_url}}" class="cwp-button cwp-button--hasicon" target="_blank">
-                            <img src="https://communityallstars.com/wp-content/uploads/2016/03/teambankicon.png" alt="TB Icon">
+                          <a ng-href="{{modalSchool._cas_school_team_bank_url}}" class="cwp-button cwp-button--tb-icon" target="_blank">
+                            TB
                           </a>
                            <a ng-href="{{modalSchool._cas_school_team_bank_url}}" class="cwp-button cwp-button--no-border cwp-button--link" target="_blank">
                             {{modalSchool._cas_school_team_bank_url}}
