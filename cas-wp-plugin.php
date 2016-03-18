@@ -393,6 +393,14 @@ function cas_plugin_register_custom_meta() {
             'schema'          => null,
         )
     );
+    register_rest_field( 'cas_email_template',
+        '_cas_email_template_subject',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
 }
 
 /**

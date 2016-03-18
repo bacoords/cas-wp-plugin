@@ -132,11 +132,19 @@ angular.module('backendApp', ['wp.api'])
       var q = q.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
       var q = q.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
       var q = q.replace(/\[SPONSOR\]/g, $scope.emailToName);
-      
+      var r = 'Email Subject';
+      var r = jQuery($scope.emailSelect._cas_email_template_subject).text();
+      var r = r.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
+      var r = r.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
+      var r = r.replace(/\[CONTACT\]/g, $scope.emailSchool._cas_school_contact_name);
+      var r = r.replace(/\[PHONE\]/g, $scope.emailSchool._cas_school_contact_phone);
+      var r = r.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
+      var r = r.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
+      var r = r.replace(/\[SPONSOR\]/g, $scope.emailToName);
       
       var d = encodeURIComponent(q);  
       
-      if($scope.emailToName){
+      if($scope.emailToFirstName && $scope.emailToLastName){
         z += 'mailto:' + a + ' ' + aa + '<' + b + '>?';
       }else{
         z += 'mailto:' + b + '?';
@@ -146,7 +154,10 @@ angular.module('backendApp', ['wp.api'])
         z += 'cc=' + c + '&';
       }
       
+      z += 'subject=' + r + '' + '&';
+      
       z += 'body=' + d + '';
+      
       
       window.open(
         z,
