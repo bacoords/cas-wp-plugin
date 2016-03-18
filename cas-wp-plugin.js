@@ -169,6 +169,7 @@ angular.module('backendApp', ['wp.api'])
   $scope.getNearbySchools = function(a){
     var b = a._attached_cmb2_attached_posts;
     console.log(b);
+    $scope.nearbySchoolsObj = [];
     for(var i = 0; i < b.length; i++){
       wpAPIResource.get( {
         param1: 'cas_school',
