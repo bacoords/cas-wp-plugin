@@ -70,7 +70,7 @@ angular.module('backendApp', ['wp.api'])
         $scope.modalSchool = result;
         $scope.isShowingModal = true;
         $scope.loading = false;
-        $scope.nearbySchoolsObj = $scope.getNearbySchools(result);
+        $scope.getNearbySchools(result);
       });
       return;
     }else{
@@ -169,17 +169,17 @@ angular.module('backendApp', ['wp.api'])
   $scope.getNearbySchools = function(a){
     var b = a._attached_cmb2_attached_posts;
     console.log(b);
-    var d = []
     for(var i = 0; i < b.length; i++){
       wpAPIResource.get( {
         param1: 'cas_school',
         param2: b[i]
       } ).$promise.then(function(result){
-        d.push(result.title.rendered);
+        $scope.nearbySchoolsObj.push(result.title.rendered);
+        console.log($scope.nearbySchoolsObj);
       });
       
     }    
-    return d;
+    return;
     
   }
 //  
