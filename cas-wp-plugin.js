@@ -133,7 +133,7 @@ angular.module('backendApp', ['wp.api'])
       var q = q.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
       var q = q.replace(/\[SPONSOR\]/g, $scope.emailToName);
       var r = 'Email Subject';
-      var r = jQuery($scope.emailSelect._cas_email_template_subject).text();
+      var r = $scope.emailSelect._cas_email_template_subject;
       console.log(r);
       var r = r.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
       var r = r.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
