@@ -134,6 +134,7 @@ angular.module('backendApp', ['wp.api'])
       var q = q.replace(/\[SPONSOR\]/g, $scope.emailToName);
       var r = 'Email Subject';
       var r = jQuery($scope.emailSelect._cas_email_template_subject).text();
+      console.log(r);
       var r = r.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
       var r = r.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
       var r = r.replace(/\[CONTACT\]/g, $scope.emailSchool._cas_school_contact_name);
@@ -153,8 +154,8 @@ angular.module('backendApp', ['wp.api'])
       if($scope.emailCC){
         z += 'cc=' + c + '&';
       }
-      
-      z += 'subject=' + r + '' + '&';
+      console.log(r);
+      z += 'subject=' + r + '&';
       
       z += 'body=' + d + '';
       
