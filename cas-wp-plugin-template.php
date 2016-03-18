@@ -172,6 +172,7 @@ if(is_user_logged_in ()){ ?>
                      <div class="bit-1">
                        <div class="padding">
                          <p class="text-gray--dark">{{modalSchool._cas_school_info_field_sports}}</p>
+                         <p class="text-gray--dark no-print" ng-hide="{{modalSchool._cas_school_info_field_sports}}"><em>No Info</em></p>
                        </div>
                      </div>
                    </div>
@@ -181,6 +182,7 @@ if(is_user_logged_in ()){ ?>
                        <div class="padding">
                          <strong>About the School:</strong><br>
                          <p class="text-gray--dark">{{modalSchool._cas_school_description}}</p>
+                         <p class="text-gray--dark no-print" ng-hide="{{modalSchool._cas_school_description}}"><em>No Info</em></p>
                        </div>
                      </div>
                    </div>
@@ -190,6 +192,7 @@ if(is_user_logged_in ()){ ?>
                        <div class="padding">
                          <strong>About the City:</strong><br>
                          <p class="text-gray--dark">{{modalSchool._cas_school_city_info}}</p>
+                         <p class="text-gray--dark no-print" ng-hide="{{modalSchool._cas_school_city_info}}"><em>No Info</em></p>
                        </div>
                      </div>
                    </div>
@@ -199,6 +202,7 @@ if(is_user_logged_in ()){ ?>
                        <div class="padding">
                          <strong>Sports Achievements:</strong><br>
                          <p class="text-gray--dark">{{modalSchool._cas_school_testimonial_achievements}}</p>
+                         <p class="text-gray--dark no-print" ng-hide="{{modalSchool._cas_school_testimonial_achievements}}"><em>No Info</em></p>
                        </div>
                      </div>
                    </div>
@@ -268,7 +272,7 @@ if(is_user_logged_in ()){ ?>
                  </div>
                </div>
                <div class="bit-2">
-                 <div class="padding">Template:
+                 <div class="padding">Templates:
                  <select ng-model="emailSelect" ng-options="email.title.rendered for email in emails">
                    <option value="">SELECT TEMPLATE</option>
                  </select>
@@ -281,7 +285,8 @@ if(is_user_logged_in ()){ ?>
             
             <form>
                
-              <input type="text" ng-model="emailToName" placeholder="To">
+              <input type="text" ng-model="emailToFirstName" placeholder="To (First Name)">
+              <input type="text" ng-model="emailToLastName" placeholder="To (Last Name)">
               <input type="text" ng-model="emailToAddress" placeholder="Email Address">
               <input type="text" ng-model="emailCC" placeholder="CC">
 <!--              <textarea ng-model="emailBody"></textarea>-->

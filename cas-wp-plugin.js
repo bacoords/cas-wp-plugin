@@ -120,7 +120,8 @@ angular.module('backendApp', ['wp.api'])
     var z = '';
     if($scope.emailToAddress && $scope.emailSelect){
       //set up variables
-      var a = encodeURIComponent($scope.emailToName);
+      var a = encodeURIComponent($scope.emailToFirstName);
+      var aa = encodeURIComponent($scope.emailToLastName);
       var b = encodeURIComponent($scope.emailToAddress);
       var c = encodeURIComponent($scope.emailCC);
       var q = jQuery($scope.emailSelect.content.rendered).text();
@@ -136,7 +137,7 @@ angular.module('backendApp', ['wp.api'])
       var d = encodeURIComponent(q);  
       
       if($scope.emailToName){
-        z += 'mailto:' + a + '<' + b + '>?';
+        z += 'mailto:' + a + ' ' + aa + '<' + b + '>?';
       }else{
         z += 'mailto:' + b + '?';
       }
