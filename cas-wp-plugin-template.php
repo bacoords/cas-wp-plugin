@@ -230,7 +230,7 @@ if(is_user_logged_in ()){ ?>
 
                     <BR class="no-print">
 
-                    <div class="frame">
+                    <div class="frame" ng-show="nearbySchoolsObj">
                       <div class="bit-1">
                         <div class="padding">
                           <strong>Schools Nearby</strong>

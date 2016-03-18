@@ -385,6 +385,14 @@ function cas_plugin_register_custom_meta() {
             'schema'          => null,
         )
     );
+    register_rest_field( 'cas_school',
+        '_cas_school_city_info',
+        array(
+            'get_callback'    => 'cas_plugin_get_custom_meta',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
 }
 
 /**
@@ -434,6 +442,33 @@ function cwp_create_post_type() {
 		)
 	);
 }
+
+
+
+add_action( 'cmb2_init', 'cwp_school_metaboxes' );
+
+function cwp_school_metaboxes() {
+    $prefix = '_cas_email_template_'; // Prefix for all fields
+    
+		$cmb = new_cmb2_box(array(
+        'id' => 'cas_email_template_general_metabox',
+        'title' => 'More Information',
+        'object_types' => array('cas_email_template'), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+        'show_names' => true, // Show field names on the left
+			));
+        
+       $cmb->add_field(array(
+                'name' => 'Default Email Subject',
+//                'desc' => 'Number and Street',
+                'id' => $prefix . 'subject',
+                'type' => 'text'
+            ));
+}
+
+
+
 //disable wysiwyg for email templates
 add_filter('user_can_richedit', 'disable_wyswyg_for_custom_post_type');
 function disable_wyswyg_for_custom_post_type( $default ){
