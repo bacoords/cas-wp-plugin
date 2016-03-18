@@ -20,6 +20,9 @@ if(is_user_logged_in ()){ ?>
          <img src="https://communityallstars.com/wp-content/uploads/2016/03/capiconsch.png" class="ng-hide" alt="Cal Link" ng-show="!currentView">
        </a>
      </div>
+     <div class="cwp-header__logout">
+       <a href="<?php echo wp_logout_url(home_url() ); ?>" class="cwp-button">Logout</a>
+     </div>
    </div>
    
    
@@ -94,18 +97,7 @@ if(is_user_logged_in ()){ ?>
         </tr>
       </table>
 
-      <div class="no-print">
-        <BR><BR><BR>
-        <div class="frame">
-          <div class="bit-1">
-            <div class="center padding">
-
-              <a href="<?php echo wp_logout_url(home_url() ); ?>" class="cwp-button">Logout</a>
-            </div>
-          </div>
-        </div>
-        <br><br><br>
-      </div>
+      <div class="no-print"><BR><BR><br><BR></div>
 
       <div class="cwp-modal-overlay ng-hide" ng-show="isShowingModal">
        <a class="cwp-modal-overlay__close" ng-click="showModal(-1)"></a>
@@ -175,7 +167,7 @@ if(is_user_logged_in ()){ ?>
                        </div>
                      </div>
                    </div>
-                   <BR>
+                   <BR class="no-print">
                    <div class="frame">
                      <div class="bit-1">
                        <div class="padding">
@@ -183,7 +175,7 @@ if(is_user_logged_in ()){ ?>
                        </div>
                      </div>
                    </div>
-                   <BR>
+                   <BR class="no-print">
                    <div class="frame">
                      <div class="bit-1">
                        <div class="padding">
@@ -192,7 +184,7 @@ if(is_user_logged_in ()){ ?>
                        </div>
                      </div>
                    </div>
-                   <BR>
+                   <BR class="no-print">
                    <div class="frame">
                      <div class="bit-1">
                        <div class="padding">
@@ -201,7 +193,7 @@ if(is_user_logged_in ()){ ?>
                        </div>
                      </div>
                    </div>
-                   <BR>
+                   <BR class="no-print">
                    <div class="frame">
                      <div class="bit-1">
                        <div class="padding">
@@ -236,7 +228,7 @@ if(is_user_logged_in ()){ ?>
                       </div>
                     </div>
 
-                    <BR>
+                    <BR class="no-print">
 
                     <div class="frame">
                       <div class="bit-1">

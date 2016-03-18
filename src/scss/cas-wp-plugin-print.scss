@@ -22,10 +22,10 @@ body, .cwp, .cwp-modal-overlay, .cwp-modal__print {
   background:#fff !important;
   box-shadow:none;
 }
-.cwp-modal__header__buttons, cwp-subheader{
+.cwp-modal__header__buttons, .cwp-subheader{
   display: none !important;
 }
 .cwp-modal{
-  box-shadow: none;
-  border:none;
+  box-shadow: none !important;
+  border:none !important;
 }

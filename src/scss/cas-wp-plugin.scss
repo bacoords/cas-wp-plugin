@@ -71,6 +71,13 @@ $green: rgba(70,184,101,1);
         cursor:pointer;
       }
     }
+    &__logout{
+      align-self:center;
+      background:$white;
+      display:block;
+      height: 90px;
+      
+    }
   }
   
   
