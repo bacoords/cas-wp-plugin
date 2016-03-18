@@ -506,6 +506,7 @@ function wpse128204_edit_form_top( $post )
         echo '<div class="postbox-container"><div class="postbox">
           <div class="inside">
           <h2>Possible Codes</h2>
+          <p><em>Email is Text-Only. Do not include HTML</em></p>
           <p>School Info:  [SCHOOL]  [SCHOOLURL]  [MASCOT] </p>
           <P>Contact Info:  [CONTACT]  [TITLE]  [PHONE]</p>
           <P>Email Info:  [SPONSOR]</p>
