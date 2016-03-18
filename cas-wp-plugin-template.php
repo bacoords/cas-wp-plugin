@@ -107,7 +107,8 @@ if(is_user_logged_in ()){ ?>
         <br><br><br>
       </div>
 
-      <div class="cwp-modal-overlay ng-hide" ng-show="isShowingModal" ng-click="showModal(-1)">
+      <div class="cwp-modal-overlay ng-hide" ng-show="isShowingModal">
+       <a class="cwp-modal-overlay__close" ng-click="showModal(-1)"></a>
         <div class="cwp-modal cwp-modal__print">
 
          <a class="cwp-button cwp-modal-close" ng-click="showModal(-1)">&#10006;</a>
@@ -261,7 +262,9 @@ if(is_user_logged_in ()){ ?>
         </div>
       </div>
 
-      <div class="cwp-modal-overlay ng-hide" ng-show="isShowingEmail" ng-click="showModal(-1)">
+      <div class="cwp-modal-overlay ng-hide" ng-show="isShowingEmail">
+       
+         <a class="cwp-modal-overlay__close" ng-click="showEmail(-1)"></a>
         <div class="cwp-modal cwp-modal__email">
 
          <a class="cwp-button cwp-modal-close" ng-click="showEmail(-1)">&#10006;</a>
