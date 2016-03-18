@@ -189,7 +189,7 @@ if(is_user_logged_in ()){ ?>
                      <div class="bit-1">
                        <div class="padding">
                          <strong>About the City:</strong><br>
-                         <p class="text-gray--dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quos quidem placeat non distinctio! Quidem maiores reprehenderit est amet quam officiis nesciunt labore voluptatum, architecto, odio repudiandae incidunt inventore quaerat.</p>
+                         <p class="text-gray--dark">{{modalSchool._cas_school_city_info}}</p>
                        </div>
                      </div>
                    </div>
