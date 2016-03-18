@@ -88,7 +88,7 @@ if(is_user_logged_in ()){ ?>
           <td>{{school.modified | date: 'M/d/yy'}}</td> 
           <td>
             <a ng-href="{{school.link}}" class="cwp-button cwp-button--cas-icon" target="_blank">CAS</a>
-            <a ng-href="{{school._cas_school_team_bank_url}}" class="cwp-button cwp-button--tb-icon" target="_blank" ng-show="modalSchool._cas_school_team_bank_url">TB</a>
+            <a ng-href="{{school._cas_school_team_bank_url}}" class="cwp-button cwp-button--tb-icon" target="_blank" ng-show="school._cas_school_team_bank_url">TB</a>
           </td>
 
         </tr>
@@ -107,7 +107,7 @@ if(is_user_logged_in ()){ ?>
         <br><br><br>
       </div>
 
-      <div class="cwp-modal-overlay ng-hide" ng-show="isShowingModal">
+      <div class="cwp-modal-overlay ng-hide" ng-show="isShowingModal" ng-click="showModal(-1)">
         <div class="cwp-modal cwp-modal__print">
 
          <a class="cwp-button cwp-modal-close" ng-click="showModal(-1)">&#10006;</a>
@@ -249,7 +249,7 @@ if(is_user_logged_in ()){ ?>
 
                     <BR>
 
-                    <div class="frame">
+                    <div class="frame no-print">
                       <div class="bit-1">
                         <div class="google-maps"><iframe width="360" height="360" frameborder="0" style="border:0" ng-src="{{createMap(modalSchool._cas_school_address, modalSchool._cas_school_city, modalSchool._cas_school_state, modalSchool._cas_school_zip)}}"></iframe></div>
                       </div>
@@ -261,7 +261,7 @@ if(is_user_logged_in ()){ ?>
         </div>
       </div>
 
-      <div class="cwp-modal-overlay ng-hide" ng-show="isShowingEmail">
+      <div class="cwp-modal-overlay ng-hide" ng-show="isShowingEmail" ng-click="showModal(-1)">
         <div class="cwp-modal cwp-modal__email">
 
          <a class="cwp-button cwp-modal-close" ng-click="showEmail(-1)">&#10006;</a>
