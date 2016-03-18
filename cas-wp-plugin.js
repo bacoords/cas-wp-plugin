@@ -170,7 +170,7 @@ angular.module('backendApp', ['wp.api'])
     var b = a._attached_cmb2_attached_posts;
     console.log(b);
     var d = []
-    for(var i = 0, a < b.length(); i++){
+    for(var i = 0, i < b.length(); i++){
       wpAPIResource.get( {
         param1: 'cas_school',
         param2: b[i]
