@@ -235,7 +235,7 @@ if(is_user_logged_in ()){ ?>
                         <div class="padding">
                           <strong>Schools Nearby</strong>
                           <br>
-  <!--                        <p ng-repeat="nearby in modalSchool._attached_cmb2_attached_posts">{{nearbySchools(nearby)}}</p>-->
+                          <p ng-repeat="nearby in nearbySchoolsObj">{{nearby}}</p>
                         </div>
                       </div>
                     </div>
