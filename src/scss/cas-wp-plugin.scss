@@ -271,14 +271,14 @@ $green: rgba(70,184,101,1);
       }
     }
     &--email-template{
-        background:$black;
+        background:$gray;
         color:$white;
       font-size: 20px;
       text-transform: uppercase;
       &:hover{
         
         background:$white;
-        color:$black;
+        color:$gray;
       }
       &__selected{
         box-shadow: 0px 0px 5px 3px rgba(77,144,254,1);
