@@ -266,23 +266,26 @@ if(is_user_logged_in ()){ ?>
          <a class="cwp-button cwp-modal-close" ng-click="showEmail(-1)">&#10006;</a>
           <div class="cwp-modal__header cwp-modal__email__header">
              <div class="frame">
-               <div class="bit-2">
-                 <div class="padding">
+               <div class="bit-1">
+                 <div class="padding center">
                    Email For: <strong>{{emailSchool._cas_school_name}}</strong>
-                 </div>
-               </div>
-               <div class="bit-2">
-                 <div class="padding">Templates:
-                 <select ng-model="emailSelect" ng-options="email.title.rendered for email in emails">
-                   <option value="">SELECT TEMPLATE</option>
-                 </select>
                  </div>
                </div>
              </div>
 
           </div>
           <div class="cwp-modal__body cwp-modal__email__body">
-            
+            <div class="frame">
+              
+               <div class="bit-1">
+                 <div class="padding">
+                   Templates:
+                   <a ng-click="getEmailSelect(email)" ng-repeat="email in emails" class="cwp-buttom cwp-button--email-template">
+                     {{email.title.rendered}}
+                   </a>
+                 </div>
+               </div>
+            </div>
             <form>
                
               <input type="text" ng-model="emailToFirstName" placeholder="To (First Name)">

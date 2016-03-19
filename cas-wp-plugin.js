@@ -114,7 +114,9 @@ angular.module('backendApp', ['wp.api'])
     }
   }
   
-
+  $scope.getEmailSelect = function(e){
+    $scope.emailSelect = e;
+  }
   
   $scope.emailSubmit = function(){
     var z = '';
