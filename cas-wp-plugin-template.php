@@ -297,7 +297,7 @@ if(is_user_logged_in ()){ ?>
               <input type="text" ng-model="emailToLastName" placeholder="To (Last Name)">
               <input type="text" ng-model="emailToAddress" placeholder="Email Address">
               <input type="text" ng-model="emailCC" placeholder="CC">
-              <?php wp_editor('Select a Template', 'tab-editor'); ?>
+              <?php wp_editor('Select a Template', 'tab-editor', array('editor_height'=>'500px')); ?>
 <!--              <textarea ng-model="emailBody"></textarea>-->
               <a ng-click="emailSubmit()" class="cwp-button cwp-button--email-submit" target="_blank">go to email</a>
             </form>

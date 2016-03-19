@@ -6,6 +6,43 @@ jQuery(document).ready(function(){
 });
 
 
+//TinyMCE Functions re: https://gist.github.com/RadGH/523bed274f307830752c
+function tmce_getContent(editor_id, textarea_id) {
+  if ( typeof editor_id == 'undefined' ) editor_id = wpActiveEditor;
+  if ( typeof textarea_id == 'undefined' ) textarea_id = editor_id;
+  
+  if ( jQuery('#wp-'+editor_id+'-wrap').hasClass('tmce-active') && tinyMCE.get(editor_id) ) {
+    return tinyMCE.get(editor_id).getContent();
+  }else{
+    return jQuery('#'+textarea_id).val();
+  }
+}
+
+function tmce_setContent(content, editor_id, textarea_id) {
+  if ( typeof editor_id == 'undefined' ) editor_id = wpActiveEditor;
+  if ( typeof textarea_id == 'undefined' ) textarea_id = editor_id;
+  
+  if ( jQuery('#wp-'+editor_id+'-wrap').hasClass('tmce-active') && tinyMCE.get(editor_id) ) {
+    return tinyMCE.get(editor_id).setContent(content);
+  }else{
+    return jQuery('#'+textarea_id).val(content);
+  }
+}
+
+function tmce_focus(editor_id, textarea_id) {
+  if ( typeof editor_id == 'undefined' ) editor_id = wpActiveEditor;
+  if ( typeof textarea_id == 'undefined' ) textarea_id = editor_id;
+  
+  if ( jQuery('#wp-'+editor_id+'-wrap').hasClass('tmce-active') && tinyMCE.get(editor_id) ) {
+    return tinyMCE.get(editor_id).focus();
+  }else{
+    return jQuery('#'+textarea_id).focus();
+  }
+}
+
+
+
+
 
 angular.module('backendApp', ['wp.api'])
 
@@ -118,6 +155,7 @@ angular.module('backendApp', ['wp.api'])
     $scope.emailSelect = e;
     jQuery('.cwp-button--email-template').removeClass('cwp-button--email-template__selected');
     jQuery('#email-link-' + e.id).addClass('cwp-button--email-template__selected');
+    tmce_setContent( e.content.rendered, 'tab-editor' );
   }
   
   $scope.emailSubmit = function(){
