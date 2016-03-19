@@ -116,6 +116,8 @@ angular.module('backendApp', ['wp.api'])
   
   $scope.getEmailSelect = function(e){
     $scope.emailSelect = e;
+    jQuery('.cwp-button--email-template').removeClass('cwp-button--email-template__selected');
+    jQuery('#email-link-' + e.id).addClass('cwp-button--email-template__selected');
   }
   
   $scope.emailSubmit = function(){

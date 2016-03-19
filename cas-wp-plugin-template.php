@@ -277,10 +277,15 @@ if(is_user_logged_in ()){ ?>
           <div class="cwp-modal__body cwp-modal__email__body">
             <div class="frame">
               
-               <div class="bit-1">
+               <div class="bit-25">
                  <div class="padding">
                    Templates:
-                   <a ng-click="getEmailSelect(email)" ng-repeat="email in emails" class="cwp-button cwp-button--email-template">
+                 </div>
+               </div>
+               <div class="bit-75">
+                 <div class="padding">
+                   
+                   <a ng-click="getEmailSelect(email)" ng-repeat="email in emails" class="cwp-button cwp-button--email-template" id="email-link-{{email.id}}">
                      {{email.title.rendered}}
                    </a>
                  </div>
