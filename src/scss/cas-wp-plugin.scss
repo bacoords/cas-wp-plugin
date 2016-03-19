@@ -273,6 +273,8 @@ $green: rgba(70,184,101,1);
     &--email-template{
         background:$black;
         color:$white;
+      font-size: 20px;
+      text-transform: uppercase;
       &:hover{
         
         background:$white;
@@ -389,6 +391,7 @@ $green: rgba(70,184,101,1);
       
       &__header{
         padding:10px;
+        font-size: 24px;
       }
       &__body{  
         
