@@ -280,7 +280,7 @@ if(is_user_logged_in ()){ ?>
                <div class="bit-1">
                  <div class="padding">
                    Templates:
-                   <a ng-click="getEmailSelect(email)" ng-repeat="email in emails" class="cwp-buttom cwp-button--email-template">
+                   <a ng-click="getEmailSelect(email)" ng-repeat="email in emails" class="cwp-button cwp-button--email-template">
                      {{email.title.rendered}}
                    </a>
                  </div>
