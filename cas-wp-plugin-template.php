@@ -298,7 +298,7 @@ if(is_user_logged_in ()){ ?>
               <input type="text" ng-model="emailToAddress" placeholder="Email Address">
               <input type="text" ng-model="emailCC" placeholder="CC">
 <!--              <textarea ng-model="emailBody"></textarea>-->
-              <a ng-click="emailSubmit()" class="cwp-button" target="_blank">go to email</a>
+              <a ng-click="emailSubmit()" class="cwp-button cwp-button--email-submit" target="_blank">go to email</a>
             </form>
           </div>
         </div>
