@@ -19,7 +19,7 @@ if (!empty($_POST)){
   $headers[] = 'From: Community All Stars <' . $_POST['from'] . '>' . "\r\n";
   
   if(isset($_POST['cc']) && !empty($_POST['cc'])){
-    $cc = 'CC: ' . $_POST['cc'];
+    $cc = 'Cc: ' . $_POST['cc'];
     $header[] = $cc;
   }
   $sent = wp_mail( $to, $_POST['subject'], $_POST['emailBody'], $headers );
