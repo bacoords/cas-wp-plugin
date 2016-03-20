@@ -10,11 +10,15 @@ if (!empty($_POST)){
   //   $_POST['cc'];
   //   $_POST['subject'];
   //   $_POST['emailBody'];
-  		
-			$email_title_string = "Invoice Paid: " . $_POST['invoice'];
-			//Alert CAS with Email
-			$headers = array('Content-Type: text/html; charset=UTF-8');
-			wp_mail( array('design@communityallstars.com','lauren@communityallstars.com'), $email_title_string , $message_string, $headers ); 
+
+  
+  $to =  $_POST['firstname']  . ' ' .   $_POST['lastname'] . ' <' . $_POST['to'] . '>';
+  $headers = array(
+  'Content-Type: text/html; charset=UTF-8',
+  'From: ' . $_POST['from'] . ';',
+  'CC:' . $_POST['cc'] . ';'
+  );
+  wp_mail( $to, $_POST['subject'], $_POST['emailBody'], $headers ); 
 
   
 }
