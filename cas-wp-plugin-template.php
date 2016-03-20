@@ -19,7 +19,7 @@ if (!empty($_POST)){
   'CC:' . $_POST['cc'] . ';'
   );
   wp_mail( $to, $_POST['subject'], $_POST['emailBody'], $headers ); 
-
+  $sent = true;
   
 }
 
@@ -50,8 +50,19 @@ if(is_user_logged_in ()){ ?>
        <a href="<?php echo wp_logout_url(home_url() ); ?>" class="cwp-button">Logout</a>
      </div>
    </div>
-   
-   
+
+       
+             <?php if($sent){ ?>
+      <div class="frame no-print">
+        <div class="bit-1">
+          <div class="center padding">
+                
+            <h1>Email Sent!</h1>
+          
+          </div>
+        </div>
+      </div> 
+          <?php } ?>
     <div class="cs-loader no-print" ng-show="loading">
       <div class="cs-loader-inner">
         <label>	●</label>
