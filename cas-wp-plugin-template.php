@@ -15,10 +15,14 @@ if (!empty($_POST) && !empty($_POST['to'])){
   
   $to =  $_POST['firstname'] . ' ' . $_POST['lastname'] . ' <' . $_POST['to'] . '>';
   $headers = array(
-  'From: Community All Stars <' . $_POST['from'] . '>;',
-  'CC:' . $_POST['cc'] . ';',
-  'Content-Type: text/html; charset=UTF-8',
+  'From: Community All Stars <' . $_POST['from'] . '>;'
   );
+  
+  if(!empty($_POST['cc'])){
+    $cc = 'CC: ' . $_POST['cc'] . ';'
+    array_push($headers, $cc);
+  }
+  array_push($headers, 'Content-Type: text/html; charset=UTF-8');
   wp_mail( $to, $_POST['subject'], $_POST['emailBody'], $headers ); 
   $sent = true;
   
@@ -85,9 +89,7 @@ if(is_user_logged_in ()){ ?>
       <div class="frame no-print">
         <div class="bit-1">
           <div class="center padding">
-                
             <h1>Email Sent!</h1>
-           <?php echo $to; ?>
           </div>
         </div>
       </div> 
