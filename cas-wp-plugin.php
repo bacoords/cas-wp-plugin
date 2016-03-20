@@ -478,11 +478,11 @@ function cwp_school_metaboxes() {
 
 
 //disable wysiwyg for email templates
-add_filter('user_can_richedit', 'disable_wyswyg_for_custom_post_type');
-function disable_wyswyg_for_custom_post_type( $default ){
-  if( get_post_type() === 'cas_email_template') return false;
-  return $default;
-}
+//add_filter('user_can_richedit', 'disable_wyswyg_for_custom_post_type');
+//function disable_wyswyg_for_custom_post_type( $default ){
+//  if( get_post_type() === 'cas_email_template') return false;
+//  return $default;
+//}
 /**
 * Add REST API support to email templates.
 */

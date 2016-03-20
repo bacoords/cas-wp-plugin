@@ -88,7 +88,6 @@ if(is_user_logged_in ()){ ?>
         <div class="bit-1">
           <div class="center padding">
             <h1>Email Sent!</h1>
-            <?php print_r($headers) ?>
           </div>
         </div>
       </div> 
