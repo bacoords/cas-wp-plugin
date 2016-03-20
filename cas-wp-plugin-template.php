@@ -330,7 +330,8 @@ if(is_user_logged_in ()){ ?>
               <input type="text" name="subject" ng-model="emailSubject" placeholder="Subject">
               <?php wp_editor('Select a Template', 'tab-editor', array('editor_height'=>'500px','textarea_name'=>'emailBody')); ?>
 <!--              <textarea ng-model="emailBody"></textarea>-->
-              <a ng-click="emailSubmit()" class="cwp-button cwp-button--email-submit" target="_blank">SEND EMAIL</a>
+<!--              <a ng-click="emailSubmit()" class="cwp-button cwp-button--email-submit" target="_blank">SEND EMAIL</a>-->
+              <input type="submit" class="cwp-button cwp-button--email-submit" target="_blank">SEND EMAIL</a>
             </form>
           </div>
         </div>
