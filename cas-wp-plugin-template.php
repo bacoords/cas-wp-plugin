@@ -2,7 +2,8 @@
 
 //email post stuff
 if (!empty($_POST)){
-  wp_mail
+//  wp_mail
+  
   
 }
 
@@ -301,9 +302,12 @@ if(is_user_logged_in ()){ ?>
                </div>
             </div>
             <form id="email-form" action="" method="post" >
-               
-              <input type="text" ng-model="emailToFirstName" placeholder="To (First Name)">
-              <input type="text" ng-model="emailToLastName" placeholder="To (Last Name)">
+              <div class="frame">
+                <div class="bit-2"><input type="text" ng-model="emailToFirstName" placeholder="To (First Name)"></div>
+                <div class="bit-2"><input type="text" ng-model="emailToLastName" placeholder="To (Last Name)"></div>
+              </div> 
+              
+              
               <input type="text" ng-model="emailToAddress" placeholder="To Email Address">
               <input type="text" ng-model="emailToAddress" placeholder="From Email Address">
               <input type="text" ng-model="emailCC" placeholder="CC">
