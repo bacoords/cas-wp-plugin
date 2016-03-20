@@ -18,7 +18,7 @@ if (!empty($_POST)){
   'From: Community All Stars <' . $_POST['from'] . '>;',
   );
   
-  if(!empty($_POST['cc'])){
+  if(isset($_POST['cc'])){
     $cc = 'CC: ' . $_POST['cc'] . ';'
     array_push($headers, $cc);
   }
