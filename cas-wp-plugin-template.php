@@ -1,4 +1,13 @@
 <?php
+
+//email post stuff
+if (!empty($_POST)){
+  wp_mail
+  
+}
+
+
+
 get_header();
 
 
@@ -291,15 +300,16 @@ if(is_user_logged_in ()){ ?>
                  </div>
                </div>
             </div>
-            <form>
+            <form id="email-form" action="" method="post" >
                
               <input type="text" ng-model="emailToFirstName" placeholder="To (First Name)">
               <input type="text" ng-model="emailToLastName" placeholder="To (Last Name)">
-              <input type="text" ng-model="emailToAddress" placeholder="Email Address">
+              <input type="text" ng-model="emailToAddress" placeholder="To Email Address">
+              <input type="text" ng-model="emailToAddress" placeholder="From Email Address">
               <input type="text" ng-model="emailCC" placeholder="CC">
-              <?php wp_editor('Select a Template', 'tab-editor', array('editor_height'=>'500px')); ?>
+              <?php wp_editor('Select a Template', 'tab-editor', array('editor_height'=>'500px','textarea_name'=>'emailBody')); ?>
 <!--              <textarea ng-model="emailBody"></textarea>-->
-              <a ng-click="emailSubmit()" class="cwp-button cwp-button--email-submit" target="_blank">go to email</a>
+              <a ng-click="emailSubmit()" class="cwp-button cwp-button--email-submit" target="_blank">SEND EMAIL</a>
             </form>
           </div>
         </div>

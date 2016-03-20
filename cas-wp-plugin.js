@@ -154,61 +154,69 @@ angular.module('backendApp', ['wp.api'])
   $scope.getEmailSelect = function(e){
     $scope.emailSelect = e;
     jQuery('.cwp-button--email-template').removeClass('cwp-button--email-template__selected');
-    jQuery('#email-link-' + e.id).addClass('cwp-button--email-template__selected');
-    tmce_setContent( e.content.rendered, 'tab-editor' );
+    jQuery('#email-link-' + e.id).addClass('cwp-button--email-template__selected');    
+    var q = jQuery(e.content.rendered).text();
+    var q = q.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
+    var q = q.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
+    var q = q.replace(/\[CONTACT\]/g, $scope.emailSchool._cas_school_contact_name);
+    var q = q.replace(/\[PHONE\]/g, $scope.emailSchool._cas_school_contact_phone);
+    var q = q.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
+    var q = q.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
+    var q = q.replace(/\[SPONSOR\]/g, $scope.emailToName);
+    tmce_setContent( q, 'tab-editor' );
   }
   
-  $scope.emailSubmit = function(){
-    var z = '';
-    if($scope.emailToAddress && $scope.emailSelect){
-      //set up variables
-      var a = encodeURIComponent($scope.emailToFirstName);
-      var aa = encodeURIComponent($scope.emailToLastName);
-      var b = encodeURIComponent($scope.emailToAddress);
-      var c = encodeURIComponent($scope.emailCC);
-      var q = jQuery($scope.emailSelect.content.rendered).text();
-      var q = q.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
-      var q = q.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
-      var q = q.replace(/\[CONTACT\]/g, $scope.emailSchool._cas_school_contact_name);
-      var q = q.replace(/\[PHONE\]/g, $scope.emailSchool._cas_school_contact_phone);
-      var q = q.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
-      var q = q.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
-      var q = q.replace(/\[SPONSOR\]/g, $scope.emailToName);
-      var r = 'Email Subject';
-      var r = $scope.emailSelect._cas_email_template_subject;
-      console.log(r);
-      var r = r.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
-      var r = r.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
-      var r = r.replace(/\[CONTACT\]/g, $scope.emailSchool._cas_school_contact_name);
-      var r = r.replace(/\[PHONE\]/g, $scope.emailSchool._cas_school_contact_phone);
-      var r = r.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
-      var r = r.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
-      var r = r.replace(/\[SPONSOR\]/g, $scope.emailToName);
-      
-      var d = encodeURIComponent(q);  
-      
-      if($scope.emailToFirstName && $scope.emailToLastName){
-        z += 'mailto:' + a + ' ' + aa + '<' + b + '>?';
-      }else{
-        z += 'mailto:' + b + '?';
-      }
-      
-      if($scope.emailCC){
-        z += 'cc=' + c + '&';
-      }
-      console.log(r);
-      z += 'subject=' + r + '&';
-      
-      z += 'body=' + d + '';
-      
-      
-      window.open(
-        z,
-        '_blank' // <- This is what makes it open in a new window.
-      );
-    }
-    return;
-  }
+//  $scope.emailSubmit = function(){
+//    var z = '';
+//    if($scope.emailToAddress && $scope.emailSelect){
+//      //set up variables
+//      var a = encodeURIComponent($scope.emailToFirstName);
+//      var aa = encodeURIComponent($scope.emailToLastName);
+//      var b = encodeURIComponent($scope.emailToAddress);
+//      var c = encodeURIComponent($scope.emailCC);
+//      var q = jQuery($scope.emailSelect.content.rendered).text();
+//      var q = q.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
+//      var q = q.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
+//      var q = q.replace(/\[CONTACT\]/g, $scope.emailSchool._cas_school_contact_name);
+//      var q = q.replace(/\[PHONE\]/g, $scope.emailSchool._cas_school_contact_phone);
+//      var q = q.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
+//      var q = q.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
+//      var q = q.replace(/\[SPONSOR\]/g, $scope.emailToName);
+//      var r = 'Email Subject';
+//      var r = $scope.emailSelect._cas_email_template_subject;
+//      console.log(r);
+//      var r = r.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
+//      var r = r.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
+//      var r = r.replace(/\[CONTACT\]/g, $scope.emailSchool._cas_school_contact_name);
+//      var r = r.replace(/\[PHONE\]/g, $scope.emailSchool._cas_school_contact_phone);
+//      var r = r.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
+//      var r = r.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
+//      var r = r.replace(/\[SPONSOR\]/g, $scope.emailToName);
+//      
+//      var d = encodeURIComponent(q);  
+//      
+//      if($scope.emailToFirstName && $scope.emailToLastName){
+//        z += 'mailto:' + a + ' ' + aa + '<' + b + '>?';
+//      }else{
+//        z += 'mailto:' + b + '?';
+//      }
+//      
+//      if($scope.emailCC){
+//        z += 'cc=' + c + '&';
+//      }
+//      console.log(r);
+//      z += 'subject=' + r + '&';
+//      
+//      z += 'body=' + d + '';
+//      
+//      
+//      window.open(
+//        z,
+//        '_blank' // <- This is what makes it open in a new window.
+//      );
+//    }
+//    return;
+//  }
 
   
   
