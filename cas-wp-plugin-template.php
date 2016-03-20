@@ -19,7 +19,7 @@ if (!empty($_POST)){
   );
   
   if(isset($_POST['cc'])){
-    $cc = 'CC: ' . $_POST['cc'] . ';'
+    $cc = 'CC: ' . $_POST['cc'] . ';';
     array_push($headers, $cc);
   }
   array_push($headers, 'Content-Type: text/html; charset=UTF-8');
