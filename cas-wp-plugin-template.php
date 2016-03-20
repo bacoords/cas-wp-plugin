@@ -325,7 +325,7 @@ if(is_user_logged_in ()){ ?>
               
               
               <input type="text" name="to" ng-model="emailToAddress" placeholder="To Email Address">
-              <input type="text" name="from" ng-model="emailToAddress" placeholder="From Email Address">
+              <input type="text" name="from" ng-model="emailFromAddress" placeholder="From Email Address">
               <input type="text" name="cc" ng-model="emailCC" placeholder="CC">
               <input type="text" name="subject" ng-model="emailSubject" placeholder="Subject">
               <?php wp_editor('Select a Template', 'tab-editor', array('editor_height'=>'500px','textarea_name'=>'emailBody')); ?>
