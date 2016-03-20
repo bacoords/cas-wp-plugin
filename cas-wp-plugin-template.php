@@ -23,8 +23,7 @@ if (!empty($_POST)){
     array_push($headers, $cc);
   }
   array_push($headers, 'Content-Type: text/html; charset=UTF-8');
-  wp_mail( $to, $_POST['subject'], $_POST['emailBody'], $headers ); 
-  $sent = true;
+  $sent = wp_mail( $to, $_POST['subject'], $_POST['emailBody'], $headers );
   
 }
 
@@ -90,6 +89,7 @@ if(is_user_logged_in ()){ ?>
         <div class="bit-1">
           <div class="center padding">
             <h1>Email Sent!</h1>
+            <?php print_r($headers) ?>
           </div>
         </div>
       </div> 
