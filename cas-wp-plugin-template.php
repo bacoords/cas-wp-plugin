@@ -22,6 +22,7 @@ if (!empty($_POST)){
     $cc = 'CC: ' . $_POST['cc'] . ';';
     array_push($headers, $cc);
   }
+  print_r($headers);
   array_push($headers, 'Content-Type: text/html; charset=UTF-8');
   $sent = wp_mail( $to, $_POST['subject'], $_POST['emailBody'], $headers );
   
