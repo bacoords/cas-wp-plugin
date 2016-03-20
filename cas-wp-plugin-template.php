@@ -2,7 +2,7 @@
 
 //email post stuff
 $sent = false;
-if (!empty($_POST) && !empty($_POST['to'])){
+if (!empty($_POST)){
 
   //   $_POST['firstname'];
   //   $_POST['lastname'];
@@ -15,7 +15,7 @@ if (!empty($_POST) && !empty($_POST['to'])){
   
   $to =  $_POST['firstname'] . ' ' . $_POST['lastname'] . ' <' . $_POST['to'] . '>';
   $headers = array(
-  'From: Community All Stars <' . $_POST['from'] . '>;'
+  'From: Community All Stars <' . $_POST['from'] . '>;',
   );
   
   if(!empty($_POST['cc'])){
