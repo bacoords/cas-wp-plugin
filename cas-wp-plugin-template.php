@@ -14,18 +14,14 @@ if (!empty($_POST)){
 
   
   $to =  $_POST['firstname'] . ' ' . $_POST['lastname'] . ' <' . $_POST['to'] . '>';
-  $headers = array(
-  'From: Community All Stars <' . $_POST['from'] . '>;',
-  );
+
+  $headers[] = 'Content-Type: text/html; charset=UTF-8';
+  $headers[] = 'From: Community All Stars <' . $_POST['from'] . '>' . "\r\n";
   
   if(isset($_POST['cc']) && !empty($_POST['cc'])){
-    $cc = 'CC: ' . $_POST['cc'] . ';';
-    array_push($headers, $cc);
+    $cc = 'CC: ' . $_POST['cc'];
+    $header[] = $cc;
   }
-  array_push($headers, 'Content-Type: text/html; charset=UTF-8');
-  print_r($headers);
-  print_r($_POST['subject']);
-  print_r($_POST['emailBody']);
   $sent = wp_mail( $to, $_POST['subject'], $_POST['emailBody'], $headers );
   
 }
