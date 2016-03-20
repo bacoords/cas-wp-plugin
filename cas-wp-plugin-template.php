@@ -14,7 +14,7 @@ if (!empty($_POST)){
   
   $to =  $_POST['firstname']  . ' ' .   $_POST['lastname'] . ' <' . $_POST['to'] . '>';
   $headers = array(
-  'Content-Type: text/html; charset=UTF-8',
+  'Content-Type: text/html; charset=UTF-8;',
   'From: ' . $_POST['from'] . ';',
   'CC:' . $_POST['cc'] . ';'
   );
@@ -52,17 +52,7 @@ if(is_user_logged_in ()){ ?>
    </div>
 
        
-             <?php if($sent){ ?>
-      <div class="frame no-print">
-        <div class="bit-1">
-          <div class="center padding">
-                
-            <h1>Email Sent!</h1>
-          
-          </div>
-        </div>
-      </div> 
-          <?php } ?>
+ 
     <div class="cs-loader no-print" ng-show="loading">
       <div class="cs-loader-inner">
         <label>	●</label>
@@ -90,7 +80,17 @@ if(is_user_logged_in ()){ ?>
           </div>
         </div>
       </div>
-
+            <?php if($sent){ ?>
+      <div class="frame no-print">
+        <div class="bit-1">
+          <div class="center padding">
+                
+            <h1>Email Sent!</h1>
+           <?php echo $to; ?>
+          </div>
+        </div>
+      </div> 
+          <?php } ?>
       <table> 
         <tr>
          <td>Shortcuts</td>
