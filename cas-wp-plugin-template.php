@@ -1,7 +1,8 @@
 <?php
 
 //email post stuff
-if (!empty($_POST)){
+$sent = false;
+if (!empty($_POST) && !empty($_POST['to'])){
 
   //   $_POST['firstname'];
   //   $_POST['lastname'];
@@ -12,7 +13,7 @@ if (!empty($_POST)){
   //   $_POST['emailBody'];
 
   
-  $to =  $_POST['firstname']  . ' ' .   $_POST['lastname'] . ' <' . $_POST['to'] . '>';
+  $to =  $_POST['firstname'] . ' ' . $_POST['lastname'] . ' <' . $_POST['to'] . '>';
   $headers = array(
   'Content-Type: text/html; charset=UTF-8;',
   'From: ' . $_POST['from'] . ';',
@@ -330,14 +331,14 @@ if(is_user_logged_in ()){ ?>
             </div>
             <form id="email-form" action="" method="post"s>
               <div class="frame">
-                <div class="bit-2"><input type="text" name="firstname" ng-model="emailToFirstName" placeholder="To (First Name)"></div>
-                <div class="bit-2"><input type="text" name="lastname" ng-model="emailToLastName" placeholder="To (Last Name)"></div>
+                <div class="bit-2"><input type="text" name="firstname"  placeholder="To (First Name)"></div>
+                <div class="bit-2"><input type="text" name="lastname" placeholder="To (Last Name)"></div>
               </div> 
               
               
-              <input type="text" name="to" ng-model="emailToAddress" placeholder="To Email Address">
-              <input type="text" name="from" ng-model="emailFromAddress" placeholder="From Email Address">
-              <input type="text" name="cc" ng-model="emailCC" placeholder="CC">
+              <input type="text" name="to" placeholder="To Email Address">
+              <input type="text" name="from" placeholder="From Email Address">
+              <input type="text" name="cc" placeholder="CC">
               <input type="text" name="subject" ng-model="emailSubject" placeholder="Subject">
               <?php wp_editor('Select a Template', 'tab-editor', array('editor_height'=>'500px','textarea_name'=>'emailBody')); ?>
 <!--              <textarea ng-model="emailBody"></textarea>-->
