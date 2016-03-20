@@ -23,7 +23,7 @@ if (!empty($_POST)){
     $header[] = $cc;
   }
   
-  $body = str_replace("=", "=3D", $_POST['emailBody'])
+  $body = str_replace("=", "=3D", $_POST['emailBody']);
   
   $sent = wp_mail( $to, $_POST['subject'], $body, $headers );
   
