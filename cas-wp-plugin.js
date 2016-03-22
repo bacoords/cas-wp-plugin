@@ -183,7 +183,7 @@ angular.module('backendApp', ['wp.api'])
       if($scope.emailCC){
         z += 'cc=' + c + '&';
       }
-      console.log(r);
+      
       z += 'subject=' + $scope.emailSubject + '&';
       
       z += 'body=' + $scope.emailBody + '';
