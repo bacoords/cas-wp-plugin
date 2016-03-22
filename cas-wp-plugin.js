@@ -123,7 +123,7 @@ angular.module('backendApp', ['wp.api'])
     jQuery('.cwp-button--email-template').removeClass('cwp-button--email-template__selected');
     jQuery('#email-link-' + e.id).addClass('cwp-button--email-template__selected');    
 
-    var r = e._cas_email_template_subject;
+    var r = jQuery(e._cas_email_template_subject).text();
     var r = r.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
     var r = r.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
     var r = r.replace(/\[CONTACT\]/g, $scope.emailSchool._cas_school_contact_name);
@@ -134,7 +134,7 @@ angular.module('backendApp', ['wp.api'])
     $scope.emailSubject = r;
     
     
-    var q = e.content.rendered;
+    var q = jQuery(e.content.rendered).text();
     var q = q.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
     var q = q.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
     var q = q.replace(/\[CONTACT\]/g, $scope.emailSchool._cas_school_contact_name);
