@@ -343,7 +343,7 @@ if(is_user_logged_in ()){ ?>
               <input type="text" name="from" placeholder="From Email Address">
               <input type="text" name="cc" placeholder="CC">
               <input type="text" name="subject" ng-model="emailSubject" placeholder="Subject">
-              <?php wp_editor('Select a Template', 'tab-editor', array('editor_height'=>'500px','wpautop'=>false,'textarea_name'=>'emailBody')); ?>
+              <?php wp_editor('Select a Template', 'tab-editor', array('editor_height'=>'500px','wpautop'=>false,'textarea_name'=>'emailBody','media_buttons'=>false)); ?>
 <!--              <textarea ng-model="emailBody"></textarea>-->
 <!--              <a ng-click="emailSubmit()" class="cwp-button cwp-button--email-submit" target="_blank">SEND EMAIL</a>-->
               <input type="submit" class="cwp-button cwp-button--email-submit" target="_blank">SEND EMAIL</a>
