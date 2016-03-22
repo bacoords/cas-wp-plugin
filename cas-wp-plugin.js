@@ -6,39 +6,6 @@ jQuery(document).ready(function(){
 });
 
 
-//TinyMCE Functions re: https://gist.github.com/RadGH/523bed274f307830752c
-function tmce_getContent(editor_id, textarea_id) {
-  if ( typeof editor_id == 'undefined' ) editor_id = wpActiveEditor;
-  if ( typeof textarea_id == 'undefined' ) textarea_id = editor_id;
-  
-  if ( jQuery('#wp-'+editor_id+'-wrap').hasClass('tmce-active') && tinyMCE.get(editor_id) ) {
-    return tinyMCE.get(editor_id).getContent();
-  }else{
-    return jQuery('#'+textarea_id).val();
-  }
-}
-
-function tmce_setContent(content, editor_id, textarea_id) {
-  if ( typeof editor_id == 'undefined' ) editor_id = wpActiveEditor;
-  if ( typeof textarea_id == 'undefined' ) textarea_id = editor_id;
-  
-  if ( jQuery('#wp-'+editor_id+'-wrap').hasClass('tmce-active') && tinyMCE.get(editor_id) ) {
-    return tinyMCE.get(editor_id).setContent(content);
-  }else{
-    return jQuery('#'+textarea_id).val(content);
-  }
-}
-
-function tmce_focus(editor_id, textarea_id) {
-  if ( typeof editor_id == 'undefined' ) editor_id = wpActiveEditor;
-  if ( typeof textarea_id == 'undefined' ) textarea_id = editor_id;
-  
-  if ( jQuery('#wp-'+editor_id+'-wrap').hasClass('tmce-active') && tinyMCE.get(editor_id) ) {
-    return tinyMCE.get(editor_id).focus();
-  }else{
-    return jQuery('#'+textarea_id).focus();
-  }
-}
 
 
 
@@ -175,17 +142,17 @@ angular.module('backendApp', ['wp.api'])
     var q = q.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
     var q = q.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
     var q = q.replace(/\[SPONSOR\]/g, $scope.emailToName);
-    tmce_setContent( q, 'tab-editor' );
+    $scope.emailBody = q;
   }
   
-//  $scope.emailSubmit = function(){
-//    var z = '';
-//    if($scope.emailToAddress && $scope.emailSelect){
-//      //set up variables
-//      var a = encodeURIComponent($scope.emailToFirstName);
-//      var aa = encodeURIComponent($scope.emailToLastName);
-//      var b = encodeURIComponent($scope.emailToAddress);
-//      var c = encodeURIComponent($scope.emailCC);
+  $scope.emailSubmit = function(){
+    var z = '';
+    if($scope.emailToAddress && $scope.emailBody){
+      //set up variables
+      var a = encodeURIComponent($scope.emailToFirstName);
+      var aa = encodeURIComponent($scope.emailToLastName);
+      var b = encodeURIComponent($scope.emailToAddress);
+      var c = encodeURIComponent($scope.emailCC);
 //      var q = jQuery($scope.emailSelect.content.rendered).text();
 //      var q = q.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
 //      var q = q.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
@@ -206,29 +173,29 @@ angular.module('backendApp', ['wp.api'])
 //      var r = r.replace(/\[SPONSOR\]/g, $scope.emailToName);
 //      
 //      var d = encodeURIComponent(q);  
-//      
-//      if($scope.emailToFirstName && $scope.emailToLastName){
-//        z += 'mailto:' + a + ' ' + aa + '<' + b + '>?';
-//      }else{
-//        z += 'mailto:' + b + '?';
-//      }
-//      
-//      if($scope.emailCC){
-//        z += 'cc=' + c + '&';
-//      }
-//      console.log(r);
-//      z += 'subject=' + r + '&';
-//      
-//      z += 'body=' + d + '';
-//      
-//      
-//      window.open(
-//        z,
-//        '_blank' // <- This is what makes it open in a new window.
-//      );
-//    }
-//    return;
-//  }
+      
+      if($scope.emailToFirstName && $scope.emailToLastName){
+        z += 'mailto:' + a + ' ' + aa + '<' + b + '>?';
+      }else{
+        z += 'mailto:' + b + '?';
+      }
+      
+      if($scope.emailCC){
+        z += 'cc=' + c + '&';
+      }
+      console.log(r);
+      z += 'subject=' + $scope.emailSubject + '&';
+      
+      z += 'body=' + $scope.emailBody + '';
+      
+      
+      window.open(
+        z,
+        '_blank' // <- This is what makes it open in a new window.
+      );
+    }
+    return;
+  }
 
   
   

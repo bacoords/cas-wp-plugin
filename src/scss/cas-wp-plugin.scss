@@ -437,6 +437,17 @@ $green: rgba(70,184,101,1);
   
 }
 
+
+.email-alert{
+  border:1px solid red;
+  border-radius:3px;
+  padding:5px;
+    background: white;
+    margin: 10px auto;
+    max-width: 300px;
+  h1{ color:red;}
+}
+
 .cwp-login-form{
   width:600px;
   margin:0 auto;border-radius: 10px;

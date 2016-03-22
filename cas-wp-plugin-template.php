@@ -90,7 +90,8 @@ if(is_user_logged_in ()){ ?>
       <div class="frame no-print">
         <div class="bit-1">
           <div class="center padding">
-            <h1>Email Sent!</h1>
+            <div class="email-alert"> <h1>Email Sent!</h1></div>
+           
           </div>
         </div>
       </div> 
@@ -334,19 +335,15 @@ if(is_user_logged_in ()){ ?>
             </div>
             <form id="email-form" action="" method="post"s>
               <div class="frame">
-                <div class="bit-2"><input type="text" name="firstname"  placeholder="To (First Name)"></div>
-                <div class="bit-2"><input type="text" name="lastname" placeholder="To (Last Name)"></div>
+                <div class="bit-2"><input type="text" name="firstname"  ng-model="emailToFirstName"  placeholder="To (First Name)"></div>
+                <div class="bit-2"><input type="text" name="lastname" ng-model="emailToLastName"  placeholder="To (Last Name)"></div>
               </div> 
               
               
-              <input type="text" name="to" placeholder="To Email Address">
-              <input type="text" name="from" placeholder="From Email Address">
-              <input type="text" name="cc" placeholder="CC">
-              <input type="text" name="subject" ng-model="emailSubject" placeholder="Subject">
-              <?php wp_editor('Select a Template', 'tab-editor', array('editor_height'=>'500px','wpautop'=>false,'textarea_name'=>'emailBody','media_buttons'=>false)); ?>
-<!--              <textarea ng-model="emailBody"></textarea>-->
-<!--              <a ng-click="emailSubmit()" class="cwp-button cwp-button--email-submit" target="_blank">SEND EMAIL</a>-->
-              <input type="submit" class="cwp-button cwp-button--email-submit" target="_blank">SEND EMAIL</a>
+              <input type="text" name="to" ng-model="emailToAddress"  placeholder="To Email Address">
+              <input type="text" name="cc" ng-model="emailCC"  placeholder="CC">
+              <a ng-click="emailSubmit()" class="cwp-button cwp-button--email-submit" target="_blank">SEND EMAIL</a>
+<!--              <input type="submit" class="cwp-button cwp-button--email-submit" target="_blank">SEND EMAIL</a>-->
             </form>
           </div>
         </div>
