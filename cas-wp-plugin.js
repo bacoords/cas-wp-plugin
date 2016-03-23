@@ -124,29 +124,7 @@ angular.module('backendApp', ['wp.api'])
     $scope.emailSelect = e;
     jQuery('.cwp-button--email-template').removeClass('cwp-button--email-template__selected');
     jQuery('#email-link-' + e.id).addClass('cwp-button--email-template__selected');    
-    var r = e._cas_email_template_subject;
-    var r = r.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
-    var r = r.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
-    var r = r.replace(/\[CONTACT\]/g, $scope.emailSchool._cas_school_contact_name);
-    var r = r.replace(/\[PHONE\]/g, $scope.emailSchool._cas_school_contact_phone);
-    var r = r.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
-    var r = r.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
-    var r = r.replace(/\[SPONSOR\]/g, $scope.emailToName);      
-//    var r = encodeURIComponent(r);
-    $scope.emailSubject = r;
-    var q = e.content.rendered.replace(/<br\s*[\/]?>/gi, "%0D%0A");
-    var q = q.replace(/<p\s*[\/]?>/gi, "%0D%0A");
-    var q = q.replace(/<\/p\s*[\/]?>/gi, "%0D%0A");
-    var q = q.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
-    var q = q.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
-    var q = q.replace(/\[CONTACT\]/g, $scope.emailSchool._cas_school_contact_name);
-    var q = q.replace(/\[PHONE\]/g, $scope.emailSchool._cas_school_contact_phone);
-    var q = q.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
-    var q = q.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
-    var q = q.replace(/\[SPONSOR\]/g, $scope.emailToName);
-    
-//    var q = encodeURIComponent(q);
-    $scope.emailBody = q;
+
   }
   
   $scope.emailSubmit = function(){
@@ -157,26 +135,26 @@ angular.module('backendApp', ['wp.api'])
       var aa = encodeURIComponent($scope.emailToLastName);
       var b = encodeURIComponent($scope.emailToAddress);
       var c = encodeURIComponent($scope.emailCC);
-//      var q = jQuery($scope.emailSelect.content.rendered).text();
-//      var q = q.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
-//      var q = q.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
-//      var q = q.replace(/\[CONTACT\]/g, $scope.emailSchool._cas_school_contact_name);
-//      var q = q.replace(/\[PHONE\]/g, $scope.emailSchool._cas_school_contact_phone);
-//      var q = q.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
-//      var q = q.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
-//      var q = q.replace(/\[SPONSOR\]/g, $scope.emailToName);
-//      var r = 'Email Subject';
-//      var r = $scope.emailSelect._cas_email_template_subject;
-//      console.log(r);
-//      var r = r.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
-//      var r = r.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
-//      var r = r.replace(/\[CONTACT\]/g, $scope.emailSchool._cas_school_contact_name);
-//      var r = r.replace(/\[PHONE\]/g, $scope.emailSchool._cas_school_contact_phone);
-//      var r = r.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
-//      var r = r.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
-//      var r = r.replace(/\[SPONSOR\]/g, $scope.emailToName);
-//      
-//      var d = encodeURIComponent(q);  
+    var r = $scope.emailSelect._cas_email_template_subject;
+    var r = r.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
+    var r = r.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
+    var r = r.replace(/\[CONTACT\]/g, $scope.emailSchool._cas_school_contact_name);
+    var r = r.replace(/\[PHONE\]/g, $scope.emailSchool._cas_school_contact_phone);
+    var r = r.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
+    var r = r.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
+    var r = r.replace(/\[SPONSOR\]/g, $scope.emailToName);     
+    $scope.emailSubject = r;
+    var q = $scope.emailSelect.content.rendered.replace(/<br\s*[\/]?>/gi, "%0D%0A");
+    var q = q.replace(/<p\s*[\/]?>/gi, "%0D%0A");
+    var q = q.replace(/<\/p\s*[\/]?>/gi, "%0D%0A");
+    var q = q.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
+    var q = q.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
+    var q = q.replace(/\[CONTACT\]/g, $scope.emailSchool._cas_school_contact_name);
+    var q = q.replace(/\[PHONE\]/g, $scope.emailSchool._cas_school_contact_phone);
+    var q = q.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
+    var q = q.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
+    var q = q.replace(/\[SPONSOR\]/g, $scope.emailToName);
+    $scope.emailBody = q;
       
       if($scope.emailToFirstName && $scope.emailToLastName){
         z += 'mailto:' + a + ' ' + aa + '<' + b + '>?';
