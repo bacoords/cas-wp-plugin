@@ -144,6 +144,7 @@ angular.module('backendApp', ['wp.api'])
       var r = r.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
       var r = r.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
       var r = r.replace(/\[SPONSOR\]/g, $scope.emailToFirstName);     
+      var r = r.replace(/&/g,"and");     
       $scope.emailSubject = r;
       var q = $scope.emailSelect.content.rendered.replace(/<br\s*[\/]?>/gi, "%0D%0A");
       var q = q.replace(/<p\s*[\/]?>/gi, "%0D%0A");
@@ -154,7 +155,8 @@ angular.module('backendApp', ['wp.api'])
       var q = q.replace(/\[PHONE\]/g, $scope.emailSchool._cas_school_contact_phone);
       var q = q.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
       var q = q.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
-      var q = q.replace(/\[SPONSOR\]/g, $scope.emailToFirstName);
+      var q = q.replace(/\[SPONSOR\]/g, $scope.emailToFirstName);   
+      var r = r.replace(/&/g,"and"); 
       $scope.emailBody = q;
       
       if($scope.emailToFirstName && $scope.emailToLastName){
