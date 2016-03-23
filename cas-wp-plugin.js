@@ -124,8 +124,9 @@ angular.module('backendApp', ['wp.api'])
     $scope.emailSelect = e;
     jQuery('.cwp-button--email-template').removeClass('cwp-button--email-template__selected');
     jQuery('#email-link-' + e.id).addClass('cwp-button--email-template__selected');    
+    var r = e._cas_email_template_subject.replace(/<br\s*[\/]?>/gi, "\n");
    
-    var r = encodeURIComponent(e._cas_email_template_subject);
+    var r = encodeURIComponent(r);
     var r = r.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
     var r = r.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
     var r = r.replace(/\[CONTACT\]/g, $scope.emailSchool._cas_school_contact_name);
@@ -133,6 +134,7 @@ angular.module('backendApp', ['wp.api'])
     var r = r.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
     var r = r.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
     var r = r.replace(/\[SPONSOR\]/g, $scope.emailToName);  
+    
     $scope.emailSubject = r;
     
     
