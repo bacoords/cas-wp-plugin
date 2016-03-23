@@ -134,7 +134,7 @@ angular.module('backendApp', ['wp.api'])
     var r = r.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
     var r = r.replace(/\[SPONSOR\]/g, $scope.emailToName);  
     
-    var r = encodeURIComponent(r);
+//    var r = encodeURIComponent(r);
     $scope.emailSubject = r;
     
     
@@ -147,7 +147,7 @@ angular.module('backendApp', ['wp.api'])
     var q = q.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
     var q = q.replace(/\[SPONSOR\]/g, $scope.emailToName);
     
-    var q = encodeURIComponent(q);
+//    var q = encodeURIComponent(q);
     $scope.emailBody = q;
   }
   
