@@ -90,7 +90,8 @@ angular.module('backendApp', ['wp.api'])
   //email modal
   
   $scope.isShowingEmail = false;
-  $scope.emailToName = '';
+  $scope.emailToFirstName = '';
+  $scope.emailToLastName = '';
   $scope.emailToAddress = '';
   $scope.emailCC = '';
   $scope.emailBody = '';
@@ -105,6 +106,7 @@ angular.module('backendApp', ['wp.api'])
         param2: i
       } ).$promise.then(function(result){
         $scope.emailSchool = result;
+        $scope.getNearbySchoolsEmail(result); //Call Nearby Schools Function
         $scope.isShowingEmail = true;
         $scope.loading = false;
       });
@@ -136,6 +138,7 @@ angular.module('backendApp', ['wp.api'])
       var b = encodeURIComponent($scope.emailToAddress);
       var c = encodeURIComponent($scope.emailCC);
       
+      
       var r = $scope.emailSelect._cas_email_template_subject;
       var r = r.replace(/\[SCHOOL\]/g, $scope.emailSchool._cas_school_name);
       var r = r.replace(/\[TITLE\]/g, $scope.emailSchool._cas_school_contact_title);
@@ -143,7 +146,9 @@ angular.module('backendApp', ['wp.api'])
       var r = r.replace(/\[PHONE\]/g, $scope.emailSchool._cas_school_contact_phone);
       var r = r.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
       var r = r.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
-      var r = r.replace(/\[SPONSOR\]/g, $scope.emailToFirstName);     
+      var r = r.replace(/\[SPONSORFIRST\]/g, $scope.emailToFirstName);     
+      var r = r.replace(/\[SPONSORLAST\]/g, $scope.emailToLastName);     
+      var r = r.replace(/\[NEARBYSCHOOLS\]/g, $scope.nearbySchoolsEmailStr);     
       var r = r.replace(/&/g,"and");     
       $scope.emailSubject = r;
       var q = $scope.emailSelect.content.rendered.replace(/<br\s*[\/]?>/gi, "%0D%0A");
@@ -155,8 +160,10 @@ angular.module('backendApp', ['wp.api'])
       var q = q.replace(/\[PHONE\]/g, $scope.emailSchool._cas_school_contact_phone);
       var q = q.replace(/\[MASCOT\]/g, $scope.emailSchool._cas_school_mascot);
       var q = q.replace(/\[SCHOOLURL\]/g, $scope.emailSchool.link);
-      var q = q.replace(/\[SPONSOR\]/g, $scope.emailToFirstName);   
-      var r = r.replace(/&/g,"and"); 
+      var q = q.replace(/\[SPONSORFIRST\]/g, $scope.emailToFirstName);   
+      var q = q.replace(/\[SPONSORLAST\]/g, $scope.emailToLastName);   
+      var q = q.replace(/\[NEARBYSCHOOLS\]/g, $scope.nearbySchoolsEmailStr); 
+      var q = q.replace(/&/g,"and"); 
       $scope.emailBody = q;
       
       if($scope.emailToFirstName && $scope.emailToLastName){
@@ -195,7 +202,7 @@ angular.module('backendApp', ['wp.api'])
 //  //get nearby schools
   $scope.getNearbySchools = function(a){
     var b = a._attached_cmb2_attached_posts;
-    console.log(b);
+ 
     $scope.nearbySchoolsObj = [];
     for(var i = 0; i < b.length; i++){
       wpAPIResource.get( {
@@ -210,5 +217,23 @@ angular.module('backendApp', ['wp.api'])
     return;
     
   }
-//  
+
+//  //get nearby schools
+  $scope.getNearbySchoolsEmail = function(a){
+    var b = a._attached_cmb2_attached_posts;
+
+    $scope.nearbySchoolsEmailStr = '';
+    for(var i = 0; i < b.length; i++){
+      wpAPIResource.get( {
+        param1: 'cas_school',
+        param2: b[i]
+      } ).$promise.then(function(result){
+        $scope.nearbySchoolsEmailStr += result.title.rendered += ' ';
+      });
+      
+    }    
+    return true;
+    
+  }
+
 });
