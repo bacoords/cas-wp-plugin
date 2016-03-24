@@ -224,15 +224,16 @@ angular.module('backendApp', ['wp.api'])
 
     $scope.nearbySchoolsEmailStr = '';
     for(var i = 0; i < b.length; i++){
+      var c = b.length - 1;
       wpAPIResource.get( {
         param1: 'cas_school',
         param2: b[i]
       } ).$promise.then(function(result){
         $scope.nearbySchoolsEmailStr += result.title.rendered;
-        if (i < b.length - 1){
+        if (i < c){
           $scope.nearbySchoolsEmailStr += ', ';
         }
-        if (i === b.length - 1){
+        if (i === c){
           $scope.nearbySchoolsEmailStr += ' and ';
         }
       });
