@@ -228,7 +228,13 @@ angular.module('backendApp', ['wp.api'])
         param1: 'cas_school',
         param2: b[i]
       } ).$promise.then(function(result){
-        $scope.nearbySchoolsEmailStr += result.title.rendered += ' ';
+        $scope.nearbySchoolsEmailStr += result.title.rendered;
+        if (i < b.length - 1){
+          $scope.nearbySchoolsEmailStr += ', ';
+        }
+        if (i === b.length - 1){
+          $scope.nearbySchoolsEmailStr += ' and ';
+        }
       });
       
     }    
