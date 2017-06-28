@@ -151,7 +151,7 @@ function cas_plugin_enqueue_script() {
     
     wp_enqueue_script( 'angular-resource', '//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-resource.min.js', array( 'angular' ) );
     
-    wp_enqueue_script( 'cas-plugin-js', 'http://cas.threecordsstudio.com/wp-content/plugins/cas-wp-plugin/cas-wp-plugin.js?v=2.4', array( 'angular','angular-resource','angular-route','angular-wp-api' ) );   
+    wp_enqueue_script( 'cas-plugin-js', 'https://communityallstars.com/wp-content/plugins/cas-wp-plugin/cas-wp-plugin.js?v=2.4', array( 'angular','angular-resource','angular-route','angular-wp-api' ) );   
   }
 
 }
@@ -159,8 +159,8 @@ add_action( 'wp_enqueue_scripts', 'cas_plugin_enqueue_script' );
 
 function cas_plugin_enqueue_style() {
   if(is_page_template( 'cas-wp-plugin-template.php')){
-    wp_enqueue_style( 'cas-plugin-style', 'http://cas.threecordsstudio.com/wp-content/plugins/cas-wp-plugin/dist/css/cas-wp-plugin.css' ); 
-    wp_enqueue_style( 'cas-plugin-style-print', 'http://cas.threecordsstudio.com/wp-content/plugins/cas-wp-plugin/dist/css/cas-wp-plugin-print.css', array(),false,'print' ); 
+    wp_enqueue_style( 'cas-plugin-style', 'https://communityallstars.com/wp-content/plugins/cas-wp-plugin/dist/css/cas-wp-plugin.css' ); 
+    wp_enqueue_style( 'cas-plugin-style-print', 'https://communityallstars.com/wp-content/plugins/cas-wp-plugin/dist/css/cas-wp-plugin-print.css', array(),false,'print' ); 
   }
 }
 add_action( 'wp_enqueue_scripts', 'cas_plugin_enqueue_style' );

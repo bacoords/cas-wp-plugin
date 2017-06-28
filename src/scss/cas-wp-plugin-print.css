@@ -1,0 +1,37 @@
+/* line 8, /Users/bacoords/Sites/cas-wp-plugin/src/scss/cas-wp-plugin-print.scss */
+table,
+footer,
+.cas-nav-top,
+.cas-nav,
+.cn-nav-shim,
+.cwp-header,
+.cwp-modal__email,
+.no-print {
+  display: none !important; }
+
+/* line 11, /Users/bacoords/Sites/cas-wp-plugin/src/scss/cas-wp-plugin-print.scss */
+body {
+  overflow: inherit !important; }
+
+/* line 14, /Users/bacoords/Sites/cas-wp-plugin/src/scss/cas-wp-plugin-print.scss */
+body, .cwp, .cwp-modal-overlay, .cwp-modal__print {
+  width: auto !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  position: static !important;
+  overflow: visible !important;
+  background: #fff !important;
+  box-shadow: none; }
+
+/* line 25, /Users/bacoords/Sites/cas-wp-plugin/src/scss/cas-wp-plugin-print.scss */
+.cwp-modal__header__buttons, .cwp-subheader {
+  display: none !important; }
+
+/* line 28, /Users/bacoords/Sites/cas-wp-plugin/src/scss/cas-wp-plugin-print.scss */
+.cwp-modal {
+  box-shadow: none !important;
+  border: none !important; }
+
+/*# sourceMappingURL=cas-wp-plugin-print.css.map */
